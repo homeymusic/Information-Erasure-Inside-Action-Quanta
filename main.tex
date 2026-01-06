@@ -15,7 +15,7 @@
 \title{Quantized Phase-Space from Information Erasure}
 
 \begin{abstract}
-The Second Law of Thermodynamics drives systems toward maximum entropy. We show that when applied to the quantum of action in symplectic phase space, this imperative erases surplus information, reducing continuous phase space into a discrete geometry of maximal algorithmic entropy. Through a numerical analysis of the harmonic oscillator, we demonstrate that this emergent geometry recovers the marginals of the Wigner quasiprobability distribution. These results suggest phase-space quantization is a thermodynamic necessity, providing quantum mechanics with an algorithmic correspondence that operates without the postulates of probability waves or superpositions.
+The Second Law of Thermodynamics drives systems toward maximum entropy. We show that when applied to the quantum of action in symplectic phase space, this imperative erases surplus information, reducing continuous phase space into a discrete geometry of maximal algorithmic entropy. Through a numerical analysis of the harmonic oscillator, we demonstrate that this emergent geometry recovers the marginals of the Wigner quasiprobability distribution. These results suggest phase-space quantization is a thermodynamic necessity, providing quantum mechanics with a geometric correspondence that operates independently of the postulates of probability waves or superpositions.
 \end{abstract}
 
 \author{Brian S. Mulloy\orcidlink{0000-0002-1803-3172}}
@@ -25,8 +25,90 @@ The Second Law of Thermodynamics drives systems toward maximum entropy. We show 
 
 \maketitle
 
+\section{Notation}
 
+\subsection{Statistical Heisenberg Uncertainty Principle}
 
+$$
+\sigma_x \sigma_p \ge \frac{\hbar}{2}
+$$
+
+\subsection{Symplectic Heisenberg Uncertainty Principle}
+
+$$
+\Delta x \Delta p \ge \frac{h}{2}
+$$
+
+$$
+\Delta x := x_0 L \quad \Delta p := p_0 P
+$$
+
+where $L$ and $P$ are dimensionless scaling factors of the characteristic position $x_0$ and momentum $p_0$.
+
+\subsection{Symplectic classical action}
+
+$$
+A = x_0 L \times p_0P > \frac{h}{2}
+$$
+
+\subsection{Symplectic quantum of Action}
+
+$$
+a = \frac{h}{2}
+$$
+
+\subsection{Fundamental Fraction}
+
+For $\delta_x$ to be within the quantum blob
+
+$$
+\delta_x < \Delta x
+$$
+
+$$
+\delta_x \Delta p = \frac{h}{2}
+$$
+
+To find $\tilde{x}$ near $x$ within the quantum blob we need
+
+$$
+\delta_x = |x - \tilde{x}| = \left | x - \frac{c}{d} x_0 \right | = x_0 \left | \frac{x}{x_0} - \frac{c}{d} \right | 
+$$
+
+$$
+x_0 \left | \frac{x}{x_0} - \frac{c}{d} \right | p_0 P = \frac{h}{2}
+$$
+
+Because the fundamental action unit is:
+
+$$
+x_0 p_0 = \frac{h}{2}
+$$
+
+We can substitute for $x_0$ from:
+
+$$
+x_0 = \frac{h}{2p_0}
+$$
+
+$$
+\frac{h}{2p_0} \left | \frac{x}{x_0} - \frac{c}{d} \right | p_0 P = \frac{h}{2}
+$$
+
+$$
+\left | \frac{x}{x_0} - \frac{c}{d} \right | = \frac{1}{P}
+$$
+
+\subsection{Symplectic Symmetry}
+The derivation for the conjugate variable $p$ follows by the same logic under the canonical transformation $(x, p) \to (p, -x)$. Because the symplectic capacity of the quantum blob is an invariant of the phase-space geometry, the momentum also satisfies:
+$$ \delta_p = |p - \tilde{p}| = p_0 \left | \frac{p}{p_0} - \frac{e}{f} \right | $$
+Applying the same boundary condition for the blob area:
+$$ \delta_p \Delta x = \frac{h}{2} \implies p_0 \left | \frac{p}{p_0} - \frac{e}{f} \right | x_0 L = \frac{h}{2} $$
+Substituting the fundamental action unit $x_0 p_0 = h/2$ yields the symmetric result:
+$$ \left | \frac{p}{p_0} - \frac{e}{f} \right | = \frac{1}{L} $$
+This demonstrates that the resolution of phase space is constrained by the same algorithmic entropy in both coordinates.
+
+\n
 \nocite{*}
 
 \bibliography{apssamp}% Produces the bibliography via BibTeX.
