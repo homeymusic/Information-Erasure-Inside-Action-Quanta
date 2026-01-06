@@ -6,9 +6,9 @@
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
 \usepackage{orcidlink}
-\usepackage{svg}
 \usepackage{mathtools}
 \usepackage{amsmath}
+\graphicspath{{figures/}}
 \DeclareMathOperator*{\argmin}{argmin}
 \begin{document}
 
@@ -108,6 +108,16 @@ Substituting the fundamental action unit $x_0 p_0 = h/2$ yields the symmetric re
 $$ \left | \frac{p}{p_0} - \frac{e}{f} \right | = \frac{1}{L} $$
 This demonstrates that the resolution of phase space is constrained by the same algorithmic entropy in both coordinates.
 
+\subsection{On Sub-Planck Scales}
+We suggest that the sub-Planck structures identified by Zurek are not violations of the fundamental quantum of action, but rather a manifestation of symplectic squeezing. By allowing the quantum blob $a=h/2$ to evolve into an elliptical geometry defined by our scaling factors $L$ and $P$, one can recover Zurek’s high-resolution interference features. In this view, the sub-Planck scale actually represents a one-dimensional resolution limit $\delta_{x}$ or $\delta_{p}$ of a squeezed symplectic invariant, rather than a reduction of the total phase-space area below the de Gosson boundary.
+
+\subsection{Figures}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{quantum_of_action.pdf}
+    \caption{Phase-space representation of the symplectic quantum of action $a=h/2$. The shaded region represents the "quantum blob" with area constraint $x_0 p_0 = h/2$.}
+    \label{fig:quantum_blob}
+\end{figure}
 \nocite{*}
 
 \bibliography{apssamp}% Produces the bibliography via BibTeX.
