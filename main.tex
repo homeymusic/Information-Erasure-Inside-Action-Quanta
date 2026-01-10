@@ -3,15 +3,43 @@
 ]{revtex4-2}
 
 \usepackage{graphicx}% Include figure files
+\graphicspath{{figures/}} 
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
 \usepackage{orcidlink}
 \usepackage{mathtools}
-\graphicspath{{figures/}}
+
+% -------------- Watermark ----------------
+\usepackage[style=iso]{datetime2}
+\usepackage{FiraMono} 
+\usepackage{tikz}
+
+\AddToHook{shipout/foreground}{
+  \begin{tikzpicture}[remember picture, overlay]
+    \node [
+      rotate=55,              % Restores the diagonal aspect-ratio alignment
+      scale=1.2,              % Large impactful scale
+      text opacity=0.18, 
+      color=gray!80,
+      font=\fontfamily{FiraMono-TLF}\selectfont\bfseries,
+      align=center
+    ] at (current page.center) {
+        {\fontsize{60}{70}\selectfont WORKING DRAFT} \\ [0.8cm]
+        {\Huge \DTMnow} \\
+        {\Huge doi.org/10.17605/OSF.IO/EV8H6} \\ [0.8cm]
+        {\Large Computational Complex Systems Laboratory} \\
+        {\Large Homey Music, Detroit, USA} \\ [0.2cm]
+         \includegraphics[width=1.0cm]{logo.png} 
+    };
+  \end{tikzpicture}
+}
+
+% -----------------------------------------
+
 \DeclareMathOperator*{\argmin}{argmin}
 \begin{document}
 
-\title{Quantized Phase-Space from Information Erasure}
+\title{Quantum Phase-Space from Information Erasure}
 
 \begin{abstract}
 The Second Law of Thermodynamics applied to the symplectic quantum of action maximizes entropy by erasing surplus information within the minimal Heisenberg cell, manifesting a complexity-action duality. The resulting collapse transforms the continuum into a quantized geometry. Numerical analysis of the harmonic oscillator demonstrates that this geometry recovers the marginals of the Wigner distribution. These results suggest quantized phase space is a thermodynamic necessity, providing quantum mechanics with a geometric correspondence independent of probability waves.
@@ -23,6 +51,29 @@ The Second Law of Thermodynamics applied to the symplectic quantum of action max
 \date{\today}
 
 \maketitle
+
+\section{Notation}
+
+\noindent
+\textbf{System Operators and States} \\
+Microstate (Initial): $x_? \in \Gamma$ \\
+Macrostate (Final): $\mathrm{X} \in \mathbb{Q}$ \\
+Erasure Map: $\mathcal{E}$, \quad $\Omega(\mathrm{X}) = |\{x_?\} \overset{\mathcal{E}}{\mapsto} \mathrm{X}|$\\
+Hamiltonian: $\mathcal{H}$ \\
+
+\\
+\noindent
+\textbf{Informational Quantities} \\
+Shannon Entropy: $\mathrm{H}$ \\
+Kolmogorov Complexity: $K$ \\
+Physical Entropy: $\Sigma$ \\
+\\
+\noindent
+\textbf{Geometric and Action Scales} \\
+Classical Action: $\mathcal{A}$ \\
+Quantum of Action: $\mathcal{A}_0$ \\
+Relative Position: $\mathcal{L}$ \\
+Relative Momentum: $\mathcal{P}$
 
 \begin{equation}
 \delta_x \Delta p < \frac{h}{2}
@@ -364,4 +415,6 @@ d
 
 \section{Notes}
 1. Margolus-Levitin Theorem and the "Quantum Speed Limit" The most direct parallel is the Margolus-Levitin Theorem, which states that the time \(\tau \) to reach an orthogonal state is bounded by \(\tau \ge \frac{h}{4E}\). If we rearrange this as \(\frac{E\tau }{h}\ge \frac{1}{4}\), and recognize \(E\tau \) as a form of action (\(S\)), the theorem essentially says that you need at least a quarter-unit of action to perform "one bit" of state-change.Recent 2025 refinements to this theorem have extended these bounds to "arbitrary fidelity," confirming that the number of operations per second is strictly limited by the system's energy.
+
+2. Honoring Brocot: The "erasure" \(\mathcal{E}(x_?) = x\) is the process of several teeth mapping to the same "tick" of the clock.
 \end{document}
