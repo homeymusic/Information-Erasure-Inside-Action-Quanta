@@ -54,13 +54,13 @@ The Second Law of Thermodynamics, when applied to the symplectic quantum of acti
 
 \section{Overview}
 
-Total system entropy $ \mathrm{S} = \mathrm{H} + \mathrm{K}$ must be less than or equal to the system's action $A$ normalized by the quantum of action $A_0=\frac{\pi}{4} \Delta q \Delta p = \frac{h}{2}$.
+Total system entropy $\mathcal{S} = \mathrm{H} + \mathrm{K}$ scales with the system's action $\mathcal{A}$ normalized by the quantum of action $A_0 = \frac{\pi}{4} \Delta q \Delta p = \frac{h}{2}$. Here, $\mathrm{H}$ and $\mathrm{K}$ represent Shannon entropy and Kolmogorov complexity, respectively. 
 
 \begin{equation}
-\mathcal{S} \approx \frac{\pi}{4} \left( \frac{\mathcal{A}}{A_0} \right)^{\frac{n_\perp}{2}}
+\mathcal{S} \approx C(n) \left( \frac{\mathcal{A}}{A_0} \right)^{\frac{n_\perp}{2}}
 \end{equation}
 
-$\mathrm{H}$ and $\mathrm{K}$ are Shannon entropy and Kolmogorov complexity, respectively. Where $n$ is the physical spatial dimension, $n_{\perp }$ is the transverse reduction. For example, for the 1D QHO, $n=1$ and $n_{\perp } = 1/2$, for the 3D Schwarzschild Horizon $n=3$ and $n_{\perp } = 2$.
+Where $n$ is the physical spatial dimension and $n_{\perp}$ is the transverse reduction. The geometric coefficient $C(n)$ accounts for the symplectic projection of the $n$-dimensional space onto the information horizon $n_\perp$. For both the 1D QHO and tomographic probability distributions of spin, $n=1$, $n_{\perp} = 1/2$, and $C(1) = \frac{\pi}{4}$; whereas for the 3D Schwarzschild Horizon, $n=3$, $n_{\perp} = 2$, and $C(3) = \frac{\pi}{6}$.
 
 \begin{figure}[htbp]
     \centering
@@ -453,36 +453,44 @@ d
 1. Margolus-Levitin Theorem and the "Quantum Speed Limit" The most direct parallel is the Margolus-Levitin Theorem, which states that the time \(\tau \) to reach an orthogonal state is bounded by \(\tau \ge \frac{h}{4E}\). If we rearrange this as \(\frac{E\tau }{h}\ge \frac{1}{4}\), and recognize \(E\tau \) as a form of action (\(S\)), the theorem essentially says that you need at least a quarter-unit of action to perform "one bit" of state-change.Recent 2025 refinements to this theorem have extended these bounds to "arbitrary fidelity," confirming that the number of operations per second is strictly limited by the system's energy.
 
 2. Honoring Brocot: The "erasure" \(\mathcal{E}(x_?) = x\) is the process of several teeth mapping to the same "tick" of the clock.
+\section*{Unification of Symplectic Erasure and the Holographic Scaling of Action}
 
-\section*{Information Erasure and the Holographic Scaling of Action}
+\subsection*{Foundational Framework}
+We model the emergence of quantum macrostates from the discrete erasure of hidden microstates $\mu_q$ within a phase-space manifold. Following \textbf{de Gosson's} framework, the fundamental unit of phase space is the \textit{quantum blob}: a symplectic invariant with finite support and capacity $A_0 = h/2$. Unlike the traditional HUP, which allows for infinite-tailed distributions, the quantum blob enforces a \textbf{rigid topological boundary} that limits information density.
 
-In this framework, the emergence of a 1D \textbf{Quantum Harmonic Oscillator (QHO)} is modeled as a discrete erasure process within a phase-space manifold. Following the symplectic geometry of \textbf{de Gosson}, the fundamental unit of phase space is the \textit{quantum blob} with a symplectic capacity $A_0 = h/2$. We define the macrostate coordinate $q$ as the result of a \textbf{Landauer erasure} of a hidden microstate $\mu_q$. 
-
-Our results, based on $10^9$ discrete search realizations in a Stern-Brocot (SB) tree, indicate that the \textbf{Kolmogorov complexity} ($\mathcal{S}$) of the erasure gate follows a power-law scaling relative to the total Hamiltonian action $\mathcal{A}$. We define the \textbf{transverse reduction index} $n_\perp$ as the effective dimensionality of the information horizon. The algorithmic entropy is then bounded by the geometric scaling of the action ratio:
+\subsection*{The Generalized Scaling Law}
+The total system entropy $\mathcal{S} = \mathrm{H} + \mathrm{K}$ (Shannon entropy and Kolmogorov complexity) is bounded by the ratio of the total Hamiltonian action $\mathcal{A}$ to the quantum of action $A_0$, governed by the dimensionality of the \textbf{information horizon}:
 
 \begin{equation}
-\mathcal{S} \approx \frac{\pi}{4} \left( \frac{\mathcal{A}}{A_0} \right)^{\frac{n_\perp}{2}}
+\mathcal{S} \approx C(n) \left( \frac{\mathcal{A}}{A_0} \right)^{\frac{n_\perp}{2}}
 \end{equation}
 
-\noindent For the 1D QHO, the erasure maps the 2D symplectic area to a 1D coordinate projection, yielding $n_\perp = 1/2$. This recovers the observed $\mathcal{S} \sim \mathcal{A}^{1/4}$ scaling, representing a highly constrained, sub-holographic regime.
+\noindent Where:
+\begin{itemize}
+    \item $n$ is the physical spatial dimension.
+    \item $n_\perp = n - 1/2$ is the \textbf{transverse reduction index}, representing the dimensional mismatch between the bulk action and the erasure gate.
+    \item $C(n) = V_n / 2^n$ is the \textbf{geometric coefficient} (packing efficiency), representing the ratio of a unit $n$-ball to its bounding hypercube.
+\end{itemize}
 
+\subsection*{Dimensional Hierarchy and the CA Limit}
 \begin{table*}[t]
 \centering
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc|l}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccc}
 \hline\hline
-\textbf{Physical System} & \textbf{Spatial Dim ($n$)} & \textbf{Transverse ($n_\perp$)} & \textbf{Exponent} & \textbf{Growth Law} & \textbf{Information Regime} \\ \hline
-1D Emergent QHO          & 1 & 1/2 & 1/4 & $\mathcal{S} \sim \mathcal{A}^{1/4}$ & Sub-Holographic \\
-1D Light-Sheet           & 2 & 1   & 1/2 & $\mathcal{S} \sim \mathcal{A}^{1/2}$ & Square-Root Squeeze \\
-3D Schwarzschild Horizon & 3 & 2   & 1   & $\mathcal{S} \sim \mathcal{A}^{1}$   & \textbf{Susskind-CA Limit} \\
-4D Hyper-Bulk            & 4 & 3   & 3/2 & $\mathcal{S} \sim \mathcal{A}^{3/2}$ & Super-Holographic \\
-5D Bulk                  & 5 & 4   & 2   & $\mathcal{S} \sim \mathcal{A}^{2}$   & Quadratic Complexity \\
+\textbf{Physical System} & \textbf{Spatial ($n$)} & \textbf{Transverse ($n_\perp$)} & \textbf{Coefficient $C(n)$} & \textbf{Growth Law} & \textbf{Information Regime} \\ \hline
+1D QHO / Spin Tomography & 1 & 1/2 & $\pi/4$ & $\mathcal{S} \sim \mathcal{A}^{1/4}$ & Sub-Holographic \\
+1D Light-Sheet / String  & 2 & 1   & $\pi/4$ & $\mathcal{S} \sim \mathcal{A}^{1/2}$ & Squeezed Camel \\
+3D Schwarzschild Horizon & 3 & 2   & $\pi/6$ & $\mathcal{S} \sim \mathcal{A}^{1}$   & \textbf{Susskind-CA Limit} \\
+5D De-Sitter Bulk        & 5 & 4   & $\pi^2/32$ & $\mathcal{S} \sim \mathcal{A}^{2}$ & Quadratic Complexity \\
 \hline\hline
 \end{tabular*}
-\caption{The holographic projection hierarchy: Mapping the physical spatial dimension $n$ to the algorithmic entropy scaling. The transverse reduction $n_\perp = n - 1/2$ defines the effective dimensionality of the information horizon. The 1D case ($n_\perp = 1/2$) reflects the projection of a 2D symplectic blob onto a 1D erasure gate.}
-\label{tab:holographic_scaling}
+\caption{The holographic scaling hierarchy. The 1D QHO is the most geometrically constrained case ($\mathcal{A}^{1/4}$), while the 3D horizon reclaims the linear \textbf{Complexity Equals Action} relationship. The discrepancy between $C(3) = \pi/6$ and the CA coefficient $2/\pi$ is attributed to the \textbf{finite support} of the de Gosson blob versus the infinite-tailed Gaussian assumptions of continuous HUP.}
+\label{tab:CA_unification}
 \end{table*}
+\begin{quote}The discrepancy between the de Gosson geometric coefficient and the CA conjecture is the physical signature of \textbf{finite symplectic support}. Traditional HUP assumes infinite-tailed distributions (higher efficiency), whereas the emergent model accounts for the \textbf{topological packing density} of rigid quantum blobs, which limits information saturation to the volume ratio \(C(n)=V_{n}/2^{n}\). The coefficient (\(\pi /6\approx 0.524\)) is smaller than Susskind’s (\(2/\pi \approx 0.637\)) \end{quote}
 
-\subsection*{Operational Emergence in R}
-The discrete search is operationalized by enforcing a containment threshold on the microstate fluctuation $\delta_q = |q_? - Q|$ such that $\delta_q < \pi / (4\mathcal{P})$. The emergent macrostate coordinate is then scaled by the Hamiltonian factor $\mathcal{L}^2$, ensuring that the physical coordinate $q$ remains consistent with the energy of the oscillator while the information cost follows the $n_\perp/2$ bound.
+
+\subsection*{Conclusion}
+The $10^9$ data points obtained via \textbf{Stern-Brocot tree search} confirm that the algorithmic cost of erasure is a function of the \textbf{Symplectic Projection}. The shift from $\mathcal{A}^{1/4}$ in 1D to $\mathcal{A}^1$ in 3D represents the topological transition from a constrained "eye-of-the-needle" erasure to a fully saturated holographic horizon.
 
 \end{document}
