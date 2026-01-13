@@ -98,10 +98,23 @@ Where $n$ is the physical spatial dimension and $n_{\perp}$ is the transverse re
     \label{fig:shannon_entropy}
 \end{figure}
 
-
 \section{Notation}
+The variables used primarily throughout this manuscript are dimensionless values—such as coordinate $\mathcal{L}$, momentum $\mathcal{P}$, energy $\mathcal{E}$, and time $\mathcal{T}$—normalized to their characteristic base units ($q_0, p_0, E_0, t_0$). We define the fundamental \textit{quantum of action} as $A_0 = \frac{\pi}{4} q_0 p_0 = \frac{h}{2}$, which establishes the phase-space resolution of the system. While the base units ($q_0, p_0$) define the system's characteristic scales, the dynamic state resolutions ($\Delta q, \Delta p$) are captured by the dimensionless parameters $\mathcal{L}$ and $\mathcal{P}$.
 
-Physical quantities are represented as dimensionless multiples of their characteristic base units (\(p_{0},q_{0},E_{0},t_{0}\)). We define the fundamental action unit as $A_0=\pi/4 \cdot x_0 p_0 = h/2$. We introduce calligraphic scaling parameters (\(\mathcal{P,L ,E,T, A}\)) to represent the dimensionless scaling factors of these domains. Specifically, \(\mathcal{P}\) denotes the momentum scale, which serves as the reciprocal constraint on the machine's spatial resolution.
+Physical quantities are normalized as follows:
+
+\noindent
+\textbf{Normalized Notation} \\
+Microstate $q, p$: $\mu_q = q_0 q_?, \quad \mu_p = p_0 p_?$ \\
+Macrostate $q, p$: $q = \mathrm{Q} q_0, \quad p = \mathrm{P} p_0 \quad (\mathrm{Q, P} \in \mathbb{Q})$ \\
+Coordinate: $q(t) = q_0 \mathcal{L}(t)$ \\
+Momentum: $p(t) = p_0 \mathcal{P}(t)$ \\
+Time: $t = t_0 \mathcal{T}$ \\
+Energy: $E = E_0 \mathcal{E}$ \\
+Quantum of Action: $A_0 = \frac{\pi}{4} q_0 p_0 = \frac{h}{2}$ \\
+Normalized Action: $\mathcal{A} = \mathcal{P}^2 + \mathcal{L}^2$ \\
+Action: $A = A_0 \mathcal{A}$ \\
+Hamiltonian: $\mathcal{H} = A f = E_0 \mathcal{A} = \frac{h}{2}\left(\mathcal{P}^2 + \mathcal{L}^2\right)f$
 
 \noindent
 \textbf{System Operators and States} \\
