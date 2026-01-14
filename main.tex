@@ -56,8 +56,8 @@ By maximizing entropy through Landauer information erasure within the quantum of
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{erase.pdf}
-    \caption{\textbf{Erasure within the quantum of action} (schematic). Within the symplectic quantum of action defined by $\delta_q < \Delta q$ such that $\frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the algorithmic information of the thermodynamically inaccessible microstates $\{q_?\}$—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased. The state collapses to the macrostate $\mathrm{Q}$ defined by the minimal binary program $\mathbf{s}^*$ (e.g., \texttt{1101}) of length $K(\mathrm{Q}) = |\mathbf{s}^*|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_0$ requires an action $A_{\mathrm{L}}$ fundamentally bounded by the symplectic quantum of action: $\pi \hbar \ge A_{\mathrm{L}} \ge k_{B}T\ln(2)K(\mathrm{Q})\tau_0$.}
-    \label{fig:quantum_blob}
+    \caption{\textbf{Erasure within the quantum of action} (schematic). Within the symplectic quantum of action defined by $\delta_q < \Delta q$ such that $\frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the algorithmic information of the operationally indistinguishable microstates $\{q_?\}$—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased by thermodynamic necessity. The state collapses to the macrostate $\mathrm{Q}$ defined by the minimal binary program $\mathbf{s}^*$ (e.g., \texttt{1101}) of length $K(\mathrm{Q}) = |\mathbf{s}^*|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_0$ requires an action $A_{\mathrm{L}}$ fundamentally bounded by the symplectic quantum of action: $\pi \hbar \ge A_{\mathrm{L}} \ge k_{B}T\ln(2)K(\mathrm{Q})\tau_0$.}
+    \label{fig:erase}
 \end{figure}
 
 \section{Overview}
@@ -98,14 +98,13 @@ Physical quantities are normalized as follows:
 
 \noindent
 \textbf{Normalized Notation} \\
-Microstate $q, p$: $\mu_q = q_0 q_?, \quad \mu_p = p_0 p_?$ \\
-Macrostate $q, p$: $q = \mathrm{Q} q_0, \quad p = \mathrm{P} p_0 \quad (\mathrm{Q, P} \in \mathbb{Q})$ \\
+Microstate: $\mu_q = q_0 q_?, \quad \mu_p = p_0 p_?$ \\
+Macrostate: $q = \mathrm{Q} q_0, \quad p = \mathrm{P} p_0$ \\
 Coordinate: $q(t) = q_0 \mathcal{L}(t)$ \\
 Momentum: $p(t) = p_0 \mathcal{P}(t)$ \\
 Time: $t = t_0 \mathcal{T}$ \\
 Energy: $E = E_0 \mathcal{E}$ \\
-Quantum of Action: $\pi \hbar = \pi \hbar$ \\
-Quantum of Action: $\pi \hbar = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$ \\
+Quantum of Action: $\pi \hbar = \frac{\pi}{4} \Delta q \Delta p$ \\
 Action: $A = \pi \hbar \mathcal{A}$ \\
 Characteristic Action: $\frac{\pi}{4} q_0 p_0 \coloneq \pi \hbar$ \\
 Normalized Action: $\mathcal{A} = \mathcal{P}^2 + \mathcal{L}^2$ \\
@@ -121,9 +120,9 @@ Halt Criteria: $|q_? - \mathrm{Q}| < \mathcal{P}^{-1}$
 
 The resolution of a physical state is determined either by the probabilistic spread of its conjugate observables, $\sigma_{q}\sigma_{p} \ge \hbar/2$, or by its action boundary $A$ in phase space:
 
-$$\pi \hbar = \frac{\pi}{4} \Delta p \Delta q = \pi \hbar.$$
+$$A = \frac{\pi}{4} \Delta p \Delta q \ge \pi \hbar.$$
 
-Within this hard action boundary $A$, the entropy of the state is physically constrained by the minimum symplectic volume $\pi \hbar = \pi \hbar$. Because all microstates $\{\mu_q\} = \{q_{0}q_{?}\}$ within this quantum of action must be operationally indistinguishable ($\delta_{q} < \Delta q \implies \frac{\pi}{4} \delta_{q} \Delta p < \pi \hbar$), it is a thermodynamic necessity that only the macrostate $q_{0}\mathrm{Q}$ which maximizes system entropy by minimizing local complexity is physically possible: $\delta_{q} = q_{0}|q_{?} - \mathrm{Q}|$, where $q_{?}$ and $\mathrm{Q}$ are normalized and dimensionless. Defining the scale as $\Delta p = p_{0}\mathcal{P}$, we have:
+Within this hard action boundary, the entropy of the state is physically constrained by the minimum symplectic volume $A = \pi \hbar$. Because all microstates $\{\mu_q\} = \{q_{0}q_{?}\}$ within this quantum of action must be operationally indistinguishable ($\delta_{q} < \Delta q \implies \frac{\pi}{4} \delta_{q} \Delta p < \pi \hbar$), it is a thermodynamic necessity that only the macrostate $q_{0}\mathrm{Q}$ which maximizes system entropy by minimizing local complexity is physically possible: $\delta_{q} = q_{0}|q_{?} - \mathrm{Q}|$, where $q_{?}$ and $\mathrm{Q}$ are normalized and dimensionless. Defining the scale as $\Delta p = p_{0}\mathcal{P}$, we have:
 
 $$\left(\frac{\pi}{4} q_{0} p_{0}\right) |q_{?} - \mathrm{Q}| \mathcal{P} < \pi \hbar.$$
 
@@ -139,10 +138,9 @@ This thermodynamic collapse is executed by a universal computing machine we call
 \mathcal{U}_{\mathrm{L}}(\{q_{?}\}) \mapsto \mathrm{Q}
 \end{equation}
 
-which irreversibly erases the algorithmic information of the inaccessible microstates $\{q_{?} : \pi \hbar = \pi \hbar \}$, mapping them to the one minimal complexity state $K(\mathrm{Q}) = |\mathbf{s^*}|$ defined by the minimal program $\mathbf{s^*}$, where $K(\mathrm{Q})$ is the Kolmogorov complexity and $|\mathbf{s^*}|$ is the length of the program's bit string.
+which irreversibly erases the algorithmic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathrm{Q}) = |\mathbf{s^*}|$ defined by the minimal program $\mathbf{s^*}$, where $K(\mathrm{Q})$ is the Kolmogorov complexity and $|\mathbf{s^*}|$ is the length of the program's binary string.
 
-
-The bound $|q_{?} - \mathrm{Q}| < \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the information density required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathrm{Q}$ exceeds the available action, the Landauer eraser enforces a transition to the state of minimal algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the inaccessible sub-resolution information to the minimal complexity program $\mathbf{s^*}$ consistent with the $\pi \hbar = \pi \hbar$ boundary.
+The bound $|q_{?} - \mathrm{Q}| < \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the algorithmic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathrm{Q}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s^*}$ consistent with the $\pi \hbar$ boundary.
 
 \subsection*{Informational Substrate and the Universal Computer}
 
@@ -182,7 +180,7 @@ The fundamental limit of the theory is not on a single coordinate, but on the \t
 This ensures that any "gain" in bit-length for the position coordinate necessitates a corresponding "erasure" or lack of specification in the momentum coordinate, preserving the hard symplectic boundary $h/2$. Throughout the following sections, coordinate-specific results should be understood as projections of this unified 2D informational constraint.
 
 
-\subsection*{Inaccessible Microstates}
+\subsection*{Operationally Indistinguishable Microstates}
 
 We define $x_{?}$ as an unknowable value, a pre-erasure microstate: the original, fine-grained coordinate of the system. We say that information has been erased during an observation because we will never find out what the state $x_{?}$ was originally. Inside the quantum of action $S = x_0 p_0 = h/2$ (the coarse-grained minimal Heisenberg cell), $x_{?}$ is operationally indistinguishable from the resulting observed state $x$ such that 
 $$\frac{\pi}{4}\mathcal{L}|q_{?}-\mathrm{Q}|\Delta p<h/2.$$ 
