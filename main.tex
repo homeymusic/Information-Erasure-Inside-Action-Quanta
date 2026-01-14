@@ -111,49 +111,62 @@ Coordinate: $q(t) = q_0 \mathcal{L}(t)$ \\
 Momentum: $p(t) = p_0 \mathcal{P}(t)$ \\
 Time: $t = t_0 \mathcal{T}$ \\
 Energy: $E = E_0 \mathcal{E}$ \\
-Quantum of Action: $A_0 = \frac{\pi}{4} q_0 p_0 = \pi \hbar$ \\
+Characteristic Action: $A_0 = \frac{\pi}{4} q_0 p_0 = \pi \hbar$ \\
 Normalized Action: $\mathcal{A} = \mathcal{P}^2 + \mathcal{L}^2$ \\
 Action: $A = A_0 \mathcal{A}$ \\
 Hamiltonian: $\mathcal{H} = A f = E_0 \mathcal{A} = \pi \hbar\left(\mathcal{P}^2 + \mathcal{L}^2\right)f$
-
-\noindent
-\textbf{System Operators and States} \\
-Microstate (Initial): $\mu_q := q_? q_0 $ \\
-Dimensionless Microstate (Initial): $q_?$ \\
-Macrostate (Final): $\mathrm{Q} \in \mathbb{Q}$ \\
-
-\noindent
-\textbf{Universal Computing Machine} \\
 Landauer Universal Computing Machine: $\mathcal{U}_{\operatorname{L}}$ \\
-Programs Bit String: $s^*$ \\
-Program length: $|s^*|$ \\
-Bounded by the available action $S \le A/A_0$\\
-Physical Entropy: $\mathrm{S}= \mathrm{H} + \mathrm{K}$ \\
+Program Bit String: $s$ \\
+Minimal Program: $s^*$ \\
+Program Length: $|s|$ \\
+Kolmogorov Complexity: $\mathrm{K} = |s^*|$ \\
 Shannon Entropy: $\mathrm{H}$ \\
-Kolmogorov Complexity: $\mathrm{K} = |s^*|$\\
-Erasure: $\mathcal{E}$, \quad $\Omega(\mathrm{Q}) = |\{q_?\} \overset{\mathcal{E}}{\mapsto} \mathrm{Q}|$\\
-Momentum: \(p=p_{0}\mathcal{P}\), \ \small(\(\mathcal{P}\): momentum cardinality) \\
-Criteria: $|q_?-\mathrm{Q}| < \frac{\pi}{4} \mathcal{P}^{-1}$ \\
+Zurek Entropy: $\mathrm{S}= \mathrm{H} + \mathrm{K}$ \\
+Erasure: $\Omega(\mathrm{Q}) = |\{q_?\} \overset{\mathcal{U}_{\operatorname{L}}}{\mapsto} \mathrm{Q}|$ \\
+Halt Criteria: $|q_?-\mathrm{Q}| < \frac{\pi}{4} \mathcal{P}^{-1}$ \\
+Halt Criteria: $|q_?-\mathrm{Q}| < \mathcal{P}^{-1}$ \\
 
-\noindent
-\textbf{Energy and Informational Quantities} \\
-Hamiltonian: $\mathcal{H}$ \\
-\\
-\noindent
-\textbf{Geometric and Action Scales} \\
-Action: $\mathcal{A}$ \\
-Quantum of Action: $\mathcal{A}_0$ \\
-Action Coordinate Constraint: $\Lambda$ \\
-Action Momentum Pressure: $\Pi$
+\subsection{The Canonical Flow}
+
+The resolution of a physical state is determined either by the probabilistic spread of its conjugate observables, $\sigma_{q}\sigma_{p} \ge \hbar/2$, or by its action boundary $A$ in phase space:
+
+$$A = \frac{\pi}{4} \Delta p \Delta q \ge \pi \hbar.$$
+
+Within this action boundary $A$, the entropy of the state is physically constrained by the minimum symplectic volume $A = \pi \hbar$. Because all microstates $\mu_q = q_{0}q_{?}$ within this quantum of action must be operationally indistinguishable ($\delta_{q} < \Delta q \implies \frac{\pi}{4} \delta_{q} \Delta p < \pi \hbar$), it is a thermodynamic necessity that only the macrostate $q_{0}Q$ which maximizes system entropy by minimizing local complexity is physically possible: $\delta_{q} = q_{0}|q_{?} - Q|$. Expressed in terms of the quantum of action with $\Delta p = p_{0}\mathcal{P}$, we have:
+
+$$\left(\frac{\pi}{4} q_{0} p_{0}\right) |q_{?} - Q| \mathcal{P} < \pi \hbar.$$
+
+Recognizing that the characteristic action of the system is $A_{0} = \frac{\pi}{4} q_{0} p_{0} = \pi \hbar$, we arrive at:
 
 \begin{equation}
-\delta_q \Delta p < \pi \hbar
-\end{equation}
-\begin{equation}
-\Delta q \delta_p < \pi \hbar
+|q_{?} - Q| < \mathcal{P}^{-1}.
 \end{equation}
 
-\section{Notation}
+This thermodynamic collapse is executed by a universal computing machine we call the Landauer eraser:
+
+\begin{equation}
+\mathcal{U}_{\mathrm{L}}(q_{?}) \mapsto Q
+\end{equation}
+
+which irreversibly erases the knowledge of the inaccessible microstates $\{q_{?} : A = \pi \hbar \}$, mapping them to the one minimal complexity state $K(Q) = |\mathbf{s^*}|$ defined by the minimal program $\mathbf{s^*}$, where $K(Q)$ is the Kolmogorov complexity and $|\mathbf{s^*}|$ is the length of the program's bit string.
+
+
+\subsection{The Canonical Flow}
+
+The resolution of a physical state is determined either by the probabilistic spread of its conjugate observables, $\sigma _{q}\sigma _{p}\ge \hbar /2$, or by its action boundary $A$ in phase space
+
+$$A=\frac{\pi }{4}\Delta p\Delta q\ge \pi \hbar.$$
+
+Within this action boundary $A$, the entropy of the state is physically constrained by the minimum symplectic volume $A=\pi \hbar$. Because all microstates $\mu_q = q_{0}q_{?}$ within this quantum of action must be operationally indistinguishable $\delta _{q}<\Delta q\implies \frac{\pi }{4}\delta _{q}\Delta p<\pi \hbar$, it is a thermodynamic necessity that only the macrostate $q_{0} \mathrm{Q}$ that maximizes system entropy by minimizing local complexity is physically possible $\delta _{q}=q_{0}|q_{?}-\mathrm{Q}|$. Expressed in terms of the quantum of action with $\Delta p=p_{0}\mathcal{P}$ we have $\left(\frac{\pi }{4}q_{0}p_{0}\right)|q_{?}-\mathrm{Q}|\mathcal{P}<\pi \hbar.$ Recognizing that the characteristic action of the system is $A_{0} = \frac{\pi}{4}q_{0}p_{0} = \pi \hbar$, we arrive at:
+
+\begin{equation}
+|q_{?}-\mathrm{Q}|<\mathcal{P}^{-1}.
+\end{equation}
+
+This thermodynamic collapse is executed by a universal computing machine we call the Landauer eraser 
+\begin{equation}
+mathcal{U}_{\mathrm{L}}(q_?) \mapsto \mathrm{Q}
+\end{equation}, which irreversibly erases the knowledge of the inaccessible microstates $\{q_? : A = \pi \hbar \}$, mapping them to the one minimal complexity state $K(Q)=|\mathbf{s^{*}}|$ defined by the minimal program $\mathbf{s^{*}}$, where $K(Q)$ is Komogorov complexity and $|\mathbf{s^{*}}|$ is the length of the program's bit string.
 
 \subsection*{Informational Substrate and the Universal Computer}
 
