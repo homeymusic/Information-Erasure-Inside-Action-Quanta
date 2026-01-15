@@ -97,6 +97,26 @@ The variables used primarily throughout this manuscript are dimensionless values
 Physical quantities are normalized as follows:
 
 \noindent
+
+\textbf{REVISIT: Normalized Notation} \\
+Microstate: $\mu_q =  q_?\Delta q, \quad \mu_p =  p_?\Delta p $ \\
+Macrostate: $q = \mathrm{Q} \Delta q, \quad p = \mathrm{P} \Delta p$ \\
+Coordinate: $q(t) = \Delta q \mathcal{L}(t)$ \\
+Momentum: $p(t) = \Delta p \mathcal{P}(t)$ \\
+Time: $t = t_0 \mathcal{T}$ \\
+Energy: $E = E_0 \mathcal{E}$ \\
+Quantum of Action: $\pi \hbar = \frac{\pi}{4} \Delta q \Delta p$ \\
+Action: $A = \pi \hbar \mathcal{A}$ \\
+Characteristic Action: $\frac{\pi}{4} \Delta q \Delta p \coloneq \pi \hbar$ \\
+Normalized Action: $\mathcal{A} = \mathcal{P}^2 + \mathcal{L}^2$ \\
+Hamiltonian: $\mathcal{H} = E_0 \mathcal{A} = \pi \hbar (\mathcal{P}^2 + \mathcal{L}^2) f$ \\
+Landauer Machine: $\mathcal{U}_{\mathrm{L}}$ \\
+Binary Program: $s$ \\
+Minimal Binary Program: $\mathbf{s^*}$ \\
+Binary Program Length: $K(\mathrm{Q}) = |\mathbf{s^*}|$ \\
+Erasure Mapping: $\mathcal{U}_{\mathrm{L}} : \{q_?\} \mapsto \mathrm{Q}$ \\
+Halt Criteria: $|q_? - \mathrm{Q}| < \mathcal{P}^{-1}$
+
 \textbf{Normalized Notation} \\
 Microstate: $\mu_q = q_0 q_?, \quad \mu_p = p_0 p_?$ \\
 Macrostate: $q = \mathrm{Q} q_0, \quad p = \mathrm{P} p_0$ \\
@@ -115,6 +135,33 @@ Minimal Binary Program: $\mathbf{s^*}$ \\
 Binary Program Length: $K(\mathrm{Q}) = |\mathbf{s^*}|$ \\
 Erasure Mapping: $\mathcal{U}_{\mathrm{L}} : \{q_?\} \mapsto \mathrm{Q}$ \\
 Halt Criteria: $|q_? - \mathrm{Q}| < \mathcal{P}^{-1}$
+
+
+\subsection{REVIST: The Canonical Flow}
+
+The resolution of a physical state is determined either by the probabilistic spread of its conjugate observables, $\sigma_{q}\sigma_{p} \ge \hbar/2$, or by its action boundary $A$ in phase space:
+
+$$A = \frac{\pi}{4} \Delta p \Delta q \ge \pi \hbar.$$
+
+Within this hard action boundary, the entropy of the state is physically constrained by the minimum symplectic volume $A = \pi \hbar$. Because all microstates $\{\mu_q\} = \{q_{?} \Delta q\}$ within this quantum of action must be operationally indistinguishable ($\delta_{q} \le \Delta q \implies \frac{\pi}{4} \delta_{q} \Delta p \le \pi \hbar$), it is a thermodynamic necessity that only the macrostate $\mathrm{Q}\Delta q$ which maximizes system entropy by minimizing local complexity is physically possible: $\delta_{q} = |q_{?} - \mathrm{Q}|\Delta q $, where $q_{?}$ and $\mathrm{Q}$ are normalized and dimensionless. Defining the scale as $\Delta p = p_{0}\mathcal{P}$, we have:
+
+$$\left(\frac{\pi}{4} q_{0} p_{0}\right) |q_{?} - \mathrm{Q}| \mathcal{P} \le \pi \hbar.$$
+
+Recognizing the characteristic action of the system is defined by $\frac{\pi}{4} q_{0} p_{0} \coloneq \pi \hbar$, we arrive at:
+
+\begin{equation}
+|q_{?} - \mathrm{Q}| \le \mathcal{P}^{-1}.
+\end{equation}
+
+This thermodynamic collapse is executed by a universal computing machine we call the Landauer eraser:
+
+\begin{equation}
+\mathcal{U}_{\mathrm{L}}(\{q_{?}\}) \mapsto \mathrm{Q}
+\end{equation}
+
+which irreversibly erases the algorithmic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathrm{Q}) = |\mathbf{s^*}|$ defined by the minimal program $\mathbf{s^*}$, where $K(\mathrm{Q})$ is the Kolmogorov complexity and $|\mathbf{s^*}|$ is the length of the program's binary string.
+
+The bound $|q_{?} - \mathrm{Q}| \le \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the algorithmic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathrm{Q}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s^*}$ consistent with the $\pi \hbar$ boundary.
 
 \subsection{The Canonical Flow}
 
