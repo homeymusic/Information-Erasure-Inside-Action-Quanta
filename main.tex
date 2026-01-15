@@ -56,7 +56,7 @@ By maximizing entropy through Landauer information erasure within the quantum of
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{erase.pdf}
-    \caption{\textbf{Erasure within the quantum of action} (schematic). Within the symplectic quantum of action defined by $\delta_q < \Delta q$ such that $\frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the algorithmic information of the operationally indistinguishable microstates $\{q_?\}$—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased by thermodynamic necessity. The indistinguishable microstates collapse to the macrostate $\mathrm{Q}$ defined by the minimal binary program $\mathbf{s}^*$ (e.g., \texttt{1101}) of length $K(\mathrm{Q}) = |\mathbf{s}^*|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_0$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum of action: $k_{B}T\ln(2)K(\mathrm{Q})\tau_0 \le A_L \le \pi \hbar$.}
+    \caption{\textbf{Erasure within the quantum of action} (schematic). Within the symplectic quantum of action defined by $\delta_q \le \Delta q$ such that $\frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the algorithmic information of the operationally indistinguishable microstates $\{q_?\}$—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased by thermodynamic necessity. The indistinguishable microstates collapse to the macrostate $\mathrm{Q}$ defined by the minimal binary program $\mathbf{s}^*$ (e.g., \texttt{1101}) of length $K(\mathrm{Q}) = |\mathbf{s}^*|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_0$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum of action: $k_{B}T\ln(2)K(\mathrm{Q})\tau_0 \le A_L \le \pi \hbar$.}
     \label{fig:erase}
 \end{figure}
 
@@ -122,14 +122,14 @@ The resolution of a physical state is determined either by the probabilistic spr
 
 $$A = \frac{\pi}{4} \Delta p \Delta q \ge \pi \hbar.$$
 
-Within this hard action boundary, the entropy of the state is physically constrained by the minimum symplectic volume $A = \pi \hbar$. Because all microstates $\{\mu_q\} = \{q_{0}q_{?}\}$ within this quantum of action must be operationally indistinguishable ($\delta_{q} < \Delta q \implies \frac{\pi}{4} \delta_{q} \Delta p < \pi \hbar$), it is a thermodynamic necessity that only the macrostate $q_{0}\mathrm{Q}$ which maximizes system entropy by minimizing local complexity is physically possible: $\delta_{q} = q_{0}|q_{?} - \mathrm{Q}|$, where $q_{?}$ and $\mathrm{Q}$ are normalized and dimensionless. Defining the scale as $\Delta p = p_{0}\mathcal{P}$, we have:
+Within this hard action boundary, the entropy of the state is physically constrained by the minimum symplectic volume $A = \pi \hbar$. Because all microstates $\{\mu_q\} = \{q_{0}q_{?}\}$ within this quantum of action must be operationally indistinguishable ($\delta_{q} \le \Delta q \implies \frac{\pi}{4} \delta_{q} \Delta p \le \pi \hbar$), it is a thermodynamic necessity that only the macrostate $q_{0}\mathrm{Q}$ which maximizes system entropy by minimizing local complexity is physically possible: $\delta_{q} = q_{0}|q_{?} - \mathrm{Q}|$, where $q_{?}$ and $\mathrm{Q}$ are normalized and dimensionless. Defining the scale as $\Delta p = p_{0}\mathcal{P}$, we have:
 
-$$\left(\frac{\pi}{4} q_{0} p_{0}\right) |q_{?} - \mathrm{Q}| \mathcal{P} < \pi \hbar.$$
+$$\left(\frac{\pi}{4} q_{0} p_{0}\right) |q_{?} - \mathrm{Q}| \mathcal{P} \le \pi \hbar.$$
 
 Recognizing the characteristic action of the system is defined by $\frac{\pi}{4} q_{0} p_{0} \coloneq \pi \hbar$, we arrive at:
 
 \begin{equation}
-|q_{?} - \mathrm{Q}| < \mathcal{P}^{-1}.
+|q_{?} - \mathrm{Q}| \le \mathcal{P}^{-1}.
 \end{equation}
 
 This thermodynamic collapse is executed by a universal computing machine we call the Landauer eraser:
@@ -140,7 +140,7 @@ This thermodynamic collapse is executed by a universal computing machine we call
 
 which irreversibly erases the algorithmic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathrm{Q}) = |\mathbf{s^*}|$ defined by the minimal program $\mathbf{s^*}$, where $K(\mathrm{Q})$ is the Kolmogorov complexity and $|\mathbf{s^*}|$ is the length of the program's binary string.
 
-The bound $|q_{?} - \mathrm{Q}| < \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the algorithmic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathrm{Q}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s^*}$ consistent with the $\pi \hbar$ boundary.
+The bound $|q_{?} - \mathrm{Q}| \le \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the algorithmic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathrm{Q}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s^*}$ consistent with the $\pi \hbar$ boundary.
 
 \subsection*{Informational Substrate and the Universal Computer}
 
