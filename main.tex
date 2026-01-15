@@ -41,7 +41,7 @@
 \title{Information Erasure Inside the Quantum of Action}
 
 \begin{abstract}
-By maximizing entropy through Landauer information erasure within the quantum of action, we show that the continuum collapses into a discrete phase space. Numerical analysis confirms that this geometry accurately reproduces key quantum phenomena: Wigner quasiprobability marginals, black hole quasinormal modes, and Bell-violating spin correlations. This work establishes quantum phase space as the geometric consequence of information erasure at the entropic limit of action.
+By maximizing entropy through Landauer information erasure within the quantum of action, we show that continuum states collapse into discrete observables. Numerical analysis confirms that this geometry accurately reproduces key quantum phenomena. This work provides an algorithmic-geometric correspondence to quantum mechanics at the entropic limit of action.
 \end{abstract}
 
 \author{Brian S. Mulloy\orcidlink{0000-0002-1803-3172}}
@@ -61,21 +61,11 @@ By maximizing entropy through Landauer information erasure within the quantum of
 
 \section{Overview}
 
-\subsection*{The Generalized Scaling Law: Symplectic Holo-Dynamics}
-We propose that the total Landauer energy $E_L$ required to erase the informational state of a manifold is a function of its bulk action $\mathcal{A}$, modulated by the topological constraints of the \textbf{de Gosson quantum blob}. To maintain dimensional consistency, the action must be normalized against the fundamental symplectic unit $\pi \hbar$. This yields a scaling law where energy is the product of the "blob count" raised to a dimensional index and a characteristic temporal power:
+Landauer erasure over a characteristic time $\tau_0$ requires an action $A_L$ inside the symplectic quantum of action: 
 
 \begin{equation}
-E_L \approx \frac{C(n)}{\tau} \pi \hbar \left( \frac{\mathcal{A}}{\pi \hbar} \right)^{\frac{n_\perp}{2}}
+k_{B}T\ln(2)K(\mathrm{Q})\tau_0 \le A_L \le \pi \hbar
 \end{equation}
-
-\noindent Where:
-\begin{itemize}
-    \item $\mathcal{A}$ is the total action of the system ($[M L^2 T^{-1}]$).
-    \item $\pi \hbar$ is the \textbf{de Gosson capacity}, defining the minimum phase-space volume of a rigid quantum blob.
-    \item $\tau$ is the \textbf{erasure duration} (gate time), often derived from the Margolus-Levitin theorem or Lloyd's limit $\tau \sim \hbar/E$, providing the necessary $T^{-1}$ dimension to convert action to energy.
-    \item $n_\perp = n - 1/2$ is the \textbf{transverse reduction index}. This represents the effective dimensionality of the "information horizon" through which the bulk action must be processed during erasure.
-    \item $C(n) = \frac{\pi^{n/2}}{2^n \Gamma(n/2 + 1)}$ is the \textbf{geometric coefficient} of a unit $n$-ball, representing the \textbf{symplectic packing efficiency}. It accounts for the volume lost when rigid, non-squeezable blobs are packed into a bounding hypercubic manifold.
-\end{itemize}
 
 \begin{figure}[htbp]
     \centering
@@ -562,5 +552,20 @@ The discrepancy between the de Gosson geometric coefficient and the Susskind-CA 
 
 \subsection*{Conclusion}
 The $10^9$ data points obtained via \textbf{Stern-Brocot tree search} confirm that the algorithmic cost of erasure is a function of the \textbf{Symplectic Projection}. The shift from $\mathcal{A}^{1/4}$ in 1D to $\mathcal{A}^1$ in 3D represents the topological transition from a constrained "eye-of-the-needle" erasure to a fully saturated holographic horizon.
+\subsection*{The Generalized Scaling Law: Symplectic Holo-Dynamics}
+We propose that the total Landauer energy $E_L$ required to erase the informational state of a manifold is a function of its bulk action $\mathcal{A}$, modulated by the topological constraints of the \textbf{de Gosson quantum blob}. To maintain dimensional consistency, the action must be normalized against the fundamental symplectic unit $\pi \hbar$. This yields a scaling law where energy is the product of the "blob count" raised to a dimensional index and a characteristic temporal power:
+
+\begin{equation}
+E_L \approx \frac{C(n)}{\tau} \pi \hbar \left( \frac{\mathcal{A}}{\pi \hbar} \right)^{\frac{n_\perp}{2}}
+\end{equation}
+
+\noindent Where:
+\begin{itemize}
+    \item $\mathcal{A}$ is the total action of the system ($[M L^2 T^{-1}]$).
+    \item $\pi \hbar$ is the \textbf{de Gosson capacity}, defining the minimum phase-space volume of a rigid quantum blob.
+    \item $\tau$ is the \textbf{erasure duration} (gate time), often derived from the Margolus-Levitin theorem or Lloyd's limit $\tau \sim \hbar/E$, providing the necessary $T^{-1}$ dimension to convert action to energy.
+    \item $n_\perp = n - 1/2$ is the \textbf{transverse reduction index}. This represents the effective dimensionality of the "information horizon" through which the bulk action must be processed during erasure.
+    \item $C(n) = \frac{\pi^{n/2}}{2^n \Gamma(n/2 + 1)}$ is the \textbf{geometric coefficient} of a unit $n$-ball, representing the \textbf{symplectic packing efficiency}. It accounts for the volume lost when rigid, non-squeezable blobs are packed into a bounding hypercubic manifold.
+\end{itemize}
 
 \end{document}
