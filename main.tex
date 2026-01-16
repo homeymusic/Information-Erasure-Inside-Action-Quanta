@@ -41,7 +41,7 @@
 \title{Information Erasure Inside the Quantum of Action}
 
 \begin{abstract}
-By maximizing entropy through Landauer information erasure within de Gosson's quantum of action, we show that continuum states collapse into discrete conjugate observables. Numerical results confirm that these constraints accurately reproduce key quantum phenomena. This work provides an algorithmic-geometric correspondence to quantum mechanics at the entropic limit of action.
+By maximizing entropy through Landauer information erasure within de Gosson's quantum of action, we show that continuum states collapse into discrete conjugate observables. Numerical results confirm that these constraints accurately reproduce key quantum phenomena. This work provides an thermodynamic-geometric correspondence to quantum mechanics at the entropic limit of action.
 \end{abstract}
 
 \author{Brian S. Mulloy\orcidlink{0000-0002-1803-3172}}
@@ -55,15 +55,82 @@ By maximizing entropy through Landauer information erasure within de Gosson's qu
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{erase.pdf}
-    \caption{\textbf{Erasure within a quantum of action} (schematic). Within a symplectic quantum of action defined by $A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the algorithmic information of the operationally indistinguishable microstates $\{q_?\}$ for the q-coordinate—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased by thermodynamic necessity. The indistinguishable microstates collapse to the macrostate $\mathbf{Q_0} : |q_? - \mathbf{Q_0}| = |\delta_q| \le \Delta q$ defined by the minimal binary program $\mathbf{s_0}$ (e.g., \texttt{1101}) of length $K(\mathbf{Q_0}) = |\mathbf{s_0}|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_L$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum of action $k_{B}T\ln(2)K(\mathbf{Q_0})\tau_L \le A_L \le \pi \hbar$.}
+    \caption{\textbf{Erasure within a quantum of action} (schematic). Within a symplectic quantum of action defined by $A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the thermodynamic information of the operationally indistinguishable microstates $\{q_?\}$ for the q-coordinate—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased by thermodynamic necessity. The indistinguishable microstates collapse to the macrostate $\mathbf{Q_0} : |q_? - \mathbf{Q_0}| = |\delta_q| \le \Delta q$ defined by the minimal binary program $\mathbf{s_0}$ (e.g., \texttt{1101}) of length $K(\mathbf{Q_0}) = |\mathbf{s_0}|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_L$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum of action $k_{B}T\ln(2)K(\mathbf{Q_0})\tau_L \le A_L \le \pi \hbar$.}
     \label{fig:erase}
 \end{figure}
-
 \section{Overview}
 
-The de Gosson quantum of action is defined as 
+The characteristic action (facilitating dimensionless, normalized units) is defined as 
+\begin{equation}
+    A_0 = q_0 p_0 = \hbar.
+\end{equation}
 
-$$A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$$
+The de Gosson quantum of action, representing the minimum symplectic capacity of a phase-space ``blob,'' is defined by the area of an ellipse with conjugate diameters $\Delta q$ and $\Delta p$:
+\begin{equation}
+    A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar.
+\end{equation}
+
+For a system with macroscopic semi-axes $\mathcal{Q}$ and $\mathcal{P}$, the total system action $A_\Gamma$ is the sum of these elementary quanta. Given that the system is defined by a conjugate pair of action-volumes, we account for both degrees of freedom in the counting logic:
+\begin{equation}
+    A_\Gamma = \sum A_{d\Gamma} = \pi \hbar \mathcal{Q} \mathcal{P} \ge \pi \hbar.
+\end{equation}
+
+The total available microstate capacity, or counting logic of the system, is thus:
+\begin{equation}
+    N_\Gamma = 2 \mathcal{Q}\mathcal{P}.
+\end{equation}
+For a macroscopic system, $N_\Gamma \gg 1$, whereas the ground state is reached at the bifurcation limit $N_\Gamma = 2$, representing the irreducible conjugate pair.
+\section{The Thermodynamic Necessity of Conjugate Action Quanta}
+
+\subsection{The Entropic Conflict}
+The core constraint sets a strict cap on the thermodynamic complexity a single ``action blob'' can contain:
+\begin{equation}
+k_{B}T\ln(2)K(\mathbf{Q_0}, \mathbf{P_0})\tau_L \le A_L \le \pi \hbar.
+\end{equation}
+If one attempts to pack the full algorithmic information of both position and momentum into a single blob, the system exceeds the fundamental limit imposed by the Planck constant $\hbar$. A single quantum blob represents an absolute minimum symplectic volume, leaving no geometric ``slack'' for the simultaneous precision of conjugate values.
+
+\subsection{The Additivity of Action-Information and the Conjugate Leap}
+
+By defining the joint complexity of the system as the sum of independent binary programs on the universal Landauer machine $\mathcal{U}_{\mathrm{L}}$, we establish $K(\mathbf{Q_0}, \mathbf{P_0}) = |\mathbf{s_{Q_0}}| + |\mathbf{s_{P_0}}|$. Consequently, the Landauer bound on the characteristic erasure time $\tau_L$ is constrained by:
+\begin{equation}
+k_{B}T\ln(2) \left( |\mathbf{s_{Q_0}}| + |\mathbf{s_{P_0}}| \right) \tau_L \le \pi \hbar.
+\end{equation}
+
+This identity reveals that the ``leap'' from a single microstate continuum to a conjugate pair of observables is a thermodynamic necessity. Because the information budget is limited by the \textbf{symplectic capacity} \cite{deGosson2011} of the quantum blob ($\pi \hbar$), the system cannot resolve both $q$ and $p$ within a single orientation. 
+
+To maintain the total action while reducing complexity through \textbf{Landauer erasure} \cite{Landauer1961}, the universe bifurcates the action into a \textbf{conjugate pair}:
+\begin{itemize}
+    \item \textbf{The Q-Blob:} Minimizes position uncertainty by utilizing the thermodynamic slack of the conjugate momentum program.
+    \item \textbf{The P-Blob:} Minimizes momentum uncertainty by utilizing the thermodynamic slack of the conjugate position program.
+\end{itemize}
+
+This duality maps the bulk thermodynamic information into the discrete, erasable bits of our observable world, ensuring the erasure time adheres to the absolute \textbf{Planckian dissipation limit} $\tau_{\hbar} = \frac{\hbar}{k_B T}$, scaled by the geometric factor $\frac{\pi}{\ln(2)}$.
+
+\section{de Gosson}
+
+The characteristic action (facilitating dimensionless, normalized units) is defined as 
+\begin{equation}
+    A_0 = q_0 p_0 = \hbar.
+\end{equation}
+
+The de Gosson quantum of action, representing the minimum symplectic capacity of a phase-space ``blob,'' is defined by the area of an ellipse with conjugate diameters $\Delta q$ and $\Delta p$:
+\begin{equation}
+    A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar.
+\end{equation}
+
+For a system with macroscopic semi-axes $\mathcal{Q}$ and $\mathcal{P}$ (where $\Delta Q = 2q_0\mathcal{Q}$ and $\Delta P = 2p_0\mathcal{P}$), the total system action $A_\Gamma$ is the sum of these elementary quanta:
+\begin{equation}
+    A_\Gamma = \sum A_{d\Gamma} = \frac{\pi}{4} (2 q_0 \mathcal{Q}) (2 p_0 \mathcal{P}) = \pi \hbar \mathcal{Q} \mathcal{P} \ge \pi \hbar.
+\end{equation}
+
+The counting logic dictates that the system contains a discrete number of action quanta:
+\begin{equation}
+    N_\Gamma = \mathcal{Q}\mathcal{P}.
+\end{equation}
+In this framework, a macroscopic system is characterized by $N_\Gamma \gg 1$, while the quantum ground state is recovered at the lower bound, $N_\Gamma = 1$.
+
+
+\section{Landauer}
 
 Landauer erasure over a characteristic time $\tau_L$ requires an action $A_L$ bounded by the symplectic quantum of action,
 
@@ -85,10 +152,6 @@ and
 
 where $K(\mathbf{Q_0}, \mathbf{P_0}) = |\mathbf{s_{Q_0}}| + |s_{P_0}|$.
 
-and the sum of those quanta gives the total action of the sytem
-
-$$A_\Gamma = \sum A_{d \Gamma}.$$
-
 
 The Landauer erasure time $\tau _{L}$ for the ground state $K(\mathbf{Q}_{\mathbf{0}})=1$ is 
 
@@ -96,7 +159,7 @@ The Landauer erasure time $\tau _{L}$ for the ground state $K(\mathbf{Q}_{\mathb
 \tau _{L}\le \frac{\pi \hbar }{k_{B}T\ln (2)}=\frac{\pi }{\ln (2)}\tau _{\hbar },
 \end{equation}
 
-where $\tau _{\hbar }=\frac{\hbar }{k_{B}T}$ is the Planckian dissipation time. Here, the factor of $\pi $ accounts for the elliptical geometry of the quantum of action, while $\ln (2)$ represents the entropic cost of a single bit erasure. This establishes that the erasure time is a specific algorithmic-geometric scaling of the absolute quantum-thermal speed limit.
+where $\tau _{\hbar }=\frac{\hbar }{k_{B}T}$ is the Planckian dissipation time. Here, the factor of $\pi $ accounts for the elliptical geometry of the quantum of action, while $\ln (2)$ represents the entropic cost of a single bit erasure. This establishes that the erasure time is a specific thermodynamic-geometric scaling of the absolute quantum-thermal speed limit.
 
 \begin{figure}[htbp]
     \centering
@@ -118,12 +181,12 @@ where $\tau _{\hbar }=\frac{\hbar }{k_{B}T}$ is the Planckian dissipation time. 
     \label{fig:conjugate_quanta}
 \end{figure}
 
-\section{The Algorithmic Necessity of Conjugate Action Quanta}
+\section{The Thermodynamic Necessity of Conjugate Action Quanta}
 
 \subsection{The Entropic Conflict}
-The core equation sets a strict cap on how much algorithmic complexity a single "action blob" can contain:
-\[k_{B}T\ln(2)K(\mathbf{Q_0})\tau_L \le A_L \le \pi \hbar\]
-If one attempts to place all information for both position and momentum into one blob, they run into the fundamental limit imposed by the Planck constant $\hbar$. A single quantum blob in phase space represents an absolute minimum volume, leaving no room for precise conjugate values.m
+The core equation sets a strict cap on how much thermodynamic complexity a single "action blob" can contain:
+\[k_{B}T\ln(2)K(\mathbf{Q_0}, \mathbf{P_0})\tau_L \le A_L \le \pi \hbar\]
+If one attempts to place all information for both position and momentum into one blob, they run into the fundamental limit imposed by the Planck constant $\hbar$. A single quantum blob in phase space represents an absolute minimum volume, leaving no room for precise conjugate values.
 
 \subsection{The Additivity of Action-Information and the Conjugate Leap}
 
@@ -133,22 +196,22 @@ By defining the joint complexity of the system as the sum of independent binary 
 k_{B}T\ln(2) \left( |\mathbf{s_{Q_0}}| + |\mathbf{s_{P_0}}| \right) \tau_L \le \pi \hbar.
 \end{equation}
 
-This identity reveals that the "leap" from a single microstate continuum to a conjugate pair of observables is an algorithmic necessity. Because the information budget for a discrete reality is limited by the \textbf{symplectic capacity} \cite{deGosson2011} of the ``quantum blob'' ($\pi \hbar$), the system cannot resolve both position and momentum within a single geometric orientation. 
+This identity reveals that the "leap" from a single microstate continuum to a conjugate pair of observables is an thermodynamic necessity. Because the information budget for a discrete reality is limited by the \textbf{symplectic capacity} \cite{deGosson2011} of the ``quantum blob'' ($\pi \hbar$), the system cannot resolve both position and momentum within a single geometric orientation. 
 
 To maintain the total action while reducing complexity through \textbf{Landauer erasure} \cite{Landauer1961}, the universe bifurcates the action into a \textbf{conjugate pair}:
 \begin{itemize}
-    \item \textbf{The Q-Blob:} Minimizes position uncertainty by utilizing the algorithmic ``slack'' of the conjugate momentum program.
-    \item \textbf{The P-Blob:} Minimizes momentum uncertainty by utilizing the algorithmic ``slack'' of the conjugate position program.
+    \item \textbf{The Q-Blob:} Minimizes position uncertainty by utilizing the thermodynamic ``slack'' of the conjugate momentum program.
+    \item \textbf{The P-Blob:} Minimizes momentum uncertainty by utilizing the thermodynamic ``slack'' of the conjugate position program.
 \end{itemize}
 
-This duality effectively maps the bulk algorithmic information into the discrete, erasable bits of our observable world, ensuring that the erasure time adheres to the absolute \textbf{Planckian dissipation limit} $\tau_{\hbar} = \frac{\hbar}{k_B T}$, scaled by the factor $\frac{\pi}{\ln(2)}$ which bridges de Gosson's elliptical geometry with thermodynamic entropy.
+This duality effectively maps the bulk thermodynamic information into the discrete, erasable bits of our observable world, ensuring that the erasure time adheres to the absolute \textbf{Planckian dissipation limit} $\tau_{\hbar} = \frac{\hbar}{k_B T}$, scaled by the factor $\frac{\pi}{\ln(2)}$ which bridges de Gosson's elliptical geometry with thermodynamic entropy.
 
 
 
-\subsection{The Algorithmic-Geometric Solution}
+\subsection{The thermodynamic-Geometric Solution}
 To maintain a consistent physical description (which allows both position-space and momentum-space realities), the system must utilize two linked quanta of action---a \textbf{conjugate pair}.
 \begin{itemize}
-    \item \textbf{The "Q Blob" (Position Focus):} This state prioritizes the resolution of position information. To achieve a collapse to a discrete observable $\mathbf{Q_0}$, the system utilizes the algorithmic "slack" of the conjugate momentum, satisfying:
+    \item \textbf{The "Q Blob" (Position Focus):} This state prioritizes the resolution of position information. To achieve a collapse to a discrete observable $\mathbf{Q_0}$, the system utilizes the thermodynamic "slack" of the conjugate momentum, satisfying:
     \begin{equation}
         |q_{?} - \mathbf{Q_0}| \le \mathcal{P}^{-1}
     \end{equation}
@@ -160,7 +223,7 @@ To maintain a consistent physical description (which allows both position-space 
     \end{equation}
     Geometrically, this corresponds to a horizontal orientation in phase space where position uncertainty is minimized relative to the available action $\mathcal{A}$.
 
-    \item \textbf{The "P Blob" (Momentum Focus):} This state prioritizes the resolution of momentum information. To achieve a collapse to a discrete observable $\mathbf{P_0}$, the system utilizes the algorithmic "slack" of the conjugate position, satisfying:
+    \item \textbf{The "P Blob" (Momentum Focus):} This state prioritizes the resolution of momentum information. To achieve a collapse to a discrete observable $\mathbf{P_0}$, the system utilizes the thermodynamic "slack" of the conjugate position, satisfying:
     \begin{equation}
         |p_{?} - \mathbf{P_0}| \le \mathcal{Q}^{-1}
     \end{equation}
@@ -174,13 +237,13 @@ To maintain a consistent physical description (which allows both position-space 
 \end{itemize}
 
 
-The series of plots illustrates this: as the "transition" progresses (representing energy levels of a Quantum Harmonic Oscillator), the two blobs morph while maintaining their duality, confirming their linked nature as an algorithmic necessity.
+The series of plots illustrates this: as the "transition" progresses (representing energy levels of a Quantum Harmonic Oscillator), the two blobs morph while maintaining their duality, confirming their linked nature as an thermodynamic necessity.
 
 \subsection{The Origin of Quantum Fluctuations}
 
-We propose that the \textbf{quantum fluctuation}, $\delta_q$, is the physical isomorphism of algorithmic information loss. While traditionally viewed as stochastic noise, $\delta_q$ is revealed here to be the physical coordinate displacement resulting from the erasure of the microstate program $s_?$ into the minimal macrostate program $\mathbf{s_0}$. 
+We propose that the \textbf{quantum fluctuation}, $\delta_q$, is the physical isomorphism of thermodynamic information loss. While traditionally viewed as stochastic noise, $\delta_q$ is revealed here to be the physical coordinate displacement resulting from the erasure of the microstate program $s_?$ into the minimal macrostate program $\mathbf{s_0}$. 
 
-On the algorithmic side, the universe discards a string length $\Delta I = |s_?| - |\mathbf{s_0}|$. On the physical side, this is expressed as the fluctuation:
+On the thermodynamic side, the universe discards a string length $\Delta I = |s_?| - |\mathbf{s_0}|$. On the physical side, this is expressed as the fluctuation:
 \begin{equation}
     \delta_q = q_{?} - \mathbf{Q_0}
 \end{equation}
@@ -254,9 +317,9 @@ This thermodynamic collapse is executed by a universal computing machine we call
 \mathcal{U}_{\mathrm{L}}(\{q_{?}\}) \mapsto \mathbf{Q_0}
 \end{equation}
 
-which irreversibly erases the algorithmic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathbf{Q_0}) = |\mathbf{s_0}|$ defined by the minimal program $\mathbf{s_0}$, where $K(\mathbf{Q_0})$ is the Kolmogorov complexity and $|\mathbf{s_0}|$ is the length of the program's binary string.
+which irreversibly erases the thermodynamic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathbf{Q_0}) = |\mathbf{s_0}|$ defined by the minimal program $\mathbf{s_0}$, where $K(\mathbf{Q_0})$ is the Kolmogorov complexity and $|\mathbf{s_0}|$ is the length of the program's binary string.
 
-The bound $|q_{?} - \mathbf{Q_0}| \le \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the algorithmic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathbf{Q_0}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s_0}$ consistent with the $\pi \hbar$ boundary.
+The bound $|q_{?} - \mathbf{Q_0}| \le \mathcal{P}^{-1}$ establishes a fundamental thermodynamic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the thermodynamic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathbf{Q_0}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded thermodynamic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s_0}$ consistent with the $\pi \hbar$ boundary.
 
 \subsection{The Canonical Flow}
 
@@ -280,20 +343,20 @@ This thermodynamic collapse is executed by a universal computing machine we call
 \mathcal{U}_{\mathrm{L}}(\{q_{?}\}) \mapsto \mathbf{Q_0}
 \end{equation}
 
-which irreversibly erases the algorithmic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathbf{Q_0}) = |\mathbf{s_0}|$ defined by the minimal program $\mathbf{s_0}$, where $K(\mathbf{Q_0})$ is the Kolmogorov complexity and $|\mathbf{s_0}|$ is the length of the program's binary string.
+which irreversibly erases the thermodynamic information of the indistinguishable microstates $\{q_{?}\} : \pi \hbar$, mapping them to the one minimal complexity state $K(\mathbf{Q_0}) = |\mathbf{s_0}|$ defined by the minimal program $\mathbf{s_0}$, where $K(\mathbf{Q_0})$ is the Kolmogorov complexity and $|\mathbf{s_0}|$ is the length of the program's binary string.
 
-The bound $|q_{?} - \mathbf{Q_0}| \le \mathcal{P}^{-1}$ establishes a fundamental algorithmic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the algorithmic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathbf{Q_0}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded algorithmic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s_0}$ consistent with the $\pi \hbar$ boundary.
+The bound $|q_{?} - \mathbf{Q_0}| \le \mathcal{P}^{-1}$ establishes a fundamental thermodynamic event horizon for the physical state. Within this framework, the normalized momentum $\mathcal{P}$ functions as a computational budget; higher momentum scales provide the necessary action to sustain the thermodynamic information required for higher-resolution microstates. Conversely, when the work required to maintain the distinction between a microstate $q_{?}$ and its macrostate $\mathbf{Q_0}$ exceeds the available action, the Landauer eraser enforces a transition to the state of bounded thermodynamic complexity. This thermodynamic collapse effectively truncates the bit-string representation of the state, mapping the indistinguishable sub-resolution information to the minimal complexity program $\mathbf{s_0}$ consistent with the $\pi \hbar$ boundary.
 
 \subsection*{Informational Substrate and the Universal Computer}
 
-In defining the bit-length $|s^*|$ of a physical state, we must establish the computational substrate upon which these specifications are constructed. Consistent with Zurek's observation that the selection of a specific universal computer $\mathcal{U}$ is mathematically arbitrary for the determination of algorithmic complexity, we adopt a framework scaled to the fundamental units of phase space.
+In defining the bit-length $|s^*|$ of a physical state, we must establish the computational substrate upon which these specifications are constructed. Consistent with Zurek's observation that the selection of a specific universal computer $\mathcal{U}$ is mathematically arbitrary for the determination of thermodynamic complexity, we adopt a framework scaled to the fundamental units of phase space.
 
 \subsection*{The Stern-Brocot Computer}
 Throughout this paper, we utilize a universal computer $\mathcal{U}$ based on the \textbf{Stern-Brocot construction}, with its output scaled to the characteristic Planck-scale unit $x_0$:
 \begin{equation}
 \mathcal{U} := x_0 \operatorname{SB}
 \end{equation}
-By defining the computer in this manner, we establish a direct isomorphism between the physical resolution limit $1/\mathcal{P}$ and the algorithmic depth of the coordinate specification. The Hamiltonian's action budget $S$ thus dictates the maximum depth of the Stern-Brocot path, ensuring that the bit-length $|s^*|$ remains physically bounded by the symplectic floor.
+By defining the computer in this manner, we establish a direct isomorphism between the physical resolution limit $1/\mathcal{P}$ and the thermodynamic depth of the coordinate specification. The Hamiltonian's action budget $S$ thus dictates the maximum depth of the Stern-Brocot path, ensuring that the bit-length $|s^*|$ remains physically bounded by the symplectic floor.
 
 \subsubsection*{The Invariance of the Computational Substrate}
 While the specific bit-length of a coordinate is dependent on the selection of the universal computer $\mathcal{U}$, the validity of the measure rests entirely on the consistency of the chosen substrate. As established by Li and Vit\'{a}nyi \cite{li_vitanyi_2026} and emphasized by Zurek \cite{zurek_1989}, any comparative analysis of bit-strings $s$ remains objective so long as all strings are executed on the same reference machine. 
@@ -301,7 +364,7 @@ While the specific bit-length of a coordinate is dependent on the selection of t
 This consistency addresses the objection that highly symmetric irrational values, such as the golden ratio ($\phi$), could be "compressed" into a trivial program (e.g., "repeat 10"). While one is free to imagine a symbolic computer that outputs $\frac{1+\sqrt{5}}{2}$ as a single primitive—a device whose name was Euclid—such a computer represents a different physical mapping. Within the fixed framework of $\mathcal{U}_{SB}$, every bit-string $s$ is parsed strictly as a path to a rational terminus $X \in \mathbb{Q}$ that saturates the Heisenberg cell. Because we maintain $\mathcal{U}_{SB}$ as our invariant reference, the bit-length $|s^*|$ provides a consistent and objective measure of the Hamiltonian action required for state specification.
 
 
-\textit{Note: For a formal treatment of the Stern-Brocot tree as an algorithmic complexity generator and its mapping to rational coordinate approximations, see Appendix A.}
+\textit{Note: For a formal treatment of the Stern-Brocot tree as an thermodynamic complexity generator and its mapping to rational coordinate approximations, see Appendix A.}
 
 \section*{Symplectic Reciprocity and Conjugate Specification}
 
@@ -312,7 +375,7 @@ In a symplectic phase space, the informational budget provided by the Hamiltonia
 \begin{equation}
 |s_x^*| \propto \mathcal{P} \quad \text{and} \quad |s_p^*| \propto \mathcal{L}
 \end{equation}
-To avoid redundant formalism, we define the \textbf{Conjugate Bound}: any algorithmic result derived for the specification of $x$ using the computer $\mathcal{U} := x_0 \operatorname{SB}$ holds isomorphically for the specification of $p$ using the conjugate computer $\mathcal{U}^\dagger := p_0 \operatorname{SB}$.
+To avoid redundant formalism, we define the \textbf{Conjugate Bound}: any thermodynamic result derived for the specification of $x$ using the computer $\mathcal{U} := x_0 \operatorname{SB}$ holds isomorphically for the specification of $p$ using the conjugate computer $\mathcal{U}^\dagger := p_0 \operatorname{SB}$.
 
 \subsection*{The Total Informational Volume}
 The fundamental limit of the theory is not on a single coordinate, but on the \textbf{Total Specification}:
@@ -329,18 +392,18 @@ $$\frac{\pi}{4}\mathcal{L}|q_{?}-\mathbf{Q_0}|\Delta p<h/2.$$
 
 Because the specific value of $x_{?}$ is rendered forever unknowable by this many-to-one compression, the erasure is logically irreversible. 
 
- The difference between $x$ and $x_{?}$ is that the algorithmic complexity $|b_?|$ of $x_?$ is greater than the algorithmic complexity of the minimal algorithmic complexity value $|b_?| > |b^*|$ within the quantum of action.
+ The difference between $x$ and $x_{?}$ is that the thermodynamic complexity $|b_?|$ of $x_?$ is greater than the thermodynamic complexity of the minimal thermodynamic complexity value $|b_?| > |b^*|$ within the quantum of action.
 
 \medskip
 
 We define $b$ as the program bit string of length $|b|$ required to specify 
 the observed state $x$. Because every additional bit in the string incurs 
 a thermodynamic erasure cost of $kT \ln 2$, the physical system is subject 
-to an algorithmic-thermodynamic pressure. It is therefore a thermodynamic 
+to an thermodynamic-thermodynamic pressure. It is therefore a thermodynamic 
 necessity that from the ensemble of available microstates 
 $\{x_? : |x_? - x| \Delta p < h/2 \}$, the observed value $x$ must 
 correspond to the unique bit string $\mathbf{b^*}$ of minimal length 
-$|\mathbf{b^*}|$. This is expressed as the algorithmic mapping 
+$|\mathbf{b^*}|$. This is expressed as the thermodynamic mapping 
 $$x = \mathcal{U}(\mathbf{b^*})$$ 
 where $\mathcal{U}$ represents the universal physical constructor that 
 identifies the state $x$ as the output of the minimal program $\mathbf{b^*}$ 
@@ -353,8 +416,8 @@ Landauer established, longer strings represent higher-potential energy states
 for the coupled system-reservoir ensemble, and thus $\mathbf{b^*}$ is the 
 only state whose entropy can be fully dissipated by the local thermal 
 background [2]. Furthermore, in the framework of the 
-\textit{Foundations of Algorithmic Thermodynamics} [3], $\mathbf{b^*}$ 
-represents the "coarsest" algorithmic descriptor that remains invariant 
+\textit{Foundations of thermodynamic Thermodynamics} [3], $\mathbf{b^*}$ 
+represents the "coarsest" thermodynamic descriptor that remains invariant 
 under environmental interaction. Any higher-complexity representation $b_{n}$ 
 is thermodynamically unstable; the extra information is effectively 
 "scrambled" by the thermal reservoir, forcing the system to halt at the 
@@ -373,15 +436,15 @@ In this framework, the Stern-Brocot tree—a complete binary search tree of all 
 \begin{equation}
 x = x_0 \operatorname{SB}(\mathbf{b^*}) = x_0 X
 \end{equation}
-This traversal is not indefinite; it is governed by the thermodynamic necessity to halt. As the tree is descended, the bit-length $|\mathbf{b^*}|$ increases, incurring an cumulative erasure cost of $|\mathbf{b^*}|kT\ln 2$. Consequently, the algorithmic thermodynamics select the exact level where the resolution limit $|x_{?} - x_0 \operatorname{SB}(\mathbf{b^*})| \Delta p < h/2$ is first satisfied. By embedding the Stern-Brocot tree directly into the constructor, the physical system ensures that the resulting quantized value $x$ is the most algorithmically efficient representation of the  available microstates 
+This traversal is not indefinite; it is governed by the thermodynamic necessity to halt. As the tree is descended, the bit-length $|\mathbf{b^*}|$ increases, incurring an cumulative erasure cost of $|\mathbf{b^*}|kT\ln 2$. Consequently, the thermodynamic thermodynamics select the exact level where the resolution limit $|x_{?} - x_0 \operatorname{SB}(\mathbf{b^*})| \Delta p < h/2$ is first satisfied. By embedding the Stern-Brocot tree directly into the constructor, the physical system ensures that the resulting quantized value $x$ is the most thermodynamically efficient representation of the  available microstates 
 $\{x_? : |x_? - x_0 X| \Delta p < h/2 \}$. This mechanism minimizes the complexity of the physical record by selecting the most accessible rational convergent within the resolution bound, effectively forcing the phase-space to emerge as a quantized structure from the thermodynamic limit of information erasure.
 
 \medskip
 The physical impossibility of resolving irrational states is best illustrated by the Golden Ratio, 
 $$\phi \approx 1.618 \ 033 \ 988 \ 749 \ \dots$$ 
-In the Stern-Brocot implementation of $\mathcal{U}$, the program required to compute $x = \phi x_0$ is a non-terminating instruction set $b_{\phi} = (1, 0, 1, 0, \dots)$. This infinite string exposes a critical divergence between the Shannon entropy $H_{Sh}$---the \textit{ensemble average} of information---and the algorithmic entropy $H_{alg}$, which quantifies the physical complexity of the \textit{individual microstate}. 
+In the Stern-Brocot implementation of $\mathcal{U}$, the program required to compute $x = \phi x_0$ is a non-terminating instruction set $b_{\phi} = (1, 0, 1, 0, \dots)$. This infinite string exposes a critical divergence between the Shannon entropy $H_{Sh}$---the \textit{ensemble average} of information---and the thermodynamic entropy $H_{alg}$, which quantifies the physical complexity of the \textit{individual microstate}. 
 
-Following the framework of algorithmic thermodynamics \cite{Ebtekar2025}, we define the relationship between the ensemble average and the individual microstate complexity:
+Following the framework of thermodynamic thermodynamics \cite{Ebtekar2025}, we define the relationship between the ensemble average and the individual microstate complexity:
 \begin{equation}
     H_{Sh} = -\sum_{i \in \{0,1\}} w_i \log_2 w_i, \quad H_{alg}(x_{?}) = |b|
 \end{equation}
@@ -390,7 +453,7 @@ where $w_i$ represents the statistical probability of a branching instruction $i
     \mathcal{W} = \lim_{|b| \to \infty} |b| k T \ln 2 = \infty
 \end{equation}
 
-This distinction is fundamental: whereas Shannon entropy measures our mean ignorance of an ensemble, the algorithmic complexity $|b|$ quantifies the actual thermodynamic weight of the specific microstate at each step of its resolution. As Zurek established in his formulation of \textit{physical entropy} \cite{Zurek1989}, the total entropy $S_d = H_{alg} + H_{Sh}$ must account for the information already manifested in the record. Because every additional bit in $b$ incurs a cumulative energy cost, the physical system is subject to an informational pressure that favors the state of minimal complexity. Since no local thermal reservoir possesses the infinite energy capacity required to finalize the non-terminating program $b_\phi$, the constructor $\mathcal{U}$ is forced to \textit{halt} at the minimal program $\mathbf{b^*}$---the unique rational convergent that satisfies the \textbf{Heisenberg resolution limit} $|x_{?} - x| \Delta p < h/2$ with the least thermodynamic work. This thermodynamic barrier proves that irrational coordinates are physically unrealizable, leaving the quantized rational record as the only possible state of the phase-space.
+This distinction is fundamental: whereas Shannon entropy measures our mean ignorance of an ensemble, the thermodynamic complexity $|b|$ quantifies the actual thermodynamic weight of the specific microstate at each step of its resolution. As Zurek established in his formulation of \textit{physical entropy} \cite{Zurek1989}, the total entropy $S_d = H_{alg} + H_{Sh}$ must account for the information already manifested in the record. Because every additional bit in $b$ incurs a cumulative energy cost, the physical system is subject to an informational pressure that favors the state of minimal complexity. Since no local thermal reservoir possesses the infinite energy capacity required to finalize the non-terminating program $b_\phi$, the constructor $\mathcal{U}$ is forced to \textit{halt} at the minimal program $\mathbf{b^*}$---the unique rational convergent that satisfies the \textbf{Heisenberg resolution limit} $|x_{?} - x| \Delta p < h/2$ with the least thermodynamic work. This thermodynamic barrier proves that irrational coordinates are physically unrealizable, leaving the quantized rational record as the only possible state of the phase-space.
 
 
 \subsection{Statistical Heisenberg Uncertainty Principle}
@@ -449,7 +512,7 @@ We say that information has been erased during the compression because we will n
 \end{quote}
 
 We say that information has been erased $|\mathbf{s_0}|kT\ln{2}$ when the microstate collapses to the macrostate $q_? \rightarrow \mathbf{Q_0}, \ \mu_q = q_?q_0, \ q =  \mathbf{Q_0} q_0, \ \mathbf{Q_0} \in \mathbb{Q}$ (dimensionless, normalized units) because we will never find out what the state $q_?$ was originally. State values within the coarse-grained Heisenberg uncertainty cell (quantum blob) are operationally indistinguishable 
-$\frac{\pi}{4}q_0\mathcal{L}|q_? - \mathbf{Q_0}| \Delta p < h/2$. Each $\mathbf{Q_0}$ corresponds to a bit string $\mathbf{s_0}$ which is unique for the given physical system. For any physical system $\Delta q := q_0\mathcal{L}, \ \Delta p := p_0 \mathcal{P}$ is defined by the Hamiltonian. The dimensionless normalized factor $\mathcal{P}$ indicates the momentum and also the resolution limit of the conjugate observable and is determined by the Hamiltonian's energy scale. We find $\mathbf{Q_0}$ and $\mathbf{s_0}$ using the Stern-Brocot tree such that $|q_?/q_0 - \mathbf{Q_0}| < 1 / \mathcal{P} \implies \delta_q \Delta p < h/2$, using the hard symplectic boundary $h/2$ of the Heisenberg cell as opposed to the fuzzy statistical one $\hbar/2$. The spread of the position and momentum as $\mathcal{P}$ increases the ensemble Shannon entropy $\mathrm{H}$ while the increasing resolution $1/\mathcal{P}$ increases the algorithmic entropy $\mathrm{K}$ required to erase the information about the unknown state.
+$\frac{\pi}{4}q_0\mathcal{L}|q_? - \mathbf{Q_0}| \Delta p < h/2$. Each $\mathbf{Q_0}$ corresponds to a bit string $\mathbf{s_0}$ which is unique for the given physical system. For any physical system $\Delta q := q_0\mathcal{L}, \ \Delta p := p_0 \mathcal{P}$ is defined by the Hamiltonian. The dimensionless normalized factor $\mathcal{P}$ indicates the momentum and also the resolution limit of the conjugate observable and is determined by the Hamiltonian's energy scale. We find $\mathbf{Q_0}$ and $\mathbf{s_0}$ using the Stern-Brocot tree such that $|q_?/q_0 - \mathbf{Q_0}| < 1 / \mathcal{P} \implies \delta_q \Delta p < h/2$, using the hard symplectic boundary $h/2$ of the Heisenberg cell as opposed to the fuzzy statistical one $\hbar/2$. The spread of the position and momentum as $\mathcal{P}$ increases the ensemble Shannon entropy $\mathrm{H}$ while the increasing resolution $1/\mathcal{P}$ increases the thermodynamic entropy $\mathrm{K}$ required to erase the information about the unknown state.
 
 
 \subsection{On Sub-Planck Scales}
@@ -468,13 +531,13 @@ The CA conjecture posits that the quantum complexity ($\mathcal{C}$) of a bounda
 \end{equation}
 
 \subsection*{Relevance to the Coordinate-Action Bound}
-The CA conjecture provides a direct academic foundation for the claim that "one cannot specify the value of any physical state with a bit length greater than the capacity of the action." It implies that action is not merely a dynamical integral, but the physical manifestation of algorithmic complexity. 
+The CA conjecture provides a direct academic foundation for the claim that "one cannot specify the value of any physical state with a bit length greater than the capacity of the action." It implies that action is not merely a dynamical integral, but the physical manifestation of thermodynamic complexity. 
 
 While the CA conjecture typically applies to holographic boundary states, the \textbf{Coordinate-Action Bound} extends this logic to the minimal bit-length specification of individual phase-space coordinates ($x, p$), identifying the symplectic quantum $h$ as the fundamental resolution limit for such physical information.
 
 \section*{The Minimal Action-Complexity Bound}
 
-This section summarizes the fundamental limit of physical specification. The theory posits that the algorithmic complexity of a coordinate is not an abstract property, but a physical value whose existence is "funded" by the action capacity of the system.
+This section summarizes the fundamental limit of physical specification. The theory posits that the thermodynamic complexity of a coordinate is not an abstract property, but a physical value whose existence is "funded" by the action capacity of the system.
 
 \subsection*{The Nutshell Expression}
 For any physical state defined by coordinates $(x, p)$ within a system governed by a Hamiltonian $H$, the bit-length $|s^*|$ of the shortest description of that state is strictly bounded by the normalized action capacity:
@@ -612,7 +675,7 @@ The discrepancy between the de Gosson geometric coefficient and the Susskind-CA 
 
 
 \subsection*{Conclusion}
-The $10^9$ data points obtained via \textbf{Stern-Brocot tree search} confirm that the algorithmic cost of erasure is a function of the \textbf{Symplectic Projection}. The shift from $\mathcal{A}^{1/4}$ in 1D to $\mathcal{A}^1$ in 3D represents the topological transition from a constrained "eye-of-the-needle" erasure to a fully saturated holographic horizon.
+The $10^9$ data points obtained via \textbf{Stern-Brocot tree search} confirm that the thermodynamic cost of erasure is a function of the \textbf{Symplectic Projection}. The shift from $\mathcal{A}^{1/4}$ in 1D to $\mathcal{A}^1$ in 3D represents the topological transition from a constrained "eye-of-the-needle" erasure to a fully saturated holographic horizon.
 \subsection*{The Generalized Scaling Law: Symplectic Holo-Dynamics}
 We propose that the total Landauer energy $E_L$ required to erase the informational state of a manifold is a function of its bulk action $\mathcal{A}$, modulated by the topological constraints of the \textbf{de Gosson quantum blob}. To maintain dimensional consistency, the action must be normalized against the fundamental symplectic unit $\pi \hbar$. This yields a scaling law where energy is the product of the "blob count" raised to a dimensional index and a characteristic temporal power:
 
