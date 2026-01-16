@@ -54,15 +54,24 @@ By maximizing entropy through Landauer information erasure within de Gosson's qu
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{erase.pdf}
-    \caption{\textbf{Erasure within a conjugate-bounded quantum of action} (schematic). Within a symplectic quantum of action defined by $A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the binary sequences $\{s_?\}$ (e.g., \texttt{110101010\dots}) of the operationally indistinguishable microstates $\{q_?\}$—bounded by the dimensionless conjugate units $\mathcal{P}=p/p_0$—are irreversibly erased by thermodynamic necessity. The indistinguishable microstates collapse to the macrostate $\mathbf{Q_0}\colon |q_? - \mathbf{Q_0}| = |\delta_q| \le \Delta q$ defined by the minimal binary string $\mathbf{s_0}$ (e.g., \texttt{1101}) of length $K(\mathbf{Q_0}) = |\mathbf{s_0}|$, running on a Landauer erasing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_L$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum of action $k_{B}T\ln(2)K(\mathbf{Q_0})\tau_L \le A_L \le \pi \hbar$.}
+    \caption{\textbf{Erasure within a conjugate-bounded quantum of action} (schematic). 
+Within a symplectic quantum of action defined by $A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, 
+the binary sequences $\{s_?\}$ of operationally indistinguishable microstates $\{q_?\}$—bounded 
+by the dimensionless conjugate units $\mathcal{P}=p/p_0$—are irreversibly erased by 
+thermodynamic necessity. The microstates are mapped by the optimal encoder 
+$\mathbf{s_0} = \mathrm{Enc}_0(q_?, \mathcal{P})$ to the macrostate 
+$\mathbf{Q_0}\colon |q_? - \mathbf{Q_0}| = |\delta_q| \le \Delta q$, where $\mathbf{s_0}$ 
+is the minimal binary string of length $K(\mathbf{Q_0}) = |\mathbf{s_0}|$ required to run 
+the Landauer erasing machine $\mathcal{U}_{\mathrm{L}}$. This erasure over a characteristic 
+time $\tau_L$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum 
+of action: $k_{B}T\ln(2)K(\mathbf{Q_0})\tau_L \le A_L \le \pi \hbar$.}
 \label{fig:erase}
-
-
-\label{fig:erase}
-    \label{fig:erase}
 \end{figure}
 
 \section{Overview}
+
+$$\mathbf{s_0} = \mathrm{Enc}(q_?, \mathcal{P}) \quad \text{where} \quad \mathrm{Enc} \colon \Gamma \times \mathbb{R} \to \{0,1\}^*$$
+
 
      Within a symplectic quantum of action defined by $A_{d\Gamma} = \frac{\pi}{4} \Delta q \Delta p = \pi \hbar$, the algorithmic information of the operationally indistinguishable microstates $\{q_?\}$ for the q-coordinate—defined in dimensionless conjugate units $\mathcal{P}=p/p_0$—specified by binary programs $\{s_?\}$ (e.g., \texttt{110101010\dots})—is irreversibly erased by thermodynamic necessity. The indistinguishable microstates collapse to the macrostate $\mathbf{Q_0}\colon |q_? - \mathbf{Q_0}| = |\delta_q| \le \Delta q$ defined by the minimal binary program $\mathbf{s_0}$ (e.g., \texttt{1101}) of length $K(\mathbf{Q_0}) = |\mathbf{s_0}|$, running on a universal computing machine $\mathcal{U}_{\mathrm{L}}$. This Landauer erasure over a characteristic time $\tau_L$ requires an action $A_{\mathrm{L}}$ bounded by the symplectic quantum of action $k_{B}T\ln(2)K(\mathbf{Q_0})\tau_L \le A_L \le \pi \hbar$.
 
@@ -708,5 +717,12 @@ $A_{L,p} = \frac{\pi}{4} \Delta q \delta_p \le \pi \hbar$
 might complement this:
 
 $A_L = \frac{\pi}{4} \Delta q \Delta p \le \pi \hbar$
+
+\subsection{Mapping the Encoder to the Stern-Brocot Tree}
+
+
+In our computational model, the optimal encoder \(\mathrm{Enc}_{0}\) is implemented as a traversal of the Stern-Brocot tree \(\mathrm{SB}\). Given the microstate \(q_{?}\) and the boundary \(\mathcal{P}\), the encoder identifies the unique binary path \(\mathbf{s}_{\mathbf{0}}\) that minimizes the algorithmic complexity \(K(\mathbf{Q}_{\mathbf{0}})\) while satisfying the symplectic constraints.
+
+$$\mathrm{Enc}_0(q_?, \mathcal{P}) = \operatorname{SB}(\mathbf{Q_0}) \mapsto \mathbf{s_0}$$
 
 \end{document}
