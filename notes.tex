@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+
+% --- Essential Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb} % For advanced math and subequations
+\usepackage{xcolor}           % For colored boxes in lab notes
+\usepackage{hyperref}         % For clickable references
+
+% --- Page Style ---
+\pagestyle{headings}
+\title{Notes on Information Erasure and Fine Structure}
+\author{Research Draft Summary}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{The Information-Action Limit}
+The available action for erasure inside de Gosson's action quanta is defined by:
+\begin{equation}
+\label{eq:InfoActionLimit}
+b E \tau \le \pi \hbar 
+\end{equation}
+where $b$ is the bit count, $E$ is Landauer erasure energy, and $\pi \hbar$ represents the minimal elliptical phase-space area.
+
+\section{Erasure in Conjugate Action Quanta}
+Erasure within a conjugate pair of Heisenberg cells is bounded as follows:
+\begin{subequations}
+\label{eq:SymplecticBounds}
+\begin{equation}
+\label{eq:SymplecticBoundsq}
+\frac{\pi}{4}|\mu_q - q|\Delta p \le \frac{\pi \hbar}{2} 
+\end{equation}
+\begin{equation}
+\label{eq:SymplecticBoundsp}
+\frac{\pi}{4}|\mu_p - p|\Delta q \le \frac{\pi \hbar}{2} 
+\end{equation}
+\end{subequations}
+Each coordinate displacement $(\mu_q - q)$ utilizes exactly half of the available de Gosson action.
+
+\section{Fine Structure Scaling}
+The fine structure constant $\alpha$ emerges from the geometric scaling of these boundaries:
+\begin{equation}
+\alpha = \frac{|\delta_q| \Delta p}{2 \hbar} = \frac{2 \hbar}{\Delta q \Delta p}
+\end{equation}
+The global scaling between the erasure shift and the system boundary follows the squared relation:
+\begin{equation}
+\alpha^2 = \frac{\delta_q}{\Delta q}
+\end{equation}
+
+\vspace{2em}
+
+% --- Lab Notebook Summary Box ---
+\begin{center}
+\fcolorbox{black}{gray!10}{\begin{minipage}{0.9\textwidth}
+\textbf{Lab Note: Geometric Derivation of $\alpha$ via de Gosson Quanta} \\
+\textit{Core Concept:} $\alpha$ scales the Landauer erasure distance to the hard Heisenberg boundaries of the de Gosson "quantum blob."
+
+\begin{itemize}
+    \item \textbf{Action Partition:} Each erasure utilizes exactly $\pi\hbar/2$ of the conjugate pair. 
+    \item \textbf{Hamiltonian Scaling:} For $\alpha \approx 1/137$, the total support $\Delta q \Delta p$ encompasses $\alpha^{-1}$ units of the action bound ($2\hbar$). 
+    \item \textbf{Mappings:} $\delta_q \to r_e$ (Classical Radius), $\Delta q \to a_0$ (Bohr Radius).
+    \item \textbf{Information Link:} Bit complexity $b \propto \alpha^{-1}$, suggesting stability is reached at the Landauer limit across exactly 137 action quanta.
+\end{itemize}
+\end{minipage}}
+\end{center}
+
+
+\subsection*{Historical Context: From Sommerfeld to Information Erasure}
+
+Originally introduced by \textbf{Arnold Sommerfeld} in 1916, the fine-structure constant $\alpha \approx 1/137$ was defined as the ratio of an electron's orbital velocity to the speed of light ($v/c$), bridging the gap between classical orbits and relativistic quantum mechanics. 
+
+In this model, we evolve this geometric tradition by interpreting $\alpha$ as the \textbf{scaling limit of information erasure} within de Gosson's finite-support phase space. Here, $\alpha$ represents the density of addressable macrostates relative to the total available action:
+
+\begin{itemize}
+    \item \textbf{The Erasure Ratio ($\alpha_1$):} Redefines the classical electron radius $r_e$ as the \textit{erasure distance} $\delta_q$ required to map a microstate to a binary address relative to the cell diameter.
+    \item \textbf{The Hamiltonian Ratio ($\alpha_2$):} Defines the Bohr radius $a_0$ as the \textit{system support} boundary $\Delta q$, encompassing exactly $137$ units of action.
+    \item \textbf{The Synthesis:} Just as Sommerfeld linked the velocity scales of the atom, this model links the \textbf{thermodynamic erasure scale} to the \textbf{geometric action scale}.
+\end{itemize}
+
+\begin{equation}
+\label{eq:SommerfeldInfo}
+\alpha = \underbrace{\frac{v}{c}}_{\text{Sommerfeld}} \implies \underbrace{\frac{\delta_q}{\delta_{max}}}_{\text{Erasure Density}}
+\end{equation}
+
+This shift suggests that $\alpha$ is a fundamental constant of \textbf{computational capacity} in phase space, determining how much information can be "squeezed" into the hard boundaries of a de Gosson quantum blob before the continuum collapses into discrete observables.
+
+\end{document}

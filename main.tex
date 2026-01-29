@@ -57,15 +57,61 @@ By maximizing entropy through Landauer information erasure inside de Gosson's qu
 
 \subsection{The Information-Action Limit}
 
-We show that the action available for information erasure inside Heisenberg cells is limited by
+The action available for information erasure inside de Gosson's action quanta—the finite-support Heisenberg cells where states are operationally indistinguishable—is
 \begin{equation}
 \label{eq:InfoActionLimit}
 b E \tau \le \pi \hbar ,
 \end{equation}
-where $b = |\mathbf{s}^*|$ is the length of the minimal binary encoding $\mathbf{s}^*$ of the physical state ($q,p$), $E = k_B T \ln 2$ is the Landauer erasure energy, and $\tau$ is the characteristic time required to flip a single binary value to its orthogonal state. Here $\pi \hbar = \frac{\pi}{4} \Delta q \Delta p$ is the de Gosson quantum of action, the minimal elliptical phase-space area of finite support; unlike statistical variance $\sigma_q \sigma_p$, these dimensions $\Delta q$ and $\Delta p$ define the hard Heisenberg boundaries where states are operationally indistinguishable \cite{DeGosson2003}.
+where $b = b_q + b_p = |\mathbf{s}^*_q| + |\mathbf{s}^*_p|$ is the count of bits in the binary address $\mathbf{s}^*_q,\mathbf{s}^*_p \mapsto (q,p)$ supported by the available action for the physical state $(q,p)$, $E = k_B T \ln 2$ is the Landauer erasure energy, and $\tau$ is the time required to traverse to the binary address. Here $\pi \hbar = \frac{\pi}{4} \Delta q \Delta p$ is the de Gosson quantum of action, the minimal elliptical phase-space area of finite support; unlike statistical variance $\sigma_q \sigma_p$, these dimensions $\Delta q$ and $\Delta p$ define the hard Heisenberg boundaries where states are operationally indistinguishable \cite{DeGosson2003}.
 
-\paragraph{Referencing Example:}
-The information-action limit is captured by the inequality in Eq.~(\ref{eq:InfoActionLimit}).
+\subsection{Information Erasure Inside the Conjugate Action Quanta}
+
+Landauer erasure within a conjugate pair of Heisenberg cells is bounded by:
+\begin{subequations}
+\begin{equation}
+\label{eq:SymplecticBoundsq}
+\frac{\pi}{4}|\mu_q - q|\Delta p \le \frac{\pi \hbar}{2} 
+\end{equation}
+\begin{equation}
+\label{eq:SymplecticBoundsp}
+\frac{\pi}{4}|\mu_p - p|\Delta q \le \frac{\pi \hbar}{2} 
+\end{equation}
+\end{subequations}
+
+where the operationally indistinguishable microstates $\{\mu_q, \mu_p\}$ are irreversibly erased to macrostates $(q,p)$, encoded with the action available in each orthogonal quanta, where the phase-space coordinates map to the binary addresses $(q,p) \mapsto\mathbf{s}^*_q,\mathbf{s}^*_p$.
+
+\subsection{Thermodynamics and Geometry}
+
+These equations relate by
+
+\begin{equation}
+\label{eq:ThermoGeo}
+A_L \le A_{\texttt{erase}} \le A_d\Gamma = \pi \hbar,
+\end{equation}
+
+where $A_L \coloneqq b E \tau$, $A_{\texttt{erase}} = A_{\texttt{erase},q} + A_{\texttt{erase},p}$, $A_{\texttt{erase},q} \coloneqq \frac{\pi}{4}|\mu_q - q|\Delta p$ and $A_{\texttt{erase},p} \coloneqq \frac{\pi}{4}|\mu_p - p|\Delta q \le \frac{\pi \hbar}{2} $, and $A_d\Gamma \coloneqq \frac{\pi}{4} \Delta q \Delta p$. 
+
+\subsection{Fine Structure}
+
+The fine structure ratios are along the coordinate dimension from smallest to largest are the ratio of the erasure distance to the coordinate quantum of action bound (akin to $r_e/\lambda_e$)
+
+\begin{equation}
+\label{eq:alpha1}
+\alpha = \frac{|\delta_q| \Delta p}{2 \hbar}
+\end{equation} where $\delta_q \coloneqq \mu_q - q$ is the erasure distance and $\frac{2 \hbar}{\Delta p}$ is the quantum of action coordinate bound for $A_q$. The ratio of the coordinate quantum of action bound to the overall Hamiltonian (akin to $\lambda_e/a_0$)
+
+\begin{equation}
+\label{eq:alpha2}
+\alpha = \frac{2 \hbar}{\Delta q \Delta p}.
+\end{equation} And the ratio of the erasure distance to the overall Hamiltonian (akin to $r_e/a_0$)
+
+\begin{equation}
+\label{eq:alpha3}
+\alpha^2 = \frac{\delta_q}{\Delta q}.
+\end{equation}
+
+
+\section{Normalized Equations}
 
 \subsection{Information Erasure Inside the Quantum of Action}
 
