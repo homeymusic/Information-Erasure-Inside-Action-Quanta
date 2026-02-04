@@ -76,46 +76,85 @@ b E \tau \le \pi \hbar ,
 \end{equation}
 where $b = b_q + b_p = |\mathbf{s}^*_q| + |\mathbf{s}^*_p|$ is the count of bits in the minimal binary encoding $\mathbf{s}^*_q, \mathbf{s}^*_p$ of the physical state $(q,p)$, $E = k_B T \ln 2$ is the Landauer erasure energy, and $\tau$ is the erasure time. Here $\pi \hbar$ represents a conjugate pair of de Gosson action quanta, defined as the minimal phase-space area of finite support; unlike statistical variance $\sigma_q \sigma_p$, the boundaries $\Delta q$ and $\Delta p$ define the hard Heisenberg limits where states are operationally indistinguishable \cite{DeGosson2003}.
 
-\subsection{Information Erasure Inside the Conjugate Action Quanta}
 
-Landauer erasure within a conjugate pair of de Gosson action quanta is bounded by $A_q + A_p = \pi \hbar$, where 
-\begin{subequations}
-\begin{equation}
-\label{eq:SymplecticBoundsq}
-A_q = \frac{\pi}{4} \delta_q \Delta p = \frac{\pi \hbar}{2} 
-\end{equation}
-\begin{equation}
-\label{eq:SymplecticBoundsp}
-A_p = \frac{\pi}{4}\Delta q \delta_p = \frac{\pi \hbar}{2} 
-\end{equation}
-\end{subequations} 
-yielding the reciprocal relations
-\begin{subequations}
-\begin{equation}
-\label{eq:deltaq}
-\delta_q= \frac{2 \hbar}{\Delta p}
-\end{equation}
-\begin{equation}
-\label{eq:deltap}
-\delta_p = \frac{2 \hbar}{\Delta q}.
-\end{equation}
-\end{subequations} 
-The operationally indistinguishable microstates \(\{\mu _{q},\mu _{p}\}\) are irreversibly erased to macrostates \((q,p)\) through a deterministic mapping dictated by the information-action limit. The erasure distances, \begin{subequations}
-\begin{equation}
-\label{eq:epsilonq}
-\epsilon_q = \mu_q - q
-\end{equation} 
-and
-\begin{equation}
-\label{eq:epsilonp}
-\epsilon_p = \mu_p - p,
-\end{equation}
-\end{subequations}
-preclude the classical continuum; the density of these residues provides the geometric origin of the \(|\psi |^{2}\) distribution, appearing as a 'Devil’s staircase' of quantization when plotted against the microstate coordinates.
 
-Here $|\epsilon_q| \le \delta_q$ and $|\epsilon_p| \le \delta_p$ are encoded with the action available in each orthogonal quanta, where the phase-space coordinates map to the minimal binary addresses $(q,p) \mapsto \mathbf{s}^*_q, \mathbf{s}^*_p$.
 
-\subsection{Thermodynamics and Geometry}
+
+
+\section{Information Erasure Inside the Conjugate Action Quanta}
+
+\subsection{The General Form: Conjugate Action Quanta}
+
+The physical action available for information erasure is constrained within a \textbf{conjugate pair} of de Gosson action quanta. The total action, $A_q + A_p = \pi \hbar$, partitions between the spatial and momentum quanta according to the relative geometric proportions of the phase-space supports, $\Delta q$ and $\Delta p$:
+\begin{equation}
+\label{eq:GeneralPartition}
+A_q = \frac{\pi \hbar}{1 + \frac{\Delta p}{\Delta q}}, \quad A_p = \frac{\pi \hbar}{1 + \frac{\Delta q}{\Delta p}}
+\end{equation}
+These quanta are ellipses with areas defined by their conjugate supports $A_q = \frac{\pi}{4}\delta_q\Delta p$ and $A_p = \frac{\pi}{4}\Delta q \delta_p$. The squeezed dimensions of each quanta, $\delta_q$ and $\delta_p$, represent the maximum deterministic erasure defined by the hard \textbf{Heisenberg limits} where microstates are \textbf{operationally indistinguishable}. These capacities emerge as the symplectic projections of the action:
+\begin{equation}
+\label{eq:GeneralCapacities}
+\delta_q = \frac{4 A_q}{\pi \Delta p}, \quad \delta_p = \frac{4 A_p}{\pi \Delta q}
+\end{equation}
+The conjugate cells are tiled across phase-space. The discrete counts $N_q$ and $N_p$ are dictated by the geometric proportions of the conjugate supports, ensuring a minimum of a single fundamental cell through a floor function constraint:
+\begin{equation}
+\label{eq:GeneralTiling}
+N_q = \max\left(1, \left\lfloor \frac{\Delta p}{\Delta q} \right\rfloor\right), \quad N_p = \max\left(1, \left\lfloor \frac{\Delta q}{\Delta p} \right\rfloor\right)
+\end{equation}
+The structure of the state emerges as microstates with excess action $b E \tau$ are irreversibly erased to macrostates possessing only the action supported by these discrete cells.
+
+\subsection{The Harmonic Oscillator: Symmetrical Quanta}
+
+The Harmonic Oscillator represents a state of dynamical equilibrium. In the ground state, the potential and kinetic energies are balanced, resulting in symmetric supports where $\Delta q = \Delta p$.
+
+\textbf{Explicit Substitution for Action:}
+The symmetry of the supports ($\Delta q = \Delta p$) into Eq. (\ref{eq:GeneralPartition}) yields:
+\begin{equation}
+A_q = \frac{\pi \hbar}{1 + 1} = \frac{\pi \hbar}{2}, \quad A_p = \frac{\pi \hbar}{1 + 1} = \frac{\pi \hbar}{2}
+\end{equation}
+
+\textbf{Explicit Substitution for Capacity:}
+The resulting capacities emerge from Eq. (\ref{eq:GeneralCapacities}) as:
+\begin{equation}
+\delta_q = \frac{4 (\pi \hbar / 2)}{\pi \Delta p} = \frac{2 \hbar}{\Delta p}, \quad \delta_p = \frac{4 (\pi \hbar / 2)}{\pi \Delta q} = \frac{2 \hbar}{\Delta q}
+\end{equation}
+
+\textbf{Explicit Substitution for Tiling:}
+The symmetric supports in Eq. (\ref{eq:GeneralTiling}) yield the unitary tiling of the ground state:
+\begin{equation}
+N_q = \max(1, \lfloor 1 \rfloor) = 1, \quad N_p = \max(1, \lfloor 1 \rfloor) = 1
+\end{equation}
+
+\subsection{The Particle in a Box: Asymmetrical Quanta}
+
+In a box of width $L$, the spatial support is fixed ($\Delta q = L$). This physical constraint forces the \textbf{conjugate pair} into a geometric asymmetry as the momentum support $\Delta p$ increases.
+
+\textbf{Explicit Substitution for Action:}
+Substituting the fixed boundary $\Delta q = L$ into Eq. (\ref{eq:GeneralPartition}):
+\begin{equation}
+A_q = \frac{\pi \hbar}{1 + \frac{\Delta p}{L}}, \quad A_p = \frac{\pi \hbar}{1 + \frac{L}{\Delta p}}
+\end{equation}
+
+\textbf{Explicit Substitution for Capacity:}
+The capacities reflect the divergent scaling of the supports:
+\begin{equation}
+\delta_q = \frac{4 \hbar L}{\Delta p (L + \Delta p)}, \quad \delta_p = \frac{4 \hbar \Delta p}{L (\Delta p + L)}
+\end{equation}
+
+\textbf{Explicit Substitution for Tiling ($N_q$ and $N_p$):}
+The fixed spatial boundary $L$ in Eq. (\ref{eq:GeneralTiling}) dictates the emergent resolution:
+\begin{equation}
+N_p = \max\left(1, \left\lfloor \frac{L}{\Delta p} \right\rfloor\right) = 1, \quad N_q = \max\left(1, \left\lfloor \frac{\Delta p}{L} \right\rfloor\right)
+\end{equation}
+
+\textbf{The Asymmetric Result:}
+As $\Delta p$ increases, the momentum resolution remains at its fundamental limit ($N_p = 1$), indicating that all momentum microstates within the support are \textbf{operationally indistinguishable}. Simultaneously, $N_q$ grows with the momentum support. The spatial support $L$ is resolved with a density of $N_q$ tiles.
+
+
+
+
+
+
+\section{Thermodynamics and Geometry}
 
 These equations relate by
 
