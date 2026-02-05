@@ -148,33 +148,33 @@ N_p = \max\left(1, \left\lfloor \frac{L}{\Delta p} \right\rfloor\right) = 1, \qu
 
 \textbf{The Asymmetric Result:}
 As $\Delta p$ increases, the momentum resolution remains at its fundamental limit ($N_p = 1$), indicating that all momentum microstates within the support are \textbf{operationally indistinguishable}. Simultaneously, $N_q$ grows with the momentum support. The spatial support $L$ is resolved with a density of $N_q$ tiles.
-f
+
 \subsection{The Rigid Rotor: Dynamic Quanta}
 
-The third iconic pillar of the model is the \textbf{Rigid Rotor}. While the Harmonic Oscillator represents vibration and the Particle in a Box represents translation, the Rigid Rotor introduces pure angular motion. In phase space, this motion is characterized by the rotation of the supports $\Delta q(t)$ and $\Delta p(t)$ around the origin. Let $\theta(t)$ represent the instantaneous phase angle, where the geometric aspect ratio is defined by the trigonometric relationship $\kappa(\theta) = \tan \theta$.
+The third iconic pillar is the \textbf{Rigid Rotor}, introducing pure angular motion. In phase space, this motion is characterized by the precession of the conjugate pair within a fixed total action budget $A_q + A_p = \pi \hbar$. As the system rotates, the supports $\Delta q$ and $\Delta p$ vary according to the phase angle $\theta(t)$, where the geometric aspect ratio is defined by the trigonometric relationship $\kappa(\theta) = \tan \theta$.
 
 \textbf{Explicit Substitution for Action:}
-Substituting the rotational aspect ratio $\kappa(\theta)$ into Eq. (\ref{eq:GeneralPartition}) demonstrates how the action quanta precess between dimensions during a single period:
+Substituting the rotational aspect ratio into Eq. (\ref{eq:GeneralPartition}) demonstrates how the action quanta precess between conjugate dimensions during a single period:
 \begin{equation}
 A_q(\theta) = \frac{\pi \hbar}{1 + \tan \theta}, \quad A_p(\theta) = \frac{\pi \hbar}{1 + \cot \theta}
 \end{equation}
-This confirms that the "erasure budget" is a dynamic quantity that follows the rotational orientation of the state.
+This confirms that the ``erasure budget'' is a dynamic conserved quantity that follows the rotational orientation of the state.
 
 \textbf{Explicit Substitution for Capacity:}
-The resulting capacities $\delta_q$ and $\delta_p$ track the angular position of the rotor, revealing the breathing of the Heisenberg limits as the state sweeps through phase space:
+For the Rigid Rotor, the angular capacities $\delta_\theta$ and $\delta_\phi$ are defined as the dimensionless fractional resolution of the total action budget. By normalizing the action partition by the total budget $\pi \hbar$ and simplifying the trigonometric denominators, the units annihilate to yield bounded, dimensionless capacities:
 \begin{equation}
-\delta_q(\theta) = \frac{4 \hbar \cos \theta}{\Delta p (\cos \theta + \sin \theta)}, \quad \delta_p(\theta) = \frac{4 \hbar \sin \theta}{\Delta q (\sin \theta + \cos \theta)}
+\delta_\theta(\theta) = \frac{\cos \theta}{\cos \theta + \sin \theta}, \quad \delta_\phi(\theta) = \frac{\sin \theta}{\cos \theta + \sin \theta}
 \end{equation}
+These identities represent the ``breathing'' of the Heisenberg limits. Unlike linear capacities, these angular forms are strictly bounded between $[0, 1]$, ensuring the information erasure remains within the physical supports of the conjugate pair.
 
-\textbf{Explicit Substitution for Tiling ($N_q$ and $N_p$):}
+\textbf{Explicit Substitution for Tiling ($N_\theta$ and $N_\phi$):}
 The discrete resolution of the state fluctuates as the rotor cycles, governed by the angular tiling counts:
 \begin{equation}
-N_q(\theta) = \max\left(1, \left\lfloor \tan \theta \right\rfloor\right), \quad N_p(\theta) = \max\left(1, \left\lfloor \cot \theta \right\rfloor\right)
+N_\theta(\theta) = \max\left(1, \left\lfloor \tan \theta \right\rfloor\right), \quad N_\phi(\theta) = \max\left(1, \left\lfloor \cot \theta \right\rfloor\right)
 \end{equation}
 
 \textbf{The Dynamic Result:}
-The Rigid Rotor reveals that \textbf{information erasure} is a phase-dependent conservation law. As the system rotates, microstate detail is periodically erased in one dimension to be resolved in the conjugate dimension. This ensures that the symplectic area $\pi \hbar$ is preserved as a covariant property, while the operational indistinguishability of the state oscillates in dynamic equilibrium.
-
+The Rigid Rotor reveals that \textbf{information erasure} is a phase-dependent conservation law. As the system rotates, microstate detail is periodically erased in one dimension to be resolved in the conjugate dimension. This ensures the symplectic area $\pi \hbar$ is preserved as a covariant property, while the operational indistinguishability of the state oscillates in dynamic equilibrium.
 
 
 
