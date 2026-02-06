@@ -8,6 +8,8 @@
 \usepackage{bm}% bold math
 \usepackage{orcidlink}
 \usepackage{mathtools}
+\usepackage{algorithmic}
+\usepackage{algpseudocode}
 
 % -------------- Watermark ----------------
 \usepackage[style=iso]{datetime2}
@@ -65,168 +67,164 @@ System boundaries $\Delta q$ and $\Delta p$ determine the total action $A = \pi 
 \label{fig:erase}
 \end{figure}
 
+
+
+
+
+
+
+
+
 \section{Equations}
 
 \subsection{The Information-Action Limit}
 
-The action available for information erasure inside a conjugate pair of finite-support Heisenberg cells, de Gosson action quanta, is
+The action available for information erasure within a conjugate pair of finite-support Heisenberg cells, the action quanta, is
 \begin{equation}
 \label{eq:InfoActionLimit}
 b E \tau \le \pi \hbar ,
 \end{equation}
-where $b = b_q + b_p = |\mathbf{s}^*_q| + |\mathbf{s}^*_p|$ is the count of bits in the minimal binary encoding $\mathbf{s}^*_q, \mathbf{s}^*_p$ of the physical state $(q,p)$, $E = k_B T \ln 2$ is the Landauer erasure energy, and $\tau$ is the erasure time. Here $\pi \hbar$ represents a conjugate pair of de Gosson action quanta, defined as the minimal phase-space area of finite support; unlike statistical variance $\sigma_q \sigma_p$, the boundaries $\Delta q$ and $\Delta p$ define the hard Heisenberg limits where states are operationally indistinguishable \cite{DeGosson2003}.
-
+where $b = b_q + b_p = |\mathbf{s}^*_q| + |\mathbf{s}^*_p|$ is the count of bits in the minimal binary encoding $\mathbf{s}^*_q, \mathbf{s}^*_p$ of the physical state $(q,p)$, $E = k_B T \ln 2$ is the Landauer erasure energy, and $\tau$ is the erasure time. The total action $\pi \hbar$ is the minimal phase-space area of finite support; unlike statistical variance $\sigma_q \sigma_p$, the boundaries $\Delta q$ and $\Delta p$ define the hard Heisenberg limits where states are operationally indistinguishable \cite{DeGosson2003}.
 
 \section{Information Erasure Inside the Conjugate Action Quanta}
 
-
 \subsection{The General Form: Conjugate Action Quanta}
 
-The physical action available for information erasure is constrained within a \textbf{conjugate pair} of de Gosson action quanta. The total action, $A_q + A_p = \pi \hbar$, partitions between the spatial and momentum quanta according to the relative geometric proportions of the phase-space supports, $\Delta q$ and $\Delta p$:
+The physical action available for information erasure is constrained within a conjugate pair of action quanta. The total action, $A_q + A_p = \pi \hbar$, partitions between the spatial and momentum quanta according to the relative geometric proportions of the phase-space supports, $\Delta q$ and $\Delta p$.
+
+\textit{Action Partition:}
 \begin{equation}
 \label{eq:GeneralPartition}
 A_q = \frac{\pi \hbar}{1 + \left ( \frac{\Delta p / p_0}{\Delta q / q_0}\right )^2}, \quad A_p = \frac{\pi \hbar}{1 + \left (\frac{\Delta q/q_0}{\Delta p/p_0}\right )^2 }
 \end{equation}
 
-These action quanta are defined as ellipses with areas determined by their conjugate supports, $A_q = \frac{\pi}{4}\delta_q\Delta p$ and $A_p = \frac{\pi}{4}\Delta q \delta_p$. The squeezed dimensions, $\delta_q$ and $\delta_p$, represent the \textbf{minor diameters} of these quanta and emerge as the symplectic projections of the action onto the conjugate axes:
+\textit{Symplectic Capacities:}
 \begin{equation}
 \label{eq:GeneralCapacities}
 \delta_q = \frac{4 A_q}{\pi \Delta p}, \quad \delta_p = \frac{4 A_p}{\pi \Delta q}
 \end{equation}
 
-While the supports $\Delta p$ and $\Delta q$ define the macrostate boundaries in phase space, these minor diameters define the \textbf{resolution limit}—the threshold of the hard \textbf{Heisenberg limits} where microstates become \textbf{operationally indistinguishable}. Consequently, $\delta_q$ and $\delta_p$ dictate the maximum deterministic erasure available within the conjugate pair. 
-
-The conjugate cells are tiled across phase-space to fill the total support. The discrete counts $N_q$ and $N_p$ are dictated by the aspect ratio of the conjugate supports, ensuring a minimum of a single fundamental cell through a floor function constraint:
+\textit{Discrete Tiling:}
 \begin{equation}
 \label{eq:GeneralTiling}
 N_q = \max\left(1, \left\lfloor \frac{\Delta p/p_0}{\Delta q / q_0} \right\rfloor\right), \quad N_p = \max\left(1, \left\lfloor \frac{\Delta q/q_0}{\Delta p/p_0} \right\rfloor\right)
 \end{equation}
 
+The supports $\Delta p$ and $\Delta q$ define the macrostate boundaries, while the minor diameters $\delta_q$ and $\delta_p$ define the resolution limit—the threshold of the hard Heisenberg limits where microstates become operationally indistinguishable.
+
 \subsection{The Harmonic Oscillator: Symmetrical Quanta}
 
-The Harmonic Oscillator represents a state of dynamical equilibrium. In the ground state, the potential and kinetic energies are balanced, resulting in symmetric supports where $\Delta q = \Delta p$.
+The Harmonic Oscillator is a state of dynamical equilibrium. In the ground state, the potential and kinetic energies are balanced, resulting in symmetric supports where $\Delta q = \Delta p$.
 
-\textit{Explicit Substitution for Action:}
-The symmetry of the supports ($\Delta q = \Delta p$) into Eq. (\ref{eq:GeneralPartition}) yields a uniform partition of the de Gosson action:
+\textit{Action Partition:}
 \begin{equation}
 A_q = \frac{\pi \hbar}{2}, \quad A_p = \frac{\pi \hbar}{2}
 \end{equation}
 
-\textit{Explicit Substitution for Capacity:}
-The resulting minor diameters (capacities) emerge from Eq. (\ref{eq:GeneralCapacities}) as:
+\textit{Symplectic Capacities:}
 \begin{equation}
 \delta_q = \frac{2 \hbar}{\Delta p}, \quad \delta_p = \frac{2 \hbar}{\Delta q}
 \end{equation}
 
-\textit{Explicit Substitution for Tiling:}
-The symmetric supports in Eq. (\ref{eq:GeneralTiling}) yield the unitary tiling of the ground state:
+\textit{Discrete Tiling:}
 \begin{equation}
-N_q = \max(1, \lfloor 1 \rfloor) = 1, \quad N_p = \max(1, \lfloor 1 \rfloor) = 1
+N_q = 1, \quad N_p = 1
 \end{equation}
 
 \subsection{The Particle in a Box: Asymmetrical Quanta}
 
-In a box of width $L$, the spatial support is fixed ($\Delta q = L$). This physical constraint forces the \textbf{conjugate pair} into a geometric asymmetry as the momentum support $\Delta p$ increases relative to the spatial scale $q_0$.
+In a box of width $L$, the spatial support is fixed ($\Delta q = L$). This physical constraint forces the conjugate pair into a geometric asymmetry as the momentum support $\Delta p$ increases relative to the spatial scale $q_0$.
 
-\textit{Explicit Substitution for Action:}
-Substituting the fixed boundary $\Delta q = L$ into Eq. (\ref{eq:GeneralPartition}):
+\textit{Action Partition:}
 \begin{equation}
 A_q = \frac{\pi \hbar}{1 + \left ( \frac{\Delta p/p_0}{L/q_0}\right )^2}, \quad A_p = \frac{\pi \hbar}{1 + \left (\frac{L/q_0}{\Delta p / p_0} \right )^2}
 \end{equation}
 
-\textit{Explicit Substitution for Capacity:}
-The capacities reflect the divergent scaling of the minor diameters:
+\textit{Symplectic Capacities:}
 \begin{equation} 
 \delta_q = \frac{4 \hbar}{\Delta p \left( 1 + \left[ \frac{\Delta p/p_0}{L/q_0} \right]^2 \right)}, \quad \delta_p = \frac{4 \hbar}{L \left( 1 + \left[ \frac{L/q_0}{\Delta p/p_0} \right]^2 \right)} 
 \end{equation}
 
-\textit{Explicit Substitution for Tiling ($N_q$ and $N_p$):}
-The fixed spatial boundary $L$ in Eq. (\ref{eq:GeneralTiling}) dictates the emergent resolution:
+\textit{Discrete Tiling:}
 \begin{equation}
-N_p = \max\left(1, \left\lfloor \frac{L/q_0}{\Delta p/p_0} \right\rfloor\right) = 1, \quad N_q = \max\left(1, \left\lfloor \frac{\Delta p/p_0}{L/q_0} \right\rfloor\right)
+N_q = \max\left(1, \left\lfloor \frac{\Delta p/p_0}{L/q_0} \right\rfloor\right), \quad N_p = 1
 \end{equation}
 
-\textit{The Asymmetric Result:}
-As $\Delta p$ increases, the momentum resolution remains at its fundamental limit ($N_p = 1$), indicating that all momentum microstates within the support are \textbf{operationally indistinguishable}. Simultaneously, $N_q$ grows with the momentum support, meaning the spatial support $L$ is resolved by an increasing count of tiles defined by the squeezed spatial capacity $\delta_q$.
+As $\Delta p$ increases, the momentum resolution remains at its fundamental limit, while the spatial support $L$ is resolved by an increasing count of tiles defined by the squeezed spatial capacity $\delta_q$.
 
 \subsection{The Free Particle: Conjugate Action Redistribution}
 
-In the \textit{Free Wave Packet}, the momentum support $\Delta p$ remains a constant of motion while the spatial support $\Delta q(t)$ increases linearly. This expansion is a continuous redistribution of action within the conjugate pair. The spatial dimension ($A_q$) draws action from its conjugate momentum partner ($A_p$), allowing the state to maintain its operational structure as it spreads.
+In the Free Wave Packet, the momentum support remains a constant of motion $p_0$, while the spatial support $\Delta q(t)$ increases linearly. This expansion is a continuous redistribution of action within the conjugate pair. 
 
-\textit{Explicit Substitution for Action:}
-Substituting the constant $\Delta p$ and the expanding $\Delta q(t)$ into the general partition yields the shifting action budget of the pair:
+\textit{Action Partition:}
 \begin{equation}
-A_q(t) = \frac{\pi \hbar}{1 + \left ( \frac{\Delta p / p_0}{\Delta q(t) / q_0}\right )^2}, \quad A_p(t) = \frac{\pi \hbar}{1 + \left (\frac{\Delta q(t)/q_0}{\Delta p/p_0}\right )^2 }
+A_q(t) = \frac{\pi \hbar}{1 + \left ( \frac{1}{\Delta q(t) / q_0}\right )^2}, \quad A_p(t) = \frac{\pi \hbar}{1 + \left ( \Delta q(t)/q_0 \right )^2 }
 \end{equation}
 
-The total action budget of $\pi \hbar$ is conserved. As the spatial support grows, the action available for spatial erasure increases, funded by a corresponding decrease in the momentum action budget.
-
-\textit{Explicit Substitution for Capacity:}
-The resolution limits (minor diameters) of the conjugate pair track this redistribution. With $\Delta p$ held constant, the shifting capacities are defined by the current action partition:
+\textit{Symplectic Capacities:}
 \begin{equation}
-\delta_q(t) = \frac{4 A_q(t)}{\pi \Delta p}, \quad \delta_p(t) = \frac{4 A_p(t)}{\pi \Delta q(t)}
+\delta_q(t) = \frac{4 A_q(t)}{\pi p_0}, \quad \delta_p(t) = \frac{4 A_p(t)}{\pi \Delta q(t)}
 \end{equation}
 
-\textit{The Redistribution Result:}
-The free particle demonstrates the dynamic nature of the conjugate pair. The spreading of the packet is the deterministic redistribution of the total action budget across the $q$ and $p$ dimensions. This ensures that the resolution limits $\delta_q$ and $\delta_p$ always satisfy the fundamental action budget, regardless of the scale of the physical supports.
+\textit{Discrete Tiling:}
+\begin{equation}
+N_q(t) = \max\left(1, \left\lfloor \frac{1}{\Delta q(t) / q_0} \right\rfloor\right), \quad N_p(t) = \max\left(1, \left\lfloor \Delta q(t) / q_0 \right\rfloor\right)
+\end{equation}
+
+The total action budget is conserved as the spatial dimension draws action from its conjugate momentum partner, allowing the state to maintain its operational structure as it spreads.
+
 
 
 
 \subsection{The Rotational State: Phase-Dependent Quanta}
 
-In systems with periodic or rotational symmetry, the aspect ratio of the phase-space supports—the pivot of Eq. (\ref{eq:GeneralPartition})—is characterized by the phase angle $\phi$:
+In systems with periodic symmetry, the phase angle $\phi$ dictates the geometric proportions of the phase-space supports, $\Delta q = q_0 |\cos \phi|$ and $\Delta p = p_0 |\sin \phi|$. The resulting aspect ratio acts as the pivot of the information budget: 
 \begin{equation}
-\label{eq:PhasePivot}
 \tan \phi = \frac{\Delta p / p_0}{\Delta q / q_0}
 \end{equation}
 
-By mapping the supports to the unit circle ($\Delta p/p_0 = \sin \phi$ and $\Delta q/q_0 = \cos \phi$), the ``squeezing'' of the de Gosson ellipse is revealed as a trigonometric rotation in phase space.
-
-\textit{Explicit Substitution for Action:}
-Substituting the phase-pivot ($\tan \phi$) into Eq. (\ref{eq:GeneralPartition}) demonstrates that the action partitions according to the square of the circular functions:
+\textit{Action Partition:}
+The total action $\pi \hbar$ is partitioned into spatial and momentum components according to this orientation:
 \begin{equation}
-A_q = \frac{\pi \hbar}{1 + \tan^2 \phi} = \pi \hbar \cos^2 \phi, \quad A_p = \frac{\pi \hbar}{1 + \cot^2 \phi} = \pi \hbar \sin^2 \phi
-\end{equation}
-This confirms that the conserved total action $\pi \hbar$ is re-distributed as a trigonometric budget based on the rotational orientation of the state.
-
-\textit{Explicit Substitution for Capacity:}
-The minor diameters (capacities) represent the symplectic \textbf{``breathing''} of the resolution limits as the phase angle evolves. Using Eq. (\ref{eq:GeneralCapacities}), the capacities for the rotational state emerge as:
-\begin{equation}
-\delta_q = \frac{4 \hbar \cos^2 \phi}{p_0 \sin \phi}, \quad \delta_p = \frac{4 \hbar \sin^2 \phi}{q_0 \cos \phi}
+A_q = \pi \hbar \cos^2 \phi, \quad A_p = \pi \hbar \sin^2 \phi
 \end{equation}
 
-\textit{Explicit Substitution for Tiling:}
-The symmetric resolution of the Harmonic Oscillator ($\phi = \pi/4$) gives way to an asymmetric density of microstates as the phase angle rotates:
+\textit{Symplectic Capacities (The Resolution):}
+The resolution limit $\delta$ is the result of dividing the allocated action by the available conjugate window. Using the geometric scaling factor $4/\pi$ for the phase-space cell, the derivation for the spatial resolution is:
 \begin{equation}
-N_q = \max(1, \lfloor \tan \phi \rfloor), \quad N_p = \max(1, \lfloor \cot \phi \rfloor)
+\delta_q = \frac{4 A_q}{\pi \Delta p} = \frac{4 (\pi \hbar \cos^2 \phi)}{\pi (p_0 |\sin \phi|)} \implies \delta_q = \frac{4 \hbar \cos^2 \phi}{p_0 |\sin \phi|}
+\end{equation}
+Similarly, the momentum resolution is constrained by the spatial support:
+\begin{equation}
+\delta_p = \frac{4 A_p}{\pi \Delta q} = \frac{4 (\pi \hbar \sin^2 \phi)}{\pi (q_0 |\cos \phi|)} \implies \delta_p = \frac{4 \hbar \sin^2 \phi}{q_0 |\cos \phi|}
 \end{equation}
 
-\textit{The Angular Result:}
-The transition to phase-dependent coordinates shows that the information erasure budget is a function of the system's orientation. As $\phi$ varies, the action quanta trade resolution following $\cos^2 \phi$. This trigonometric dependency is not a measurement artifact but a geometric requirement of maintaining the de Gosson action quanta within circular supports. This provides the fundamental mechanism for the non-linear, sinusoidal correlations observed in entangled systems, where the ``erasure distance'' is governed by the relative phase between conjugate measurements.
+\textit{Discrete Tiling:}
+The number of addressable states, or "bins," available in each dimension is given by the floor of the support ratios:
+\begin{equation}
+N_q = \max(1, \lfloor |\tan \phi| \rfloor), \quad N_p = \max(1, \lfloor |\cot \phi| \rfloor)
+\end{equation}
 
 \subsection{The Rigid Rotor: Dynamic Action Partition}
 
-The \textit{Rigid Rotor} is a system in a state of continuous rotation. In this dynamic state, the phase angle $\phi$ evolves as $\phi(t) = \omega t$, where $\omega$ is the angular frequency. This maps the rotation of the physical state directly to the rotation of the conjugate action quanta in phase space, where these reciprocal ellipses are driven by the phase $\phi$ to maintain the information-action limit.
+The Rigid Rotor is a system in continuous rotation where the phase angle evolves as $\phi(t) = \omega t$. This maps the physical state to the rotation of the conjugate action quanta in phase space. The reciprocal ellipses are driven by the phase to maintain the information-action limit against a fixed radial support $R$ and the conjugate momentum scale $p_{\omega} = \hbar/R$.
 
-\textit{Explicit Substitution for Action:}
-As the rotor precesses, the aspect ratio $\tan(\omega t)$ dictates a periodic redistribution of the action erasure budget. Substituting this time-dependent rotation into Eq. (\ref{eq:GeneralPartition}) yields:
+\textit{Action Partition:}
 \begin{equation}
 A_q(t) = \pi \hbar \cos^2(\omega t), \quad A_p(t) = \pi \hbar \sin^2(\omega t)
 \end{equation}
-The total action remains an invariant $\pi \hbar$, but the capacity for information erasure oscillates between the conjugate dimensions following the square of the circular functions.
 
-\textit{Explicit Substitution for Capacity:}
-The minor diameters (capacities) oscillate in opposition, representing the continuous exchange of operational indistinguishability as the rotor sweeps through its phase:
+\textit{Symplectic Capacities:}
 \begin{equation}
-\delta_q(t) = \frac{4 \hbar \cos^2(\omega t)}{p_0 \sin(\omega t)}, \quad \delta_p(t) = \frac{4 \hbar \sin^2(\omega t)}{q_0 \cos(\omega t)}
+\delta_q(t) = \frac{4 \hbar \cos^2(\omega t)}{p_{\omega} |\sin(\omega t)|}, \quad \delta_p(t) = \frac{4 \hbar \sin^2(\omega t)}{R |\cos(\omega t)|}
 \end{equation}
 
-\textit{The Dynamic Result:}
-The Rigid Rotor demonstrates that the trigonometric partition of action is a dynamic law. The ``breathing'' of the Heisenberg limits $\delta_q(t)$ and $\delta_p(t)$ ensures that as the system gains resolution in one dimension, it must fundamentally erase it in the other to satisfy the Information-Action Limit. This periodic erasure creates the characteristic sinusoidal behavior of quantum observables. By identifying $\phi$ as the dynamic phase of rotation, we establish the geometric origin of the trigonometric correlations that emerge whenever the information-action budget is partitioned across a rotating conjugate pair.
+\textit{Discrete Tiling:}
+\begin{equation}
+N_q(t) = \max(1, \lfloor |\tan(\omega t)| \rfloor), \quad N_p(t) = \max(1, \lfloor |\cot(\omega t)| \rfloor)
+\end{equation}
 
-
-
-
+The breathing of the Heisenberg limits $\delta_q(t)$ and $\delta_p(t)$ ensures that as the system gains resolution in one dimension, it erases it in the other to satisfy the Information-Action Limit.
 
 
 
@@ -276,19 +274,65 @@ All together we have \begin{equation}
 
 \section{Normalized Equations}
 
-\subsection{Information Erasure Inside Action Quanta}
+\subsection{Normalized Harmonic Oscillator}
 
-Landauer erasure within a conjugate pair of Heisenberg cells is bounded by:
+Landauer erasure for the harmonic oscillator within conjugate action quanta is bounded by:
 \begin{equation}
 \label{eq:SymplecticBounds}
 |q_? - \mathbf{Q}^*| \le \mathcal{P}^{-1}, 
 \quad 
 |p_? - \mathbf{P}^*| \le \mathcal{Q}^{-1},
 \end{equation}
-where the operationally indistinguishable microstates are represented as $\mu_q \coloneqq q_0 q_?$ and $\mu_p \coloneqq p_0 p_?$, while the macrostates $\mathbf{Q}^*$ and $\mathbf{P}^*$, encoded with the action available in each orthogonal quanta, are defined as $q \coloneqq q_0 \mathbf{Q}^*$ and $p \coloneqq p_0 \mathbf{P}^*$. The maximal extent and maximal momentum of the system are represented as $\Delta q \coloneqq q_0 \mathcal{Q}$ and $\Delta p \coloneqq p_0 \mathcal{P}$ 
+where the operationally indistinguishable microstates are represented as $\mu_q \coloneqq q_0 q_?$ and $\mu_p \coloneqq p_0 p_?$, while the macrostates $\mathbf{Q}^*$ and $\mathbf{P}^*$, encoded with the action available in each orthogonal quanta, are defined as $q \coloneqq q_0 \mathbf{Q}^*$ and $p \coloneqq p_0 \mathbf{P}^*$. The maximal extent and maximal momentum of the system are represented as $\Delta q \coloneqq q_0 \mathcal{Q}$ and $\Delta p \coloneqq p_0 \mathcal{P}$, subject to the support constraints $\mathcal{Q}, \mathcal{P} \ge 1$, which prevent resolution from exceeding the system's unit action scale.
 
-\paragraph{Referencing Example:}
-The symplectic squeezing is captured by Eq.~(\ref{eq:SymplecticBounds}).
+\subsection{Normalized Rigid Rotor}
+
+Landauer erasure for the rigid rotor within conjugate action quanta is bounded by the phase-dependent resolution limits:
+\begin{equation}
+\label{eq:RotorBounds}
+|q_? - \mathbf{Q}^*| \le \frac{4 \cos^2 \phi}{\pi |\sin \phi|}, 
+\quad 
+|p_? - \mathbf{P}^*| \le \frac{4 \sin^2 \phi}{\pi |\cos \phi|},
+\end{equation}
+where the operationally indistinguishable microstates are represented as $\mu_q \coloneqq R q_?$ and $\mu_p \coloneqq p_\omega p_?$, while the macrostates $\mathbf{Q}^*$ and $\mathbf{P}^*$, encoded with the action partitioned by the phase angle $\phi$, are defined as $q \coloneqq R \mathbf{Q}^*$ and $p \coloneqq p_\omega \mathbf{P}^*$. 
+
+Physical accessibility is maintained only for non-vanishing conjugate supports; specifically, spatial resolution requires $|\sin \phi| > 0$ while momentum resolution requires $|\cos \phi| > 0$. The divergence of these capacities represents the threshold of total information erasure, mirroring the Heisenberg floor ($\mathcal{P}, \mathcal{Q} \ge 1$) where the system reaches the limit of a single unit action quantum.
+
+
+\section{Numerical Simulations}
+
+\begin{algorithmic}
+\Function{erase}{$x, \delta_x$}
+    \State $\text{left} \gets (-1, 0), \quad \text{right} \gets (1, 0)$
+    \State $\text{num} \gets 0, \quad \text{den} \gets 1$
+    \State $\mathbf{X}^* \gets \text{num} / \text{den}$
+    \State $\mathbf{s}^* \gets \text{""}$
+    \While{$|x - \mathbf{X}^*| > \delta_x$}
+        \If{$\mathbf{X}^* < x$} 
+            \State $\text{left} \gets (\text{num}, \text{den})$
+            \State $\mathbf{s}^* \gets \mathbf{s}^* + \text{'1'}$
+        \Else 
+            \State $\text{right} \gets (\text{num}, \text{den})$
+            \State $\mathbf{s}^* \gets \mathbf{s}^* + \text{'0'}$
+        \EndIf
+        \State $\text{num} \gets \text{left}_{num} + \text{right}_{num}$
+        \State $\text{den} \gets \text{left}_{den} + \text{right}_{den}$
+        \State $\mathbf{X}^* \gets \text{num} / \text{den}$
+    \EndWhile
+    \State $\epsilon_x \gets \mathbf{X}^* - x$
+    \State \Return $\mathbf{X}^*, \mathbf{s}^*, \epsilon_x$
+\EndFunction
+\end{algorithmic}
+
+\subsection{The Harmonic Oscillator Simulation}
+
+\begin{equation}
+(\mathbf{Q}^*, \mathbf{s}^*_q, \epsilon_q) \gets \texttt{erase}(q_?, \mathcal{P}^{-1})
+\end{equation}
+\begin{equation}
+(\mathbf{P}^*, \mathbf{s}^*_p, \epsilon_p) \gets \texttt{erase}(p_?, \mathcal{Q}^{-1})
+\end{equation}
+
 
 \section{Foundational Manuscripts}
 
