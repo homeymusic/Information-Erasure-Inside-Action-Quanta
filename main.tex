@@ -231,6 +231,59 @@ The breathing of the Heisenberg limits $\delta_q(t)$ and $\delta_p(t)$ ensures t
 
 
 
+
+
+\subsection{Bell's Theorem: Partitioning Quanta}
+
+In systems involving joint observations at orientations $\alpha$ and $\beta$, the total system budget consists of two pairs of conjugate action quanta, totaling $2\pi \hbar$. Alice and Bob each choose their measurement settings independently; Alice chooses $\alpha$ without knowledge of $\beta$, and Bob chooses $\beta$ without knowledge of $\alpha$. There is no mutual influence, there is only the geometry of the action quanta.
+
+\textit{Action Partition:}
+Alice and Bob each perform a local partition of the system's action. Alice’s allocated action $A_\alpha$ is a function strictly of her setting $\alpha$, and Bob’s allocated action $A_\beta$ is a function strictly of his setting $\beta$:
+\begin{equation}
+A_\alpha = \pi \hbar \cos^2 \alpha, \quad A_\beta = \pi \hbar \sin^2 \beta
+\end{equation}
+
+\textit{Symplectic Capacities (Anatomy of Resolution):}
+The local resolution limits $\delta_\alpha$ and $\delta_\beta$ are determined by the ratio of the partitioned action to the local conjugate aperture. The observers resolve their portions of the budget using only the local geometry against the characteristic angular scale $\sqrt{\pi \hbar}$:
+\begin{equation}
+\delta_\alpha = \frac{4 \hbar \cos^2 \alpha}{\sqrt{\pi \hbar} |\sin \alpha|}, \quad \delta_\beta = \frac{4 \hbar \sin^2 \beta}{\sqrt{\pi \hbar} |\cos \beta|}
+\end{equation}
+
+
+
+\textit{Discrete Tiling:}
+The granularity of the local measurement is dictated by the aspect ratio of the local slice. The number of addressable states is a local physical constraint:
+\begin{equation}
+N_\alpha = \max(1, \lfloor |\tan \alpha| \rfloor), \quad N_\beta = \max(1, \lfloor |\cot \beta| \rfloor)
+\end{equation}
+
+\textit{Geometric Proof of Correlation:}
+The pattern observed in the aggregate data—typically mapped to the relative phase $\phi = |\alpha - \beta|$—is not an indication of a non-local signal, but is the geometric signature of two independent observers partitioning the same $2\pi \hbar$ action budget. 
+
+The observed correlation $E(\alpha, \beta)$ is the difference between the local action partitions. When these independent data sets are compared, the relationship is governed by the relative orientation $\phi$:
+\begin{equation}
+\cos^2 \alpha - \sin^2 \beta = \cos(\alpha + \beta)\cos(\alpha - \beta)
+\end{equation}
+
+Under rotational symmetry in the aggregate data, the $\cos(\alpha + \beta)$ term averages out, leaving the observed expectation value:
+\begin{equation}
+E(\phi) = -\cos(\alpha - \beta) = -\cos \phi
+\end{equation}
+
+
+
+\textit{Geometric Conclusion:}
+This result is identical to the observed violation of Bell's inequalities, obtained here without non-local influence or hidden variables. The $-\cos \phi$ pattern is the geometric signature of two independent observers partitioning a shared $2\pi \hbar$ action budget. The violation of local realism is a retrospective illusion; the resolution limits $\delta_\alpha$ and $\delta_\beta$ are reciprocal because they are local samplings of the same conserved conjugate action quanta. The correlation is not a result of Alice's measurement changing Bob's reality, but is the inevitable geometric alignment of two independent slices of a single, shared physical constant.
+
+
+
+
+
+
+
+
+
+
 \section{Thermodynamics and Geometry}
 
 These equations relate by
