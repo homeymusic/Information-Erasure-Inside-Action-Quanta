@@ -118,7 +118,7 @@ The Harmonic Oscillator is a state of dynamical equilibrium. In the ground state
 
 \textit{Action Partition:}
 \begin{equation}
-A_q = \frac{\pi \hbar}{2}, \quad A_p = \frac{\pi \hbar}{2}
+A_q = \frac{\pi}{4} \delta_q \Delta p = \frac{\pi \hbar}{2}, \quad A_p = \frac{\pi}{4} \Delta q \delta_p = \frac{\pi \hbar}{2}
 \end{equation}
 
 \textit{Symplectic Capacities:}
@@ -173,116 +173,12 @@ N_q(t) = \max\left(1, \left\lfloor \frac{1}{\Delta q(t) / q_0} \right\rfloor\rig
 
 The total action budget is conserved as the spatial dimension draws action from its conjugate momentum partner, allowing the state to maintain its operational structure as it spreads.
 
+\subsection{Bell's Theorem: Angular Quanta}
 
-
-
-\subsection{The Rotational State: Phase-Dependent Quanta}
-
-In systems with periodic symmetry, the phase angle $\phi$ dictates the geometric proportions of the phase-space supports, $\Delta q = q_0 |\cos \phi|$ and $\Delta p = p_0 |\sin \phi|$. The resulting aspect ratio acts as the pivot of the information budget: 
 \begin{equation}
-\tan \phi = \frac{\Delta p / p_0}{\Delta q / q_0}
+\label{eq:GeneralPartition}
+A_\theta = ?, \quad A_L = ? 
 \end{equation}
-
-\textit{Action Partition:}
-The total action $\pi \hbar$ is partitioned into spatial and momentum components according to this orientation:
-\begin{equation}
-A_q = \pi \hbar \cos^2 \phi, \quad A_p = \pi \hbar \sin^2 \phi
-\end{equation}
-
-\textit{Symplectic Capacities (The Resolution):}
-The resolution limit $\delta$ is the result of dividing the allocated action by the available conjugate window. Using the geometric scaling factor $4/\pi$ for the phase-space cell, the derivation for the spatial resolution is:
-\begin{equation}
-\delta_q = \frac{4 A_q}{\pi \Delta p} = \frac{4 (\pi \hbar \cos^2 \phi)}{\pi (p_0 |\sin \phi|)} \implies \delta_q = \frac{4 \hbar \cos^2 \phi}{p_0 |\sin \phi|}
-\end{equation}
-Similarly, the momentum resolution is constrained by the spatial support:
-\begin{equation}
-\delta_p = \frac{4 A_p}{\pi \Delta q} = \frac{4 (\pi \hbar \sin^2 \phi)}{\pi (q_0 |\cos \phi|)} \implies \delta_p = \frac{4 \hbar \sin^2 \phi}{q_0 |\cos \phi|}
-\end{equation}
-
-\textit{Discrete Tiling:}
-The number of addressable states, or "bins," available in each dimension is given by the floor of the support ratios:
-\begin{equation}
-N_q = \max(1, \lfloor |\tan \phi| \rfloor), \quad N_p = \max(1, \lfloor |\cot \phi| \rfloor)
-\end{equation}
-
-\subsection{The Rigid Rotor: Dynamic Action Partition}
-
-The Rigid Rotor is a system in continuous rotation where the phase angle evolves as $\phi(t) = \omega t$. This maps the physical state to the rotation of the conjugate action quanta in phase space. The reciprocal ellipses are driven by the phase to maintain the information-action limit against a fixed radial support $R$ and the conjugate momentum scale $p_{\omega} = \hbar/R$.
-
-\textit{Action Partition:}
-\begin{equation}
-A_q(t) = \pi \hbar \cos^2(\omega t), \quad A_p(t) = \pi \hbar \sin^2(\omega t)
-\end{equation}
-
-\textit{Symplectic Capacities:}
-\begin{equation}
-\delta_q(t) = \frac{4 \hbar \cos^2(\omega t)}{p_{\omega} |\sin(\omega t)|}, \quad \delta_p(t) = \frac{4 \hbar \sin^2(\omega t)}{R |\cos(\omega t)|}
-\end{equation}
-
-\textit{Discrete Tiling:}
-\begin{equation}
-N_q(t) = \max(1, \lfloor |\tan(\omega t)| \rfloor), \quad N_p(t) = \max(1, \lfloor |\cot(\omega t)| \rfloor)
-\end{equation}
-
-The breathing of the Heisenberg limits $\delta_q(t)$ and $\delta_p(t)$ ensures that as the system gains resolution in one dimension, it erases it in the other to satisfy the Information-Action Limit.
-
-
-
-
-
-
-
-
-\subsection{Bell's Theorem: Partitioning Quanta}
-
-In systems involving joint observations at orientations $\alpha$ and $\beta$, the total system budget consists of a pair of conjugate action quanta $\pi \hbar$. Alice and Bob each choose their measurement settings independently; Alice chooses $\alpha$ without knowledge of $\beta$, and Bob chooses $\beta$ without knowledge of $\alpha$. There is no mutual influence, there is only the geometry of the action quanta.
-
-\textit{Action Partition:}
-Alice and Bob each perform a local partition of the system's action. Alice’s allocated action $A_\alpha$ is a function strictly of her setting $\alpha$, and Bob’s allocated action $A_\beta$ is a function strictly of his setting $\beta$:
-\begin{equation}
-A_\alpha = \pi \hbar \cos^2 \alpha, \quad A_\beta = \pi \hbar \sin^2 \beta
-\end{equation}
-
-\textit{Symplectic Capacities (Anatomy of Resolution):}
-The local resolution limits $\delta_\alpha$ and $\delta_\beta$ are determined by the ratio of the partitioned action to the local conjugate aperture. The observers resolve their portions of the budget using only the local geometry against the characteristic angular scale $\sqrt{\pi \hbar}$:
-\begin{equation}
-\delta_\alpha = \frac{4 \hbar \cos^2 \alpha}{\sqrt{\pi \hbar} |\sin \alpha|}, \quad \delta_\beta = \frac{4 \hbar \sin^2 \beta}{\sqrt{\pi \hbar} |\cos \beta|}
-\end{equation}
-
-
-
-\textit{Discrete Tiling:}
-The granularity of the local measurement is dictated by the aspect ratio of the local slice. The number of addressable states is a local physical constraint:
-\begin{equation}
-N_\alpha = \max(1, \lfloor |\tan \alpha| \rfloor), \quad N_\beta = \max(1, \lfloor |\cot \beta| \rfloor)
-\end{equation}
-
-\textit{Geometric Proof of Correlation:}
-The pattern observed in the aggregate data—typically mapped to the relative phase $\phi = |\alpha - \beta|$—is not an indication of a non-local signal, but is the geometric signature of two independent observers partitioning the same $\pi \hbar$ action budget. 
-
-The observed correlation $E(\alpha, \beta)$ is the difference between the local action partitions. When these independent data sets are compared, the relationship is governed by the relative orientation $\phi$:
-\begin{equation}
-\cos^2 \alpha - \sin^2 \beta = \cos(\alpha + \beta)\cos(\alpha - \beta)
-\end{equation}
-
-Under rotational symmetry in the aggregate data, the $\cos(\alpha + \beta)$ term averages out, leaving the observed expectation value:
-\begin{equation}
-E(\phi) = -\cos(\alpha - \beta) = -\cos \phi
-\end{equation}
-
-
-
-\textit{Geometric Conclusion:}
-This result is identical to the observed violation of Bell's inequalities, obtained here without non-local influence or hidden variables. The $-\cos \phi$ pattern is the geometric signature of two independent observers partitioning a shared $\pi \hbar$ action budget. The violation of local realism is a retrospective illusion; the resolution limits $\delta_\alpha$ and $\delta_\beta$ are reciprocal because they are local samplings of the same conserved conjugate action quanta. The correlation is not a result of Alice's measurement changing Bob's reality, but is the inevitable geometric alignment of two independent slices of a single, shared physical constant.
-
-
-
-
-
-
-
-
-
 
 \section{Thermodynamics and Geometry}
 
@@ -324,19 +220,47 @@ All together we have \begin{equation}
 \label{eq:alpha_combined}
 |\epsilon_q| = \alpha \delta_q = \alpha^2 \Delta q
 \end{equation}
-
 \section{Normalized Equations}
 
 \subsection{Normalized Harmonic Oscillator}
 
-Landauer erasure for the harmonic oscillator within conjugate action quanta is bounded by:
+Each of the two minimal action quanta are $A_0 = 2 \cdot\frac{\pi}{4} q_0 p_0 = \pi \hbar$. The operationally indistinguishable microstates are represented as $\mu_q \coloneqq q_0 q_?$ and $\mu_p \coloneqq p_0 p_?$, while the macrostates $\mathbf{q}^*$ and $\mathbf{p}^*$, encoded with the action available in each orthogonal quanta, are defined as $q \coloneqq q_0 \mathbf{q}^*$ and $p \coloneqq p_0 \mathbf{p}^*$. The maximal extent and maximal momentum of the system are represented as $\Delta q \coloneqq q_0 \mathcal{Q}$ and $\Delta p \coloneqq p_0 \mathcal{P}$, subject to the support constraints $\mathcal{Q}, \mathcal{P} \ge 1$, which prevent resolution from exceeding the system's unit action scale.
+
+\begin{equation}
+\frac{\pi}{4} \delta_q \Delta p = \frac{\pi \hbar}{2}
+\end{equation}
+
+\begin{equation}
+\frac{\pi}{4} q_0 |q_? - \mathbf{q}^*| p_0 \mathcal{P} = \frac{\pi \hbar}{2}
+\end{equation}
+
 \begin{equation}
 \label{eq:SymplecticBounds}
-|q_? - \mathbf{Q}^*| \le \mathcal{P}^{-1}, 
+|q_? - \mathbf{q}^*| \le \mathcal{P}^{-1}, 
 \quad 
-|p_? - \mathbf{P}^*| \le \mathcal{Q}^{-1},
+|p_? - \mathbf{p}^*| \le \mathcal{Q}^{-1},
 \end{equation}
-where the operationally indistinguishable microstates are represented as $\mu_q \coloneqq q_0 q_?$ and $\mu_p \coloneqq p_0 p_?$, while the macrostates $\mathbf{Q}^*$ and $\mathbf{P}^*$, encoded with the action available in each orthogonal quanta, are defined as $q \coloneqq q_0 \mathbf{Q}^*$ and $p \coloneqq p_0 \mathbf{P}^*$. The maximal extent and maximal momentum of the system are represented as $\Delta q \coloneqq q_0 \mathcal{Q}$ and $\Delta p \coloneqq p_0 \mathcal{P}$, subject to the support constraints $\mathcal{Q}, \mathcal{P} \ge 1$, which prevent resolution from exceeding the system's unit action scale.
+
+\subsection{Normalized Bell Test}
+
+The angular action quanta are defined by the circular support $A_0 = 2 \cdot\frac{\pi}{4} \theta_0 L_0 = \pi \hbar$, representing a state of rotational equilibrium analogous to the harmonic oscillator ground state. The operationally indistinguishable angular microstates are $\mu_\theta \coloneqq \theta_0 \theta_?$ and $\mu_L \coloneqq L_0 L_?$, while the macrostates $\mathbf{\theta}^*$ and $\mathbf{L}^*$ are defined by the action available in each orthogonal quanta as $\theta \coloneqq \theta_0 \mathbf{\theta}^*$ and $L \coloneqq L_0 \mathbf{L}^*$. Because the de Gosson blob is an isotropic disk, the unit momentum scale is defined by the radius $L_0 = \sqrt{\pi \hbar}$. The maximal angular momentum $\Delta L \coloneqq L_0 \mathcal{L}$ constrains the resolution of the microstate $\theta_?$, where the factor $2/\sqrt{\pi}$ emerges explicitly from the ratio of the disk's diameter $D = 2\sqrt{\hbar}$ to the linear unit scale $L_0$:
+
+\begin{equation}
+\frac{D}{L_0} = \frac{2\sqrt{\hbar}}{\sqrt{\pi \hbar}} = \frac{2}{\sqrt{\pi}}
+\end{equation}
+
+Substituting this geometric ratio into the support constraint ensures the resolution does not exceed the system's isotropic unit scale:
+
+\begin{equation}
+\frac{\pi}{4} \theta_0 |\theta_? - \mathbf{\theta}^*| (\sqrt{\pi \hbar} \mathcal{L}) = \frac{\pi \hbar}{2}
+\end{equation}
+
+\begin{equation}
+\label{eq:AngularSymplecticBounds}
+|\theta_? - \mathbf{\theta}^*| \le \frac{2}{\sqrt{\pi} \mathcal{L}}, 
+\quad 
+|L_? - \mathbf{L}^*| \le \frac{2}{\sqrt{\pi} \Theta}
+\end{equation}
 
 \subsection{Normalized Rigid Rotor}
 
@@ -351,19 +275,16 @@ where the operationally indistinguishable microstates are represented as $\mu_q 
 
 Physical accessibility is maintained only for non-vanishing conjugate supports; specifically, spatial resolution requires $|\sin \phi| > 0$ while momentum resolution requires $|\cos \phi| > 0$. The divergence of these capacities represents the threshold of total information erasure, mirroring the Heisenberg floor ($\mathcal{P}, \mathcal{Q} \ge 1$) where the system reaches the limit of a single unit action quantum.
 
-
 \subsection{Normalized Bell's Theorem}
 
-Landauer erasure for the shared action state is bounded by the local resolution limits of Alice and Bob
+Landauer erasure for the shared action state is bounded by the local resolution limits of Alice and Bob:
 \begin{equation}
 \label{eq:BellBounds}
 |\theta_{?\alpha} - \mathbf{\Theta}_\alpha^*| \le \frac{4 \cos^2 \alpha}{\pi |\sin \alpha|}, 
 \quad 
 |\theta_{?\beta} - \mathbf{\Theta}_\beta^*| \le \frac{4 \sin^2 \beta}{\pi |\cos \beta|},
 \end{equation}
-where $\theta_{?\alpha}, \theta_{?\beta}$ are microstates erased to macrostates $\mathbf{\Theta}_\alpha^*, \mathbf{\Theta}_\beta^*$. At the unit action scale, the available budget lacks the capacity to encode the precise value of the erasure distances 
-
-
+where $\theta_{?\alpha}, \theta_{?\beta}$ are microstates erased to macrostates $\mathbf{\Theta}_\alpha^*, \mathbf{\Theta}_\beta^*$. At the unit action scale, the available budget lacks the capacity to encode the precise value of the erasure distances:
 \begin{equation}
 \label{eq:BellSign}
 \epsilon_\alpha = \theta_{?\alpha} - \mathbf{\Theta}_\alpha^*, 
@@ -371,7 +292,7 @@ where $\theta_{?\alpha}, \theta_{?\beta}$ are microstates erased to macrostates 
 \epsilon_\beta = \theta_{?\beta} - \mathbf{\Theta}_\beta^*.
 \end{equation}
 
-Consequently, the measurement outcome is truncated to a single bit of information
+Consequently, the measurement outcome is truncated to a single bit of information:
 \begin{equation}
 \theta_\alpha = \text{sgn} (\epsilon_{\alpha}), \quad \theta_\beta = \text{sgn} (\epsilon_\beta).
 \end{equation}
@@ -379,8 +300,6 @@ Consequently, the measurement outcome is truncated to a single bit of informatio
 This binary truncation is a physical requirement of the $\pi \hbar$ system budget. With only two available bits for the joint state, the universe resolves the local sign of the partition while erasing the higher-order geometric details.
 
 Physical accessibility is determined strictly by the local setting; resolution requires non-vanishing conjugate support ($|\sin \alpha| > 0, |\cos \beta| > 0$).
-
-
 
 
 \section{Numerical Simulations}
