@@ -336,6 +336,19 @@ Physical accessibility is determined strictly by the local setting; resolution r
 (\mathbf{P}^*, \mathbf{s}^*_p, \epsilon_p) \gets \texttt{erase}(p_?, \mathcal{Q}^{-1})
 \end{equation}
 
+\section{Topological Node Extraction via Deterministic Hysteresis}
+
+To extract the effective quantum number $n$ from the deterministic erasure density $\rho(q)$, we employ a hysteresis-based topological filter. Unlike stochastic models, our density function is fully deterministic and repeatable; however, the discrete nature of the Stern-Brocot transform introduces high-frequency fine-structure modulations (quantization artifacts) superimposed on the macroscopic wavefunction.
+
+To rigorously distinguish true topological nodes from these fine-scale artifacts, we implement a symmetric \textit{Schmitt trigger} detection logic. We define a scale-adaptive prominence threshold $T_{h}$ derived from the signal's mean amplitude:
+
+\begin{equation}
+    T_{h} = k \sqrt{\langle \rho \rangle}
+\end{equation}
+
+where $k=2$ sets the rejection floor for quantization ripples. This square-root scaling ensures that the detector's sensitivity adapts to the signal intensity, maintaining robust topological identification across orders of magnitude in momentum space.
+
+The algorithm scans the density $\rho(q)$ outward from the potential center ($|q| \to \infty$). A node is registered if and only if the density executes a full hysteresis loop: descending into a local minimum and subsequently recovering by an amplitude $\Delta \rho \ge T_{h}$. This logic effectively filters out the deterministic "texture" of the number-theoretic lattice, isolating the fundamental oscillatory modes of the physical state.
 
 \section{Foundational Manuscripts}
 
