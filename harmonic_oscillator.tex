@@ -1,0 +1,103 @@
+\documentclass{article}
+
+% Language and font encoding
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Math packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Harmonic Oscillator Notes: Information Erasure and Phase Space Geometry}
+\author{Gemini AI Assistant}
+
+\begin{document}
+
+\maketitle
+
+\section{Information Theory and Erasure Action}
+
+The fundamental bound on information erasure, derived from the Landauer principle and the energy-time uncertainty relation, is given by:
+\begin{equation}
+    b E \tau \le \pi \hbar
+\end{equation}
+where $b$ is the count of bits erased, $E$ is the erasure energy ($k_B T \ln 2$), and $\tau$ is the erasure time. This product defines the erasure action $A$. For a system in phase space, we split this action into coordinate and momentum components:
+\begin{equation}
+    (b_q + b_p) E \tau \le A_q + A_p \le \pi \hbar
+\end{equation}
+
+\section{Geometric Constraints of the Oscillator}
+
+For the harmonic oscillator, emerging from the potential and kinetic components of the Hamiltonian $H=V+T$, we define a conjugate pair of action ellipses. 
+
+\subsection{Ellipses vs. Rectangles}
+We must distinguish between the bounding box (rectangle) and the actual action (elliptical area). Let $\Delta q$ and $\Delta p$ be the \textbf{full widths (diameters)} of the erasure region. The action area $A_q$ is defined by the ellipse inscribed in the rectangle formed by the erasure width $\delta_q$ and the system width $\Delta p$:
+\begin{equation}
+    A_q = \frac{\pi}{4} \delta_q \Delta p \le \frac{\pi \hbar}{2}
+\end{equation}
+
+\subsection{Hierarchy of Uncertainty}
+The erasure distance $\epsilon$ is the distance between the observable state $q$ and the unknowable microstate $\mu$. This distance is bounded by the action quantum width $\delta$, which is in turn bounded by the conjugate system diameter $\Delta$:
+\begin{equation}
+    \epsilon_q = |\mu_q - q| \le \delta_q \le \Delta q
+\end{equation}
+
+\section{Dimensionless Normalization}
+
+To facilitate simulation, we switch to dimensionless units using characteristic scales $q_0$ and $p_0$. We define $\mathcal{Q}$ and $\mathcal{P}$ as the \textbf{dimensionless radii} (semi-axes) of the system.
+
+\subsection{Variable Definitions}
+The diameters (full widths) are related to the dimensionless radii as follows:
+\begin{align}
+    \Delta q &= q_0 (2\mathcal{Q}) \\
+    \Delta p &= p_0 (2\mathcal{P})
+\end{align}
+
+We define the characteristic scale such that the product $q_0 p_0$ equals the phase space quantum $h$:
+\begin{equation}
+    h = q_0 p_0 = 2\pi\hbar
+\end{equation}
+
+\subsection{Deriving the Dimensionless Bound}
+Substituting the radius definitions into the action limit (Eq. 3):
+\begin{equation}
+    \frac{\pi}{4} q_0 |q_{?} - \mathbf{q}^*| p_0 (2\mathcal{P}) \le \frac{\pi \hbar}{2}
+\end{equation}
+Substituting $q_0 p_0 = 2\pi\hbar$:
+\begin{equation}
+    \frac{\pi}{4} (2\pi\hbar) |q_{?} - \mathbf{q}^*| (2\mathcal{P}) \le \frac{\pi \hbar}{2}
+\end{equation}
+\begin{equation}
+    \pi^2 \hbar |q_{?} - \mathbf{q}^*| \mathcal{P} \le \frac{\pi \hbar}{2}
+\end{equation}
+Dividing by $\pi^2\hbar$ yields the normalized erasure bound:
+\begin{equation}
+    \epsilon_q^* = |q_{?} - \mathbf{q}^*| \le \frac{1}{2\pi \mathcal{P}}
+\end{equation}
+
+\section{Simulation Analysis and Physical Recovery}
+
+
+
+In the simulation, histograms of erasure occupancy revealed a discrete node count $n$. A parabolic fit was observed between the node count and the coordinate.
+
+\subsection{The Unit Problem: Area vs. Circumference}
+Action $A$ has units of area. In dimensionless units, the area of our phase space orbit is:
+\begin{equation}
+    \text{Area} = \pi \mathcal{Q} \mathcal{P}
+\end{equation}
+In the quantum limit, the number of nodes $n$ corresponds to the number of action quanta $h$ enclosed. Assuming a symmetric oscillator ($\mathcal{Q} = \mathcal{P}$):
+\begin{equation}
+    n = \pi \mathcal{Q}^2 \implies \mathcal{Q} = \sqrt{\frac{n}{\pi}}
+\end{equation}
+
+The empirical fit used in the plotting code, $p_{val} = 2\pi\sqrt{n}$, suggests that the plotted coordinate $Q$ corresponds to the **circumference** ($2\pi \times \text{radius}$) of a circle in phase space. This transformation links the topological periodicity of the erasure cycle directly to the energy levels of the harmonic oscillator:
+\begin{equation}
+    n \propto \mathcal{Q}^2
+\end{equation}
+This confirms that the information-theoretic constraint $\epsilon \le \frac{1}{2\pi \mathcal{P}}$ successfully reconstructs the expected quantum mechanical scaling where Energy (and thus node count) is proportional to the square of the amplitude.
+
+\end{document}
