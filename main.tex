@@ -241,27 +241,6 @@ Each of the two minimal action quanta are $A_0 = 2 \cdot\frac{\pi}{4} q_0 p_0 = 
 |p_? - \mathbf{p}^*| \le \mathcal{Q}^{-1},
 \end{equation}
 
-\subsection{Normalized Bell Test}
-
-The angular action quanta are defined by the circular support $A_0 = 2 \cdot\frac{\pi}{4} \theta_0 L_0 = \pi \hbar$, representing a state of rotational equilibrium analogous to the harmonic oscillator ground state. The operationally indistinguishable angular microstates are $\mu_\theta \coloneqq \theta_0 \theta_?$ and $\mu_L \coloneqq L_0 L_?$, while the macrostates $\mathbf{\theta}^*$ and $\mathbf{L}^*$ are defined by the action available in each orthogonal quanta as $\theta \coloneqq \theta_0 \mathbf{\theta}^*$ and $L \coloneqq L_0 \mathbf{L}^*$. Because the de Gosson blob is an isotropic disk, the unit momentum scale is defined by the radius $L_0 = \sqrt{\pi \hbar}$. The maximal angular momentum $\Delta L \coloneqq L_0 \mathcal{L}$ constrains the resolution of the microstate $\theta_?$, where the factor $2/\sqrt{\pi}$ emerges explicitly from the ratio of the disk's diameter $D = 2\sqrt{\hbar}$ to the linear unit scale $L_0$:
-
-\begin{equation}
-\frac{D}{L_0} = \frac{2\sqrt{\hbar}}{\sqrt{\pi \hbar}} = \frac{2}{\sqrt{\pi}}
-\end{equation}
-
-Substituting this geometric ratio into the support constraint ensures the resolution does not exceed the system's isotropic unit scale:
-
-\begin{equation}
-\frac{\pi}{4} \theta_0 |\theta_? - \mathbf{\theta}^*| (\sqrt{\pi \hbar} \mathcal{L}) = \frac{\pi \hbar}{2}
-\end{equation}
-
-\begin{equation}
-\label{eq:AngularSymplecticBounds}
-|\theta_? - \mathbf{\theta}^*| \le \frac{2}{\sqrt{\pi} \mathcal{L}}, 
-\quad 
-|L_? - \mathbf{L}^*| \le \frac{2}{\sqrt{\pi} \Theta}
-\end{equation}
-
 \subsection{Normalized Rigid Rotor}
 
 Landauer erasure for the rigid rotor within conjugate action quanta is bounded by the phase-dependent resolution limits:
@@ -274,33 +253,6 @@ Landauer erasure for the rigid rotor within conjugate action quanta is bounded b
 where the operationally indistinguishable microstates are represented as $\mu_q \coloneqq R q_?$ and $\mu_p \coloneqq p_\omega p_?$, while the macrostates $\mathbf{Q}^*$ and $\mathbf{P}^*$, encoded with the action partitioned by the phase angle $\phi$, are defined as $q \coloneqq R \mathbf{Q}^*$ and $p \coloneqq p_\omega \mathbf{P}^*$. 
 
 Physical accessibility is maintained only for non-vanishing conjugate supports; specifically, spatial resolution requires $|\sin \phi| > 0$ while momentum resolution requires $|\cos \phi| > 0$. The divergence of these capacities represents the threshold of total information erasure, mirroring the Heisenberg floor ($\mathcal{P}, \mathcal{Q} \ge 1$) where the system reaches the limit of a single unit action quantum.
-
-\subsection{Normalized Bell's Theorem}
-
-Landauer erasure for the shared action state is bounded by the local resolution limits of Alice and Bob:
-\begin{equation}
-\label{eq:BellBounds}
-|\theta_{?\alpha} - \mathbf{\Theta}_\alpha^*| \le \frac{4 \cos^2 \alpha}{\pi |\sin \alpha|}, 
-\quad 
-|\theta_{?\beta} - \mathbf{\Theta}_\beta^*| \le \frac{4 \sin^2 \beta}{\pi |\cos \beta|},
-\end{equation}
-where $\theta_{?\alpha}, \theta_{?\beta}$ are microstates erased to macrostates $\mathbf{\Theta}_\alpha^*, \mathbf{\Theta}_\beta^*$. At the unit action scale, the available budget lacks the capacity to encode the precise value of the erasure distances:
-\begin{equation}
-\label{eq:BellSign}
-\epsilon_\alpha = \theta_{?\alpha} - \mathbf{\Theta}_\alpha^*, 
-\quad 
-\epsilon_\beta = \theta_{?\beta} - \mathbf{\Theta}_\beta^*.
-\end{equation}
-
-Consequently, the measurement outcome is truncated to a single bit of information:
-\begin{equation}
-\theta_\alpha = \text{sgn} (\epsilon_{\alpha}), \quad \theta_\beta = \text{sgn} (\epsilon_\beta).
-\end{equation}
-
-This binary truncation is a physical requirement of the $\pi \hbar$ system budget. With only two available bits for the joint state, the universe resolves the local sign of the partition while erasing the higher-order geometric details.
-
-Physical accessibility is determined strictly by the local setting; resolution requires non-vanishing conjugate support ($|\sin \alpha| > 0, |\cos \beta| > 0$).
-
 
 \section{Numerical Simulations}
 
