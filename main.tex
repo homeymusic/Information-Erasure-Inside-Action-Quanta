@@ -43,10 +43,10 @@
 \DeclareMathOperator*{\argmin}{argmin}
 \begin{document}
 
-\title{Information Erasure Inside Heisenberg Cells}
+\title{Information Erasure Inside Heisenberg Blobs}
 
 \begin{abstract}
-Quantum microstates are operationally indistinguishable within finite-support Heisenberg cells. These de Gosson action quanta exist as conjugate pairs, emerging from the Hamiltonian’s potential and kinetic components. Within this action geometry, the principle of least action compels Landauer information erasure. This erasure precludes the classical continuum, necessitating discrete configurations and the emergence of quantum mechanics.
+Quantum microstates are operationally indistinguishable within finite-support Heisenberg blobs. These de Gosson ellipses in phase space exist as conjugate pairs, emerging from the Hamiltonian’s potential and kinetic components. Within this action geometry, the principle of least action compels Landauer information erasure. This erasure precludes the classical continuum, necessitating discrete configurations and the emergence of quantum mechanics.
 \end{abstract}
 
 \author{Brian S. Mulloy\orcidlink{0000-0002-1803-3172}}
@@ -66,14 +66,6 @@ System boundaries $\Delta q$ and $\Delta p$ determine the total action $A = \pi 
 
 \label{fig:erase}
 \end{figure}
-
-
-
-
-
-
-
-
 
 \section{Equations}
 \begin{equation}
@@ -106,6 +98,11 @@ A_q = \frac{\pi}{4} \delta_q \Delta p \quad \text{and} \quad A_p = \frac{\pi}{4}
 \tau_{K=2} = \tau_\perp = \frac{\pi \hbar}{2 E_L}
 \end{equation}
 
+\subsection{One Blob or Two?}
+
+The orthodox application of the Heisenberg Uncertainty Principle implies that as a system's total action scales up, its minimal phase-space area---the single ``blob'' defined by $\Delta q \Delta p$---must expand. However, the foundational architects of quantum mechanics recognized immediately that this single-blob macroscopic scaling violates empirical reality. 
+
+As Schr\"{o}dinger observed in 1926 \cite{Schrodinger1926, Schrodinger1928_English}, and as Einstein formally critiqued in 1953 \cite{Einstein1953, BornEinsteinLetters1971}, permitting a single uncertainty cell to grow proportionately with a system's energy strictly predicts that macroscopic objects should exist as delocalized, unobservable smears. While Schr\"{o}dinger ultimately patched this macroscopic paradox by introducing coherent states---relying on the infinite superposition of wavefunctions to force localization---we propose a strictly geometric solution. Here, macroscopic scaling is achieved through a pair of orthogonal, conjugate phase-space blobs, governed by polar duals that strictly conserve the fundamental action area of $\pi \hbar$.
 
 \subsection{The Information-Action Limit}
 
@@ -331,13 +328,12 @@ To rigorously distinguish true topological nodes from these fine-scale artifacts
 where $k=2$ sets the rejection floor for quantization ripples. This square-root scaling ensures that the detector's sensitivity adapts to the signal intensity, maintaining robust topological identification across orders of magnitude in momentum space.
 
 The algorithm scans the density $\rho(q)$ outward from the potential center ($|q| \to \infty$). A node is registered if and only if the density executes a full hysteresis loop: descending into a local minimum and subsequently recovering by an amplitude $\Delta \rho \ge T_{h}$. This logic effectively filters out the deterministic "texture" of the number-theoretic lattice, isolating the fundamental oscillatory modes of the physical state.
-
 \section{Foundational Manuscripts}
 
 \begin{itemize}
     \item \textbf{Geometry}
     \begin{itemize}
-        \item Heisenberg \cite{Heisenberg1927}
+        \item Heisenberg \cite{Heisenberg1927, Heisenberg1983_English}
         \item de Gosson \cite{DeGosson2003}
     \end{itemize}
     
@@ -356,6 +352,16 @@ The algorithm scans the density $\rho(q)$ outward from the potential center ($|q
         \item Stolzenburg \cite{Stolzenburg2015}
         \item Aiylam \cite{Aiylam2013}
     \end{itemize}
+    
+    \item \textbf{Criticism of Macroscopic $\Delta q \Delta p$}
+    \begin{itemize}
+        \item Schr\"{o}dinger \cite{Schrodinger1926, Schrodinger1928_English}
+        \item Einstein \cite{Einstein1953, BornEinsteinLetters1971}
+        \item Popper \cite{Popper1967}
+        \item Ballentine \cite{Ballentine1970}
+        \item Leggett and Garg \cite{LeggettGarg1985}
+    \end{itemize}
+
 \end{itemize}
 
 \bibliography{main} 
