@@ -55,19 +55,16 @@ Quantum microstates are operationally indistinguishable inside Planck's quantum 
 
 \maketitle
 
-\section{Figures}
 \begin{figure}[t!]
     \centering
     \includegraphics[width=\linewidth]{erase.pdf}
 \caption{\textbf{Information erasure inside the quantum of action} (schematic). 
-System boundaries $\Delta q$ and $\Delta p$ determine the total action area $A$. The reciprocal relations $\delta q = \hbar / \Delta p$ and $\delta p = \hbar / \Delta q$ characterize the symplectic squeezing of the conjugate pair of quantum blobs, $\pi \delta q \Delta p = \frac{h}{2}$ and $\pi \Delta q \delta p = \frac{h}{2}$, whose sum is the quantum of action $h$. The values $\epsilon_q$ and $\epsilon_p$ are the erasure distances from each microstate $(q_\mu, p_\mu)$ with binary encoding $s_\mu$ to the minimal-action state $(q^*,p^*)$ with the minimal binary encoding $s^*$, where the minimal bit count is the Kolmogorov complexity $K = |s^*| \le |s_\mu|$. The physical scales satisfy $|\epsilon_q| \le \delta q \le \Delta q$ and $|\epsilon_p| \le \delta p \le \Delta p$.}
+Classical boundaries $\Delta q$ and $\Delta p$ determine the total action area $A$. The reciprocal relations $\delta q = \hbar / \Delta p$ and $\delta p = \hbar / \Delta q$ characterize the symplectic squeezing of the conjugate pair of quantum blobs, $\pi \delta q \Delta p = \frac{h}{2}$ and $\pi \Delta q \delta p = \frac{h}{2}$, whose sum is the quantum of action $h$. The values $\epsilon_q$ and $\epsilon_p$ are the erasure distances from each microstate $(q_\mu, p_\mu)$ with binary encoding $s_\mu$ to the minimal-action state $(q^*,p^*)$ with the minimal binary encoding $s^*$, where the minimal bit count is the Kolmogorov complexity $K = |s^*| \le |s_\mu|$. The physical scales satisfy $|\epsilon_q| \le \delta q \le \Delta q$ and $|\epsilon_p| \le \delta p \le \Delta p$.}
 \end{figure}
-
-\section{Equations}
 
 \begin{equation}
 \label{eq:SimpleLanguageHero}
-\text{Erasure Action} \le \text{System Phase Space Area}
+\text{Erasure Action} \le \text{Classical Phase Space Area}
 \end{equation}
 
 \begin{equation}
@@ -80,27 +77,14 @@ K E_L \tau \le A
 (K_q + K_p) E_L \tau \le A
 \end{equation}
 
-\begin{equation}
-\label{eq:ErasureTimeMargolusLevitin}
-\tau_\perp = \frac{h}{4 E_L}
-\end{equation}
-
 \subsection{One Blob or Two?}
 
-In the standard interpretation of the Heisenberg Uncertainty Principle, as a system's total action increases, its minimal phase-space area---the (incorrect) single quantum blob defined by $\Delta q \Delta p$---must expand. However, the foundational architects of quantum mechanics recognized that this mathematical behavior contradicts the macroscopic world. As Schr\"{o}dinger observed in 1926 \cite{Schrodinger1926}, and Einstein formally critiqued in 1953 \cite{Einstein1953}, permitting a single uncertainty cell to grow proportionately with a system's action predicts that everyday objects should exist as delocalized, unobservable smears. 
-
-This unphysical prediction would later drive theorists to formally define the strict boundaries of empirical macrorealism \cite{Popper1967, LeggettGarg1985}. While Schr\"{o}dinger patched this macroscopic paradox by introducing coherent states---relying on the infinite superposition of wavefunctions to force localization---and others relegated the expanding uncertainty strictly to statistical ensembles \cite{Ballentine1970}, we propose a geometric solution. Here, quantum and macroscopic scaling are achieved through a pair of orthogonal conjugate quantum blobs whose sum strictly conserves the quantum of action $h$.
-
-Where de Gosson \cite{degosson2009iceberg} illustrated the symplectic constraint on a single quantum blob by recalling the biblical camel:
 \begin{quote}
-``It is easier for a camel to pass through the eye of a needle than for one who is rich to enter the kingdom of God.''
+``It is easier for a camel to pass through the eye of a needle than for one who is rich to enter the kingdom of God.'' \cite{degosson2009iceberg}
 \end{quote}
-\noindent our model requires a conjugate pair of quantum blobs. As one blob is squeezed through the needle's eye, its action dual must proportionately expand. This reciprocal geometry is manifested in the \textit{r\'iastrad} (distortion) of the Old Irish hero C\'u Chulainn:
 \begin{quote}
 ``He squeezed one eye no wider than the eye of a needle; he opened the other wider than the mouth of a mead-cup.'' \cite{RiastradNote}
 \end{quote}
-
-In the ground state, this conjugate pair is degenerate, operating as a single isotropic circle in phase space. However, as the system's total action increases, the area does not uniformly expand into the problematic blur. Instead, the polar dual geometry squeezes the blobs into a pair of orthogonal ellipses---one stretching horizontally while its conjugate dual stretches vertically. As action continues to increase, the orthogonal cigar shapes narrow, ultimately sharpening into fine crosshairs. This precise intersection recovers the sharp, localized point of classical phase space, restoring the correspondence principle through convex symplectic geometry.
 
 \begin{equation}
 \label{eq:ConjugateActionArea}
@@ -150,6 +134,11 @@ q = \frac{A}{h} \epsilon_q  \quad \text{and} \quad p = \frac{A}{h} \epsilon_p
 \end{equation}
 
 \begin{equation}
+\label{eq:BitBudgetPlain}
+\text{Available Bits} \propto \text{Classical Conjugate Limit}
+\end{equation}
+
+\begin{equation}
 \label{eq:BitBudget}
 K_q \propto \Delta p \quad \text{and} \quad K_p \propto \Delta q
 \end{equation}
@@ -165,6 +154,15 @@ A = \pi \Delta q \Delta p
 n = \left\lfloor \frac{A}{h} \right\rfloor
 \end{equation}
 
+\section{Correspondences}
+
+\begin{itemize}
+    \item characteristic time and quantum speed limits $\tau_{K=2}=\tau_\perp = \frac{h}{4 E_L}$
+    \item erasure temperatures $T$ 
+    \item information flux and van der Pauw $\frac{\pi}{\ln{2}}$
+    \item Bekenstein bounds
+    \item Fisher information
+\end{itemize}
 \section{Dimensionless Equations}
 
 $\pi \delta q \Delta p = \frac{h}{2}$
@@ -211,10 +209,11 @@ $\widetilde{\delta q} = \frac{1}{\widetilde{\Delta p}}$
 \section{Foundational Manuscripts}
 
 \begin{itemize}
-    \item \textbf{Geometry}
+    \item \textbf{Uncertainty}
     \begin{itemize}
         \item Heisenberg \cite{Heisenberg1927, Heisenberg1983_English}
         \item de Gosson \cite{DeGosson2003}
+        \item Zurek \cite{Zurek2001}
     \end{itemize}
     
     \item \textbf{Thermodynamics}
