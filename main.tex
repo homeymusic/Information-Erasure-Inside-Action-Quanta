@@ -141,9 +141,19 @@ h = \pi \delta q \Delta p + \pi \Delta q \delta p
 
 \subsection{Quantum Density from Erasure}
 
-Instead of the Wigner quasi-probability distribution $W(q,p)$, we use Landauer erasure density $L(q,p)$.
+Instead of the Wigner quasi-probability distribution $W(q,p)$, we introduce Landauer erasure density $L(q,p)$.
 
-\subsubsection{Erasure}
+\begin{equation}
+\label{eq:JointErasure}
+L(q,p) = \sum_{\mu=1}^{N} \mathbb{I}\left( \frac{A}{h} \epsilon_q = q \right) \mathbb{I}\left( \frac{A}{h} \epsilon_p = p \right)
+\end{equation}
+
+\begin{equation}
+\label{eq:Marginals}
+N(q) = \sum_{p} L(q,p)
+\quad \text{and} \quad
+N(p) = \sum_{q} L(q,p)
+\end{equation}
 
 $$
 \texttt{erase}(q_\mu, \delta q) \rightarrow (q^*, s_q^*)
@@ -164,34 +174,42 @@ Each microstate erases into the minimal-action state $(q_\mu, p_\mu) \rightarrow
 q = \frac{A}{h} \epsilon_q \quad \text{and} \quad p = \frac{A}{h} \epsilon_p
 \end{equation}
 
-\begin{equation}
-\label{eq:JointErasure}
-L(q,p) = \sum_{\mu=1}^{N} \mathbb{I}\left( \frac{A}{h} \epsilon_q = q \right) \mathbb{I}\left( \frac{A}{h} \epsilon_p = p \right)
-\end{equation}
-
-\begin{equation}
-\label{eq:Marginals}
-N(q) = \sum_{p} L(q,p)
-\quad \text{and} \quad
-N(p) = \sum_{q} L(q,p)
-\end{equation}
 
 \subsection{The Relationship Between Bits and Resolving Power}
 
 \begin{equation}
-\label{eq:ResolvingPowerPlain}
-\text{Resolving Power} \propto \text{Bits} \propto \text{Conjugate}
+\label{eq:ResolvingPowerCoordinatePlain}
+\substack{\text{Coordinate} \\ \text{Bit Budget}}
+\sim 
+\substack{\text{Coordinate} \\ \text{Resolving Power}} 
+\sim
+\substack{\text{Momentum} \\ \text{Boundary}}
 \end{equation}
 
 \begin{equation}
-\label{eq:ResolvingPower}
-\mathcal{R}_q = \frac{1}{\delta q}  \quad \text{and} \quad \mathcal{R}_p = \frac{1}{\delta p}
+\label{eq:BitBudgetResolutionCoordinate}
+K_q \sim \mathcal{R}_q \sim \Delta p
 \end{equation}
 
 \begin{equation}
-\label{eq:BitBudgetResolution}
-\mathcal{R}_q \propto K_q \propto \Delta p \quad \text{and} \quad \mathcal{R}_p \propto K_p \propto \Delta q
+\label{eq:ResolvingPowerMomentumPlain}
+\substack{\text{Momentum} \\ \text{Bit Budget}}
+\sim 
+\substack{\text{Momentum} \\ \text{Resolving Power}} 
+\sim
+\substack{\text{Coordinate} \\ \text{Boundary}}
 \end{equation}
+
+\begin{equation}
+\label{eq:BitBudgetResolutionMomentum}
+K_p \sim \mathcal{R}_p \sim \Delta q
+\end{equation}
+
+$$
+\mathcal{R}_q = \frac{1}{\delta q}
+\quad
+\mathcal{R}_p = \frac{1}{\delta p}
+$$
 
 \subsection{Zurek Uncertainty Principle}
 
