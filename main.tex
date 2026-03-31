@@ -4,42 +4,31 @@
 
 \usepackage{graphicx}% Include figure files
 \graphicspath{{figures/}} 
-\usepackage{dcolumn}% Align table columns on decimal point
-\usepackage{bm}% bold math
 \usepackage{orcidlink}
 \usepackage{mathtools}
 \usepackage{algpseudocode}
 
-% -------------- Watermark ----------------
+% -------------- arXiv-Style Margin Stamp ----------------
 \usepackage[style=iso]{datetime2}
 \usepackage{FiraMono} 
 \usepackage{tikz}
-\usepackage{transparent} 
 
 % Use shipout/background to ensure it stays behind text/figures
 \AddToHook{shipout/background}{
   \begin{tikzpicture}[remember picture, overlay]
     \node [
-      rotate=55,
-      scale=1.2,
-      text opacity=0.15,      
-      color=gray!50,          
-      font=\fontfamily{FiraMono-TLF}\selectfont\bfseries,
-      align=center
-    ] at (current page.center) {
-        {\fontsize{60}{70}\selectfont WORKING DRAFT} \\ [0.8cm]
-        {\Huge \DTMnow} \\
-        {\Huge doi.org/10.17605/OSF.IO/EV8H6} \\ [0.8cm]
-        {\Large Computational Complex Systems Laboratory} \\
-        {\Large Homey Music, Detroit, USA} \\ [0.2cm]
-         {\transparent{0.25}\includegraphics[width=1.0cm]{logo.png}}
+      rotate=90,
+      color=gray!80, 
+      font=\fontfamily{FiraMono-TLF}\selectfont\footnotesize
+    ] at ([xshift=1.2cm]current page.west) {
+        WORKING DRAFT \quad $\bullet$ \quad \DTMnow \quad $\bullet$ \quad doi.org/10.17605/OSF.IO/EV8H6 \quad $\bullet$ \quad Homey Music, Detroit, USA
     };
   \end{tikzpicture}
 }
-% -----------------------------------------
-
+% --------------------------------------------------------
 
 \DeclareMathOperator*{\argmin}{argmin}
+
 \begin{document}
 
 \title{Information Erasure Inside the Quantum of Action}
