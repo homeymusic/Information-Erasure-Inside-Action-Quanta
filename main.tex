@@ -131,7 +131,7 @@ To express erasure action as a phase-space volume, it is dimensionally necessary
 \text{Erasure Action} = K E_L \tau
 \end{equation}
 
-We validate this definition by applying it to the minimal quantum phase space (a de Gosson blob), which is bounded by a minimum action of $h/2$. If this fundamental space is saturated by one position bit and one momentum bit ($K=K_q+K_p=2$), the minimal erasure action is:
+We validate this definition at the limit of the minimal quantum phase space, where the conjugate ellipses un-squeeze into perfect, overlapping circles, degenerating into a single de Gosson blob of area $h/2$. Saturated by one position bit and one momentum bit ($K = K_q + K_p = 2$), the minimal erasure action becomes:
 
 \begin{equation}
 \label{eq:MinimalErasureAction}
@@ -145,7 +145,7 @@ Solving for $\tau$ recovers the Margolus-Levitin limit \cite{MargolusLevitin1998
 \tau_{K=2} = \frac{h}{4 E_L} = \tau_\perp
 \end{equation}
 
-This demonstrates that the Margolus-Levitin minimal switching time from above corresponds to the maximal erasure time (e.g., decoherence time) from below.
+This demonstrates that the Margolus-Levitin limit for state evolution corresponds exactly to the maximal erasure time, naturally setting the physical timescale for quantum decoherence.
 
 \section{Lloyd: Erasure Action and Classical Action}
 
@@ -161,9 +161,9 @@ Lloyd demonstrated that the number of elementary logical operations $N$ a physic
 K E_L \tau \le A
 \end{equation}
 
-\section{Planck: Quantum Capacity}
+\section{Planck: Quantum Erasure Capacity}
 
-Planck demonstrated \cite{Planck1906} that a classical phase space of area $A$ has a capacity of $\Gamma = A/h$ quanta. Scaling the local quantum boundaries ($\delta q, \delta p$) by this macroscopic capacity, we construct the boundaries of the Erasure Action:
+Planck demonstrated \cite{Planck1906} that a classical phase space of area $A$ has a capacity of $A/h$. Expanding the quantum of action $h$ into its pair of quantum blobs (Eq.~\ref{eq:Blobs}), we scale this macroscopic capacity to construct the boundaries of erasure action:
 
 \begin{equation}
 \label{eq:GeometricActionLimit}
@@ -176,6 +176,40 @@ Because the minimal-action erasure paths from each microstate to the minimal-act
 \label{eq:ExactGeometricAction}
 (K_q + K_p) E_L \tau = \frac{A}{h} (\pi |\epsilon_q| \Delta p + \pi \Delta q |\epsilon_p|)
 \end{equation}
+
+
+\subsection{Anatomy of the Erasure Action}
+
+To understand the physical machinery of Equation~\ref{eq:ExactGeometricAction}, we can isolate how the universe provisions and expends algorithmic information:
+
+\subsubsection{The Macroscopic Capacity ($A/h$)} 
+The area of the conjugate blob pair is strictly the quantum of action, $h$. Because this fundamental space can only ever fund the minimal bit budget ($K_q = 1, K_p = 1$), the action required to support a macroscopic bit budget ($K \gg 1$) must be provisioned by the classical scale of the system. The multiplier $A/h$ provides this capacity, scaling the quantum of action $h$ up to the macroscopic action necessary to support the total bits in $K$.
+
+\subsubsection{The Geometric Squeezing ($h/2$)} 
+When a macroscopic classical boundary expands (e.g., increasing momentum $\Delta p$), symplectic geometry strictly conserves the area of the underlying de Gosson blob at exactly $h/2$. Because this area cannot grow, the blob must physically squeeze Zurek's conjugate quantum uncertainty ($\delta q$) to compensate. 
+
+\subsubsection{The Resolving Power ($K$)} 
+This sub-Planck squeezing acts as the resolving power of the phase space. To pinpoint a microstate within increasingly fine spatial crosshairs ($\delta q \to 0$), the universe must expend more algorithmic information ($K_q \to \infty$). Therefore, macroscopic boundaries enforce microscopic resolution, which in turn demands a larger bit budget:
+
+\begin{equation}
+\label{eq:ResolvingPowerPlain}
+\substack{\text{Classical} \\ \text{Boundary}}
+\sim
+\substack{\text{Resolving} \\ \text{Power}} 
+\sim
+\substack{\text{Bit} \\ \text{Budget}}
+\end{equation}
+
+By separating the conjugate coordinates, we see exactly how the erasure bit budget scales inversely with the quantum uncertainty, driven by the classical macroscopic boundaries:
+
+\begin{equation}
+\label{eq:BitBudgetResolutionCoordinate}
+\Delta p \sim \frac{1}{\delta q} \sim K_q 
+\quad \text{and} \quad
+\Delta q \sim \frac{1}{\delta p} \sim K_p 
+\end{equation}
+
+When classical momentum ($\Delta p$) grows, spatial uncertainty ($\delta q$) must shrink. The universe must therefore spend more bits ($K_q$) to locate and erase the state. This changing bit budget dictates the physics we observe: low action affords only enough bits for discrete quantum configurations, while high action supplies the massive bit budget required to draw smooth classical trajectories.
 
 \section{Quantum Density from Erasure}
 
@@ -202,7 +236,7 @@ N(p) = \sum_{q} L(q,p)
 
 \section{Erasure on a Universal Computer}
 
-Let $U$ be a Universal Reversible Turing Machine. A computable encoding function, $\mathcal{E}_U$, encodes the minimal-action microstate $x_\mu$ inside the classical action boundary $\delta x$ centered on the blob component $x_b$ as a binary program string $s_x$:
+Let $U$ be a Universal Reversible Turing Machine. For any phase-space coordinate, $x \in \{q, p\}$, a computable encoding function, $\mathcal{E}_U$, encodes the minimal-action microstate $x_\mu$ inside the classical action boundary $\delta x$ centered on the blob component $x_b$ as a binary program string $s_x$:
 
 \begin{equation}
 \label{eq:EncoderFunction}
@@ -230,10 +264,29 @@ Each microstate $(q_\mu, p_\mu)$ uncomputes to $(q_b, p_b)$, creating a displace
 q = \frac{A}{h} \epsilon_q \quad \text{and} \quad p = \frac{A}{h} \epsilon_p
 \end{equation}
 
+\subsection{Time Evolution and Decoherence}
+
+Uncomputing a microstate on $U$ is a physical process that unfolds over time. As the system clears bits from the tape, the microstate steps closer to the minimal-action state, physically shrinking the offsets $\epsilon_q$ and $\epsilon_p$ toward zero. Because the macroscopic coordinates scale directly with these microscopic offsets, they track this continuous erasure process:
+
+\begin{equation}
+\label{eq:TimeEvolutionCoordinates}
+q(t) = \frac{A}{h} \epsilon_q(t) \quad \text{and} \quad p(t) = \frac{A}{h} \epsilon_p(t)
+\end{equation}
+
+Quantum behavior is visible only while algorithmic information remains on the tape. When the tape is fully erased ($\epsilon_q = \epsilon_p = 0$), the coordinates rest exactly at the classical target $(q_b, p_b)$. We observe this mechanical loss of information as quantum decoherence. 
+
+By isolating time from the erasure action boundary and expanding Landauer's limit ($E_L = k_B T \ln 2$), we find the time required for this decoherence:
+
+\begin{equation}
+\label{eq:DecoherenceTime}
+\tau_D = \frac{\text{Erasure Action}}{(K_q + K_p) k_B T \ln 2}
+\end{equation}
+
+This denominator sets the physical clock. A system maintains its quantum behavior if it remains small ($K \to 2$) and cold ($T \to 0$). If the state requires a massive bit budget ($K \gg 1$) or operates at a high temperature ($T \gg 0$), the denominator grows rapidly. The erasure time drops to zero, and the system becomes entirely classical.
 
 \section{Numerical Simulations}
 
-We leverage modified sequences \cite{Aiylam2013} to extend the standard Stern-Brocot tree \cite{ConcreteMath} across the entire real line, $\mathbb{R}$, by initializing the search bounds at $\pm \infty$. We simulate the physical encoding function $\mathcal{E}_U$ for any phase-space coordinate, $x \in \{q, p\}$:
+We leverage modified sequences \cite{Aiylam2013} to extend the standard Stern-Brocot tree \cite{ConcreteMath} across the entire real line, $\mathbb{R}$, by initializing the search bounds at $\pm \infty$. We simulate the physical encoding function $\mathcal{E}_U$:
 
 \begin{algorithmic}[1]
 \Function{$\mathcal{E}_U$}{$x_b, \delta x$}
@@ -258,7 +311,7 @@ We leverage modified sequences \cite{Aiylam2013} to extend the standard Stern-Br
 \EndFunction
 \end{algorithmic}
 
-The minimal program $s_x^*$ is irreversibly destroyed, clearing the tape on $U$:
+The minimal program $s_x^* = \operatorname{reverse}(\operatorname{invert}({s_x}))$ is irreversibly destroyed, clearing the tape on $U$:
 
 \begin{algorithmic}[1]
 \Function{ERASE}{$s_x^*$}
@@ -297,32 +350,6 @@ The area of this Fritz John ellipsoid establishes a geometric uncertainty relati
 This approach resolves {S}chr{\"{o}}dinger's cat paradox \cite{Schrodinger1980Trimmer}: macroscopic action squeezes quantum uncertainty into fine phase-space crosshairs, enforcing microscopic precision and naturally restoring the correspondence principle.
 
 \section{Ideas to Explore}
-
-\section{Action, Resolution, and Bits}
-
-\begin{equation}
-\label{eq:ResolvingPowerPlain}
-\substack{\text{Classical} \\ \text{Boundary}}
-\propto
-\substack{\text{Resolving} \\ \text{Power}} 
-\propto
-\substack{\text{Bit} \\ \text{Budget}}
-\end{equation}
-
-\begin{equation}
-\label{eq:BitBudgetResolutionCoordinate}
-\Delta p
-\propto 
-\frac{1}{\delta q} 
-\propto 
-K_q 
-\quad \text{and} \quad
-\Delta q
-\propto 
-\frac{1}{\delta p} 
-\propto 
-K_p 
-\end{equation}
 
 \section{Excess Action}
 
