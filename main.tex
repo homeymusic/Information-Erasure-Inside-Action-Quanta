@@ -51,19 +51,19 @@ Quantum microstates are operationally indistinguishable inside Planck's quantum 
 
 \section{Introduction}
 
-We briefly set aside the traditional, statistical view of the Heisenberg uncertainty principle \cite{Robertson1929}. Instead, we return to the foundation: Planck's quantum of action, $h$ \cite{DeGosson2017}.
+While the uncertainty principle is typically framed as a statistical limit \cite{Robertson1929}, our starting point is its geometric foundation: Planck's quantum of action, $h$ \cite{DeGosson2017}.
 
-Imagine this unit not as a statistical blur, but as a physical de Gosson blob in phase space \cite{DeGosson2008}. Without loss of generality, we consider a 1D system. The environment can stretch and squeeze this blob into various shapes, but its area $A_b$ in phase space is conserved \cite{Gromov1985}. We will see later that the interior of Planck's quantum of action \cite{Zurek2001} necessitates a conjugate pair of $h/2$ blobs, but visualizing a single blob is a helpful starting point.
+Imagine this unit not as a statistical blur, but as a de Gosson blob in phase space \cite{DeGosson2008}. Without loss of generality, we consider a 1D system. The environment can stretch and squeeze this blob into various shapes, but its area $A_b$ is conserved \cite{Gromov1985}. We will see later that Zurek's derivation of sub-Planck structure \cite{Zurek2001} necessitates a conjugate pair of $h/2$ blobs as the geometry of the quantum of action, but visualizing a single blob provides a helpful starting point.
 
-Now, suppose the center of this blob $q_b$ sits at an irrational coordinate relative to a classical reference scale $q_0$, such as the golden ratio $q_b/q_0 = \phi$. If a machine understands symbolic algebra, the golden ratio is a finite sequence: $\phi = (1+\sqrt{5})/2$. However, to pinpoint a physical location in the continuum, the universe operates as a discrete Szilard engine, narrowing down the coordinate by repeatedly inserting partitions to make a sequence of binary choices \cite{PlenioVitelli2001}.
+Suppose the center of this blob, $q_b$, sits at an irrational coordinate relative to a classical reference scale $q_0$, such that their ratio is the golden ratio, $q_b/q_0 = \phi$. If a machine understands symbolic algebra, the golden ratio is a finite sequence: $\phi = (1+\sqrt{5})/2$. However, to pinpoint a physical location in the continuum, the universe operates as a discrete Szilard engine, narrowing down the coordinate by repeatedly inserting partitions to make a sequence of binary choices \cite{PlenioVitelli2001}.
 
 A rational coordinate like $3/2$ terminates after a finite number $N$ of partitions, requiring a short binary sequence (e.g., $\mathtt{110}, N=3$). But an irrational coordinate like the golden ratio never terminates. Pinpointing the value in the continuum requires an infinite sequence of binary choices (e.g., $\phi = \mathtt{11010\overline{10}}, N=\infty$).
 
-According to Landauer's principle \cite{Landauer1961}, erasing information requires a physical expenditure of action---a finite amount of heat $k_B T \ln{2}$ dissipated over a finite amount of time $\tau$ for every single bit. To erase an infinitely long binary sequence would require an infinite amount of physical action. However, any real physical system is bounded by a finite amount of available classical action $A = \pi \Delta q \Delta p$. The universe does not have the budget to handle infinite phase-space precision.
+According to Landauer's principle \cite{Landauer1961}, erasing information requires a physical expenditure of action---a finite amount of heat $k_B T \ln{2}$ dissipated over a finite amount of time $\tau$ for each bit. To erase an infinitely long binary sequence would require an infinite amount of physical action. However, physical systems are bounded by a finite amount of available classical action $A = \pi \Delta q \Delta p \ge h/2$. The universe does not have the budget to handle infinite phase-space precision.
 
 Faced with a finite action budget, the universe must truncate. But how is the system allowed to swap an exact coordinate for an approximation? Because no physical measurement can resolve the interior of the quantum of action, the infinite possible microstates within it remain operationally indistinguishable \cite{Brillouin1956, Peres1993, VonNeumann1932, Gromov1985}. This establishes a many-to-one mapping: a continuous pool of mathematically distinct coordinates within the blob $\{(q_\mu, p_\mu)\}$ all share the same physical identity. Since any coordinate in this pool is physically valid, the universe selects the microstate $(q_\mu^*, p_\mu^*)$ that requires the least action to erase \cite{FeynmanHibbs1965, Lloyd2000, Landauer1961}. Instead of the infinitely long sequence of the golden ratio, it settles for a nearby simple fraction, like $3/2$. Clearing the excess bits to reach this state is an irreversible thermodynamic process that fits within the system's classical action limit.
 
-In this letter, we show how this thermodynamic truncation leads to quantum and classical mechanics. This Landauer process granulates the continuum. The thermodynamic necessity to expend the least erasure action pixelates phase space, resolving the coarse-grained configurations of quantum mechanics at low action into the fine-grained configurations of classical mechanics at high action.
+In this letter, we show how this thermodynamic truncation leads to quantum mechanics and satisfies the correspondence principle. The thermodynamic necessity to expend the least erasure action granulates the phase-space continuum, resolving the coarse-grained configurations of quantum mechanics at low action into the fine-grained classical reality at high action.
 
 \begin{figure}[t!]
     \centering
@@ -94,7 +94,46 @@ De Gosson bridges this statistical uncertainty with phase-space geometry. By sat
 
 Protected by Gromov's non-squeezing theorem \cite{Gromov1985}, this $h/2$ minimum area is topologically conserved. Compressing the blob along one axis forces a proportional expansion along its conjugate.
 
-\section{Margolus-Levitin: Erasure Action}
+\section{Zurek: One Blob or Two?}
+
+Zurek \cite{Zurek2001} demonstrated that a quantum state develops localized structures as the classical action boundaries, $\Delta p$ and $\Delta q$, compress the conjugate squeezed boundaries, $\delta q = \hbar / \Delta p$ and $\delta p = \hbar / \Delta q$. Expressing these squeezed boundaries as phase-space ellipses yields a conjugate pair of de Gosson blobs (see Fig.~\ref{fig:erase_schematic}) with areas $\pi \delta q \Delta p = h/2$ and $\pi \Delta q \delta p = h/2$.
+
+Because both areas are required to bound the space, the total quantum of action $h$ is defined by their sum:
+
+\begin{equation}
+\label{eq:SimpleLanguageBlobs}
+\text{Quantum of Action} = \text{Pair of Quantum Blobs}
+\end{equation}
+
+\begin{equation}
+\label{eq:Blobs}
+h = \pi \delta q \Delta p + \pi \Delta q \delta p
+\end{equation}
+
+Furthermore, Zurek showed that quantum interference of the compass state creates rectangular structures bounded by these squeezed boundaries, with area $a = \delta q \delta p$ \cite{Zurek2001}. Generalizing to symplectic geometry, the unique maximum-volume shape inscribed within this convex body is the Fritz John ellipsoid \cite{John1948}, shown as the interior uncertainty ellipse in Fig.~\ref{fig:erase_schematic}. While de Gosson's formulation \cite{DeGosson2022} saturates at the half quantum of action ($h/2$), erasure within the squeezed boundaries forces this inner geometry to be smaller:
+
+\begin{equation}
+\label{eq:JohnEllipsoid}
+\pi \delta q \delta p \le \frac{h}{2}
+\end{equation}
+
+This establishes a classical action boundary on squeezed uncertainty:
+
+\begin{equation}
+\label{eq:GeometricUncertaintyPrinciplePlainLanguage}
+\text{Squeezed Uncertainty} \propto \frac{1}{\text{Classical Action}}
+\end{equation}
+
+Substituting the squeezed boundaries, the area of this inscribed ellipse is $\pi \delta q \delta p = \pi(\hbar/\Delta p)(\hbar/\Delta q)$, yielding a squeezed uncertainty principle:
+
+\begin{equation}
+\label{eq:SqueezedUncertaintyPrinciple}
+\delta q \delta p = \frac{\hbar^2}{\Delta q \Delta p}.
+\end{equation}
+
+While the traditional uncertainty principle $\sigma_q \sigma_p \ge \hbar/2$ demands the macroscopic quantum states underlying Schr{\"{o}}dinger's cat paradox \cite{Schrodinger1980Trimmer}, this squeezed uncertainty principle precludes them: as classical boundaries expand, they compress the conjugate blobs into fine crosshairs (see the bottom-left panel of Fig.~\ref{fig:harmonic_oscillator}), enforcing the correspondence principle.
+
+\section{Landauer: Erasure Action}
 
 To express the Landauer erasure of $N$ bits as action, it is dimensionally necessary to introduce a characteristic erasure time, $\tau$:
 
@@ -133,22 +172,6 @@ Applying this limit to the geometry of phase space, we posit that the total acti
 \begin{equation}
 \label{eq:ErasureAndClassicalAction}
 N E_L \tau \le A
-\end{equation}
-
-\section{Zurek: One Blob or Two?}
-
-Zurek \cite{Zurek2001} demonstrated that a quantum state develops localized structures as the classical action boundaries, $\Delta p$ and $\Delta q$, compress the conjugate squeezed boundaries, $\delta q = \hbar / \Delta p$ and $\delta p = \hbar / \Delta q$. Expressing these squeezed boundaries as phase-space ellipses yields a conjugate pair of de Gosson blobs (see Fig.~\ref{fig:erase_schematic}) with areas $\pi \delta q \Delta p = h/2$ and $\pi \Delta q \delta p = h/2$.
-
-Because both areas are required to bound the space, the total quantum of action $h$ is defined by their sum:
-
-\begin{equation}
-\label{eq:SimpleLanguageBlobs}
-\text{Quantum of Action} = \text{Pair of Quantum Blobs}
-\end{equation}
-
-\begin{equation}
-\label{eq:Blobs}
-h = \pi \delta q \Delta p + \pi \Delta q \delta p
 \end{equation}
 
 \section{Planck: Quantum Erasure Capacity}
@@ -301,31 +324,6 @@ By isolating time from the erasure action and expanding Landauer's limit ($E_L =
 \end{equation}
 
 This denominator sets the physical clock. A system maintains its quantum behavior if it remains small ($N \to 2$) and cold ($T \to 0$). If the state requires a large bit budget ($N \gg 1$) or operates at a high temperature ($T \gg 0$), the denominator grows rapidly. The erasure time drops to zero, and the system becomes entirely classical.
-
-\section{A Geometric Uncertainty Principle}
-
-Zurek demonstrated that quantum interference of the compass state creates rectangular structures bounded by the squeezed boundaries, with area $a = \delta q \delta p$ \cite{Zurek2001}. Generalizing to symplectic geometry, the unique maximum-volume shape inscribed within this convex body is the Fritz John ellipsoid \cite{John1948}. While de Gosson's formulation \cite{DeGosson2022} saturates at the half quantum of action ($h/2$), erasure within the squeezed boundaries forces this inner geometry to be smaller:
-
-\begin{equation}
-\label{eq:JohnEllipsoid}
-\pi \delta q \delta p \le \frac{h}{2}
-\end{equation}
-
-This establishes a classical action boundary on squeezed uncertainty:
-
-\begin{equation}
-\label{eq:GeometricUncertaintyPrinciplePlainLanguage}
-\text{Uncertainty} \propto \frac{1}{\text{Classical Action}}
-\end{equation}
-
-Recalling the squeezed boundaries from Eq.~\ref{eq:BlobSqueeze}, the area of this inscribed ellipse is $\pi \delta q \delta p = \pi(\hbar/\Delta p)(\hbar/\Delta q)$, yielding a geometric uncertainty principle:
-
-\begin{equation}
-\label{eq:ZurekUncertaintyPrinciple}
-\delta q \delta p = \frac{\hbar^2}{\Delta q \Delta p}.
-\end{equation}
-
-Unlike the traditional uncertainty principle $\sigma_q \sigma_p \ge \hbar/2$, which acts as a passive statistical floor, this geometric formulation is operational and resolves Schr{\"{o}}dinger's cat paradox \cite{Schrodinger1980Trimmer}: the scale of the classical boundaries compresses the squeezed boundaries into fine cross hairs, enforcing squeezed resolution and transitioning the quantum state into classical reality.
 
 \section{Finite or Infinite Support}
 
