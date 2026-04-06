@@ -27,8 +27,6 @@
 }
 % --------------------------------------------------------
 
-\DeclareMathOperator*{\argmin}{argmin}
-
 \begin{document}
 
 \title{Information Erasure Inside the Quantum of Action}
@@ -55,17 +53,17 @@ Quantum microstates are operationally indistinguishable inside Planck's quantum 
 
 We briefly set aside the traditional, statistical view of the Heisenberg uncertainty principle \cite{Robertson1929}. Instead, we return to the foundation: Planck's quantum of action, $h$ \cite{DeGosson2017}.
 
-Imagine this fundamental unit not as a statistical blur, but as a physical de Gosson blob in phase space \cite{DeGosson2008}. Without loss of generality, we consider a 1D system. The environment can stretch and squeeze this blob into various shapes, but its area $A_b$ in phase space is conserved \cite{Gromov1985}. We will see later that the interior of Planck's quantum of action \cite{Zurek2001} necessitates a conjugate pair of $h/2$ blobs, but visualizing a single blob is a helpful starting point.
+Imagine this unit not as a statistical blur, but as a physical de Gosson blob in phase space \cite{DeGosson2008}. Without loss of generality, we consider a 1D system. The environment can stretch and squeeze this blob into various shapes, but its area $A_b$ in phase space is conserved \cite{Gromov1985}. We will see later that the interior of Planck's quantum of action \cite{Zurek2001} necessitates a conjugate pair of $h/2$ blobs, but visualizing a single blob is a helpful starting point.
 
 Now, suppose the center of this blob $q_b$ sits at an irrational coordinate relative to a classical reference scale $q_0$, such as the golden ratio $q_b/q_0 = \phi$. If a machine understands symbolic algebra, the golden ratio is a finite sequence: $\phi = (1+\sqrt{5})/2$. However, to pinpoint a physical location in the continuum, the universe operates as a discrete Szilard engine, narrowing down the coordinate by repeatedly inserting partitions to make a sequence of binary choices \cite{PlenioVitelli2001}.
 
-A rational coordinate like $3/2$ terminates after a finite number $N$ of partitions, requiring a short binary sequence (e.g., $\mathtt{110}, N=3$). But an irrational coordinate like the golden ratio never terminates. Pinpointing the value perfectly in the continuum requires an infinite sequence of binary choices (e.g., $\phi = \mathtt{11010\overline{10}}, N=\infty$).
+A rational coordinate like $3/2$ terminates after a finite number $N$ of partitions, requiring a short binary sequence (e.g., $\mathtt{110}, N=3$). But an irrational coordinate like the golden ratio never terminates. Pinpointing the value in the continuum requires an infinite sequence of binary choices (e.g., $\phi = \mathtt{11010\overline{10}}, N=\infty$).
 
-According to Landauer's principle \cite{Landauer1961}, erasing information requires a physical expenditure of action---a finite amount of heat $k_B T \ln{2}$ dissipated over a finite amount of time $\tau$ for every single bit. To erase an infinitely long binary sequence would require an infinite amount of physical action. However, any real physical system is bounded by a finite amount of available classical action $A = \pi \Delta q \Delta p$. The universe simply does not have the budget to handle infinite phase-space precision.
+According to Landauer's principle \cite{Landauer1961}, erasing information requires a physical expenditure of action---a finite amount of heat $k_B T \ln{2}$ dissipated over a finite amount of time $\tau$ for every single bit. To erase an infinitely long binary sequence would require an infinite amount of physical action. However, any real physical system is bounded by a finite amount of available classical action $A = \pi \Delta q \Delta p$. The universe does not have the budget to handle infinite phase-space precision.
 
-Faced with a finite action budget, the universe must truncate. But how is the system allowed to simply swap an exact coordinate for an approximation? Because inside the quantum of action, the absolute limit of physical information extraction renders all microstates operationally indistinguishable \cite{Brillouin1956, Peres1993, VonNeumann1932, Gromov1985}. This establishes a fundamental many-to-one mapping: an infinite pool of mathematically distinct coordinates within the blob $\{(q_\mu, p_\mu)\}$ all share the same physical identity. Since any coordinate in this pool is physically valid, the universe selects the microstate $(q_\mu^*, p_\mu^*)$ that requires the least action to erase \cite{FeynmanHibbs1965, Lloyd2000, Landauer1961}. Instead of the infinitely long sequence of the golden ratio, it settles for a nearby simple fraction, like $3/2$. Clearing the excess bits to reach this state is an irreversible thermodynamic process that safely fits within the system's classical action limit.
+Faced with a finite action budget, the universe must truncate. But how is the system allowed to swap an exact coordinate for an approximation? Because no physical measurement can resolve the interior of the quantum of action, the infinite possible microstates within it remain operationally indistinguishable \cite{Brillouin1956, Peres1993, VonNeumann1932, Gromov1985}. This establishes a many-to-one mapping: a continuous pool of mathematically distinct coordinates within the blob $\{(q_\mu, p_\mu)\}$ all share the same physical identity. Since any coordinate in this pool is physically valid, the universe selects the microstate $(q_\mu^*, p_\mu^*)$ that requires the least action to erase \cite{FeynmanHibbs1965, Lloyd2000, Landauer1961}. Instead of the infinitely long sequence of the golden ratio, it settles for a nearby simple fraction, like $3/2$. Clearing the excess bits to reach this state is an irreversible thermodynamic process that fits within the system's classical action limit.
 
-In this letter, we show how this thermodynamic truncation leads to quantum and classical mechanics. This mandatory Landauer process granulates the continuum. The thermodynamic necessity to expend the least erasure action pixelates phase space, resolving the coarse-grained configurations of quantum mechanics at low action into the fine-grained configurations of classical mechanics at high action.
+In this letter, we show how this thermodynamic truncation leads to quantum and classical mechanics. This Landauer process granulates the continuum. The thermodynamic necessity to expend the least erasure action pixelates phase space, resolving the coarse-grained configurations of quantum mechanics at low action into the fine-grained configurations of classical mechanics at high action.
 
 \begin{figure}[t!]
     \centering
@@ -76,37 +74,13 @@ In this letter, we show how this thermodynamic truncation leads to quantum and c
 
 \section{Landauer: Information Erasure}
 
-Landauer's principle establishes the minimum thermodynamic cost of the information erasure of one bit \cite{Landauer1961}:
-
-\begin{equation}
-\label{eq:LandauerErasureOneBit}
-E_L = k_B T \ln{2}
-\end{equation}
+Landauer's principle establishes the minimum thermodynamic cost of the information erasure of one bit as $E_L = k_B T \ln{2}$ \cite{Landauer1961}.
 
 \section{De Gosson: The Quantum Blob}
 
-Phase-space coordinates are $(q,p)$, where $q$ is position and $p$ is momentum. According to the Heisenberg uncertainty principle \cite{Heisenberg1927}:
+Phase-space coordinates are $(q,p)$, where $q$ is position and $p$ is momentum. According to the Heisenberg uncertainty principle, $\sigma_q \sigma_p \ge \hbar/2$ \cite{Heisenberg1927}. Geometrically, symplectic mechanics translates this statistical variance into a $1\sigma$ covariance ellipse in phase space, bounding the minimum uncertainty region of the state as $q^2/(2\sigma_q^2) + p^2/(2\sigma_p^2) \le 1$ \cite{DeGosson2006}. The geometric area $A$ of this ellipse is given by $A = \pi (\sqrt{2}\sigma_q) (\sqrt{2}\sigma_p) = 2\pi \sigma_q \sigma_p$.
 
-\begin{equation}
-\label{eq:HeisenbergVariance}
-\sigma_q \sigma_p \ge \frac{\hbar}{2}
-\end{equation}
-
-Geometrically, symplectic mechanics translates this statistical variance into a $1\sigma$ covariance ellipse in phase space, rigorously bounding the minimum uncertainty region of the state \cite{DeGosson2006}:
-
-\begin{equation}
-\label{eq:CovarianceEllipsoid}
-\frac{q^2}{2\sigma_q^2} + \frac{p^2}{2\sigma_p^2} \le 1
-\end{equation}
-
-The geometric area $A$ of this ellipse is given by:
-
-\begin{equation}
-\label{eq:EllipsoidArea}
-A = \pi (\sqrt{2}\sigma_q) (\sqrt{2}\sigma_p) = 2\pi \sigma_q \sigma_p
-\end{equation}
-
-De Gosson bridges this statistical uncertainty with phase-space geometry. By saturating the Heisenberg bound ($\sigma_q \sigma_p = \hbar/2$), the minimal permissible area emerges as the fundamental quantum blob $A_b$:
+De Gosson bridges this statistical uncertainty with phase-space geometry. By saturating the Heisenberg bound ($\sigma_q \sigma_p = \hbar/2$), the minimal permissible area emerges as the quantum blob $A_b$ \cite{DeGosson2003}:
 
 \begin{equation}
 \label{eq:SimpleLanguageOneBlob}
@@ -118,7 +92,7 @@ De Gosson bridges this statistical uncertainty with phase-space geometry. By sat
 \frac{h}{2} = A_b
 \end{equation}
 
-Protected by Gromov's non-squeezing theorem \cite{Gromov1985}, this $h/2$ minimum area is topologically conserved. Compressing the blob along one axis inevitably forces a proportional expansion along its conjugate.
+Protected by Gromov's non-squeezing theorem \cite{Gromov1985}, this $h/2$ minimum area is topologically conserved. Compressing the blob along one axis forces a proportional expansion along its conjugate.
 
 \section{Margolus-Levitin: Erasure Action}
 
@@ -129,7 +103,7 @@ To express the Landauer erasure of $N$ bits as action, it is dimensionally neces
 \text{Total Erasure Action} = N E_L \tau
 \end{equation}
 
-We validate this definition at the limit of the minimal quantum phase space, where the pair of quantum blobs degenerate into a perfect overlapping circle with area $h/2$. Saturated by one position bit and one momentum bit, $N = N_q + N_p = 2$, the minimal erasure action becomes:
+We validate this definition at the limit of the minimal quantum phase space, where the pair of quantum blobs degenerate into an overlapping circle with area $h/2$. Saturated by one position bit and one momentum bit, $N = N_q + N_p = 2$, the minimal erasure action becomes:
 
 \begin{equation}
 \label{eq:MinimalErasureAction}
@@ -147,7 +121,7 @@ This demonstrates that the Margolus-Levitin minimal orthogonal time corresponds 
 
 \section{Lloyd: Erasure Action and Classical Action}
 
-Lloyd demonstrated that the number of elementary logical operations $N$ a physical system can perform in time $t$ is fundamentally bounded by its available energy: $N \le \frac{2 E t}{\pi \hbar}$ \cite{Lloyd2000}. By identifying the erasure of coordinate information as the fundamental logical operation of the system, we can map the bits of coordinate precision directly to this computational limit.
+Lloyd demonstrated that the number of elementary logical operations $N$ a physical system can perform in time $t$ is bounded by its available energy: $N \le \frac{2 E t}{\pi \hbar}$ \cite{Lloyd2000}. By identifying the erasure of coordinate information as the logical operation of the system, we can map the bits of coordinate precision directly to this computational limit.
 
 Applying this limit to the geometry of phase space, we posit that the total action required to erase $N$ bits of information cannot exceed the classical action area $A$ available to the system:
 
@@ -163,19 +137,7 @@ N E_L \tau \le A
 
 \section{Zurek: One Blob or Two?}
 
-Zurek \cite{Zurek2001} demonstrated that a quantum state develops localized structures as the classical action boundaries, $\Delta p$ and $\Delta q$, compress the conjugate squeezed boundaries, $\delta q$ and $\delta p$:
-
-\begin{equation}
-\label{eq:BlobSqueeze}
-\delta q = \frac{\hbar}{\Delta p} \quad \text{and} \quad \delta p = \frac{\hbar}{\Delta q}
-\end{equation}
-
-Expressing these squeezed boundaries as phase-space ellipses yields a conjugate pair of de Gosson blobs (see Fig.~\ref{fig:erase_schematic}):
-
-\begin{equation}
-\label{eq:BlobAreas}
-\pi \delta q \Delta p = \frac{h}{2} \quad \text{and} \quad \pi \Delta q \delta p = \frac{h}{2}
-\end{equation}
+Zurek \cite{Zurek2001} demonstrated that a quantum state develops localized structures as the classical action boundaries, $\Delta p$ and $\Delta q$, compress the conjugate squeezed boundaries, $\delta q = \hbar / \Delta p$ and $\delta p = \hbar / \Delta q$. Expressing these squeezed boundaries as phase-space ellipses yields a conjugate pair of de Gosson blobs (see Fig.~\ref{fig:erase_schematic}) with areas $\pi \delta q \Delta p = h/2$ and $\pi \Delta q \delta p = h/2$.
 
 Because both areas are required to bound the space, the total quantum of action $h$ is defined by their sum:
 
@@ -208,10 +170,10 @@ To understand the physical machinery of Equation~\ref{eq:GeometricActionLimit}, 
 The area of the conjugate blob pair is the quantum of action, $h$. Because each quantum blob $A_b = h/2$ can only ever fund the minimal bit budget ($N_q = 1, N_p = 1$), the action required to support a classical bit budget ($N \gg 1$) must be provisioned by the classical scale of the system. The multiplier $A/h$ provides this capacity, scaling the quantum of action $h$ up to the classical action necessary to support the total bits in $N$.
 
 \subsubsection{The Geometric Squeezing ($h/2$)}
-When a classical boundary expands (e.g., increasing the classical momentum boundary $\Delta p$), symplectic geometry strictly conserves the area of each de Gosson blob at exactly $h/2$. Because this area cannot grow, the blob must physically compress the squeezed position boundary ($\delta q$) to compensate.
+When a classical boundary expands (e.g., increasing the classical momentum boundary $\Delta p$), symplectic geometry conserves the area of each de Gosson blob at $h/2$. Because this area cannot grow, the blob must physically compress the squeezed position boundary ($\delta q$) to compensate.
 
 \subsubsection{The Resolving Power ($N$)}
-This symplectic squeezing acts as the resolving power of the phase space. To pinpoint a microstate within increasingly fine squeezed boundaries ($\delta q \to 0$, $\delta p \to 0$), the universe must expend more algorithmic information ($N_q \to \infty, N_p \to \infty$). Therefore, classical boundaries enforce squeezed resolution, which in turn demands a larger bit budget:
+This symplectic squeezing acts as the resolving power of the phase space. To pinpoint a microstate within shrinking squeezed boundaries ($\delta q \to 0$, $\delta p \to 0$), the universe must expend more algorithmic information ($N_q \to \infty, N_p \to \infty$). Therefore, classical boundaries enforce squeezed resolution, which in turn demands a larger bit budget:
 
 \begin{equation}
 \label{eq:ResolvingPowerPlain}
@@ -231,7 +193,7 @@ Isolating the conjugate pairs reveals the causal sequence: the expanding classic
 \Delta q \sim \frac{1}{\delta p} \sim N_p 
 \end{equation}
 
-When the classical momentum boundary ($\Delta p$) grows, the squeezed position boundary ($\delta q$) must shrink. The universe must therefore spend more bits ($N_q$) to select and erase the state. This changing bit budget dictates the physics we observe: low action affords only enough bits for discrete quantum configurations, while high action supplies the massive bit budget required to draw smooth classical trajectories.
+When the classical momentum boundary ($\Delta p$) grows, the squeezed position boundary ($\delta q$) must shrink. The universe must therefore spend more bits ($N_q$) to select and erase the state. This changing bit budget dictates the physics we observe: low action affords only enough bits for discrete quantum configurations, while high action supplies the bit budget required to draw smooth classical trajectories.
 
 \section{Quantum Density from Erasure}
 
@@ -242,7 +204,7 @@ Standard phase-space formulations of quantum mechanics traditionally employ the 
 L(q,p) = \sum_{\mu=1}^{M} \left[ q = \frac{A}{h} \epsilon_{q,\mu} \right] \left[ p = \frac{A}{h} \epsilon_{p,\mu} \right]
 \end{equation}
 
-Because Landauer erasure evaluates to a strictly discrete coordinate grid, the marginal distributions are obtained by summing over the conjugate variables:
+Because Landauer erasure evaluates to a discrete coordinate grid, the marginal distributions are obtained by summing over the conjugate variables:
 
 \begin{equation}
 \label{eq:Marginals}
@@ -260,14 +222,7 @@ For any phase-space coordinate, $x \in \{q, p\}$, an encoding function selects t
 (x_\mu^*, s_x^*) = \operatorname{ENCODE}(x_b, \delta x)
 \end{equation}
 
-Following Bennett's protocol \cite{Bennett1973}, we invert and reverse the encoded binary path $s_x^*$ to form the uncomputation path:
-
-\begin{equation}
-\label{eq:ReverseInverse}
-(\bar{s}_x^*)^R,
-\end{equation}
-
-where both paths have bit count $N_x = |s_x^*| = |(\bar{s}_x^*)^R|$
+Following Bennett's protocol \cite{Bennett1973}, we invert and reverse the encoded binary path $s_x^*$ to form the uncomputation path $(\bar{s}_x^*)^R$, where both paths have bit count $N_x = |s_x^*| = |(\bar{s}_x^*)^R|$.
 
 Physical erasure of this sequence uncomputes the microstate back to the blob center ($x_b$). This process expends Landauer action ($\Delta A_L = N_x E_L \tau$) to the environment, yielding the phase-space displacement $\epsilon_x^*$:
 
@@ -276,11 +231,11 @@ Physical erasure of this sequence uncomputes the microstate back to the blob cen
 \epsilon_x^* = \operatorname{ERASE}(s_x^*, x_\mu^*, x_b), \quad \text{expends} \quad \Delta A_L = N_x E_L \tau
 \end{equation}
 
-As each selected microstate $(q_\mu^*, p_\mu^*)$ uncomputes to its respective center $(q_b, p_b)$, it generates the conjugate displacements $\epsilon_q^*$ and $\epsilon_p^*$. The observed classical coordinates $(q,p)$ are these displacements scaled by Planck's classical capacity $A/h$:
+As each selected microstate $(q_\mu^*, p_\mu^*)$ uncomputes to its respective center $(q_b, p_b)$, it generates the conjugate erasure displacements $\epsilon_q^*$ and $\epsilon_p^*$. The observed classical coordinates $(q,p)$ are these displacements scaled by Planck's classical capacity $A/h$:
 
 \begin{equation}
 \label{eq:ObservedCoordinates}
-q = \frac{A}{h} \epsilon_q^* \quad \text{and} \quad p = \frac{A}{h} \epsilon_p^*
+(q,p) = \frac{A}{h} (\epsilon_q^*,\epsilon_p^*)
 \end{equation}
 
 \section{Numerical Simulations}
@@ -336,7 +291,7 @@ The physical erasure of the selected microstate unfolds over time. As the system
 q(t) = \frac{A}{h} \epsilon_q^*(t) \quad \text{and} \quad p(t) = \frac{A}{h} \epsilon_p^*(t)
 \end{equation}
 
-Quantum behavior is visible only while these bits remain. When the bits are fully erased ($\epsilon_q^* = \epsilon_p^* = 0$), the coordinates rest exactly at the classical target $(q_b, p_b)$. We observe this mechanical loss of information as quantum decoherence.
+Quantum behavior is visible only while these bits remain. When the bits are fully erased ($\epsilon_q^* = \epsilon_p^* = 0$), the coordinates rest at the classical target $(q_b, p_b)$. We observe this mechanical loss of information as quantum decoherence.
 
 By isolating time from the erasure action and expanding Landauer's limit ($E_L = k_B T \ln 2$), we find the time required for this decoherence:
 
@@ -345,7 +300,7 @@ By isolating time from the erasure action and expanding Landauer's limit ($E_L =
 \tau_D = \frac{A}{(N_q + N_p) k_B T \ln 2}
 \end{equation}
 
-This denominator sets the physical clock. A system maintains its quantum behavior if it remains small ($N \to 2$) and cold ($T \to 0$). If the state requires a massive bit budget ($N \gg 1$) or operates at a high temperature ($T \gg 0$), the denominator grows rapidly. The erasure time drops to zero, and the system becomes entirely classical.
+This denominator sets the physical clock. A system maintains its quantum behavior if it remains small ($N \to 2$) and cold ($T \to 0$). If the state requires a large bit budget ($N \gg 1$) or operates at a high temperature ($T \gg 0$), the denominator grows rapidly. The erasure time drops to zero, and the system becomes entirely classical.
 
 \section{A Geometric Uncertainty Principle}
 
@@ -370,15 +325,15 @@ Recalling the squeezed boundaries from Eq.~\ref{eq:BlobSqueeze}, the area of thi
 \delta q \delta p = \frac{\hbar^2}{\Delta q \Delta p}.
 \end{equation}
 
-Unlike the traditional uncertainty principle $\sigma_q \sigma_p \ge \hbar/2$, which acts as a passive statistical floor, this geometric formulation is operational and resolves Schr{\"{o}}dinger's cat paradox \cite{Schrodinger1980Trimmer}: the vast scale of the classical boundaries actively compresses the squeezed boundaries into fine crosshairs, enforcing squeezed resolution and smoothly transitioning the quantum state into classical reality.
+Unlike the traditional uncertainty principle $\sigma_q \sigma_p \ge \hbar/2$, which acts as a passive statistical floor, this geometric formulation is operational and resolves Schr{\"{o}}dinger's cat paradox \cite{Schrodinger1980Trimmer}: the scale of the classical boundaries compresses the squeezed boundaries into fine cross hairs, enforcing squeezed resolution and transitioning the quantum state into classical reality.
 
 \section{Finite or Infinite Support}
 
 While standard phase-space representations—such as the Wigner distribution and de Gosson's $1\sigma$ quantum blobs—are formally defined with infinite support (e.g., infinitely extending Gaussian tails), the Landauer erasure density proposed here utilizes strict operational boundaries.
 
-Ultimately, our model remains agnostic to whether the true underlying physical state possesses finite or infinite support. Because the thermodynamic cost of erasure is overwhelmingly dominated by the localized volume of the state, the resulting phase-space physics and action accounting remain consistent in either regime.
+Ultimately, our model remains agnostic to whether the underlying physical state possesses finite or infinite support. Because the thermodynamic cost of erasure is dominated by the localized volume of the state, the resulting phase-space physics and action accounting remain consistent in either regime.
 
-However, from a physical standpoint, modeling these boundaries with compact support arguably offers a conceptual advantage: it avoids the counterintuitive necessity of assigning non-zero probability amplitudes to strictly localized particles at arbitrarily large, classical distances.
+However, from a physical standpoint, modeling these boundaries with compact support arguably offers a conceptual advantage: it avoids the necessity of assigning non-zero probability amplitudes to localized particles at arbitrarily large, classical distances.
 
 \bibliography{main}
 \end{document}
