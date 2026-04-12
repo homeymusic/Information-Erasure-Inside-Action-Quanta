@@ -226,6 +226,13 @@ When the classical momentum boundary ($\Delta p$) grows, the squeezed position b
 
 \section{Landauer Erasure Density}
 
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=\linewidth]{figures/erasure_nodes.pdf}
+\caption{\textbf{Topological Nodes and Classical Action}.}
+\label{fig:erasure_nodes}
+\end{figure}
+
 Standard phase-space formulations of quantum mechanics traditionally employ the Wigner quasi-probability distribution $W(q,p)$ \cite{Wigner1932}. In the context of information erasure, however, we instead introduce the Landauer erasure density $L(q,p)$ as a sum of discrete Iverson brackets \cite{Knuth1992}—mathematical switches that snap to exactly 1 when a microstate is occupied and 0 otherwise—over the $M$ accessible microstates:
 
 \begin{equation}
@@ -383,6 +390,16 @@ Once encoded, the universe must physically erase the state. For example, let $s_
 \end{algorithmic}
 
 The raw output was subsequently processed using multi-threaded \texttt{data.table} routines to calculate the ensemble mean, median, minimum, and maximum sequence lengths, verifying the classical action bound $N E_L \tau \le A$ and extracting the discrete topological nodes from the resulting probability densities.
+
+\section{Thermodynamic Selection of Phase-Space Resonances}
+
+As the classical action boundary ($\Delta p$) expands, symplectic geometry demands a proportional compression of the conjugate squeezed resolution boundary ($\delta q$) \cite{Zurek2001, DeGosson2006}. When this boundary shrinks, a previously minimal-action microstate (such as a coordinate at $+1/2$) may no longer fit within the topologically valid quantum phase-space area. To instantiate the state, the system must search deeper into phase space and transition to a newly permitted structural resonance.
+
+Because every partition of continuous phase space expends a discrete quantum of Landauer action, the universe operates as a continuous phase-space Szilard engine that is strictly forbidden from executing redundant thermodynamic operations \cite{Landauer1961, Szilard1929}. According to Landauer's principle, the acquisition and erasure of physical data requires an unavoidable minimum expenditure of work, governed by the compression of the available phase-space volume \cite{PlenioVitelli2001, Bennett1973}. A naive mechanism that evaluates overlapping or unreduced intermediate boundaries would dissipate physical action without yielding new physical resolution, thereby violating the fundamental kinematic budget of the system \cite{Lloyd2000}.
+
+Consequently, the phase space does not fracture randomly. As demonstrated in the study of quantum chaos and nonlinear dynamics, driven quantum systems naturally resolve the intricate structure of classically mixed phase spaces into discrete stability zones---known as Arnol'd tongues---that lock onto pure rational hierarchies \cite{Gutzwiller1990, Haake2010}. The transition from a state at $+1/2$ to $+3/5$ represents the system migrating to the next available phase-space resonance characterized by a rational winding number \cite{Gutzwiller1990}. This mathematical necessity physically guarantees that the new resolution boundary is entirely mutually exclusive from all prior boundaries.
+
+The topological sequence that emerges---which ultimately generates the classical correspondence limit---is simply the signature of a Szilard engine operating at maximum theoretical efficiency \cite{PlenioVitelli2001}. The system migrates to the $+3/5$ partition because it represents the absolute thermodynamically cheapest path. By selecting exclusively non-redundant, rational mode-locking resonances, the universe seamlessly navigates the expanding kinematic boundaries while generating exactly zero thermodynamic waste \cite{Landauer1961, Gutzwiller1990}.
 
 \bibliography{main}
 \end{document}
