@@ -352,7 +352,7 @@ To ensure the binary partitioning of the system preserves physical symmetry, the
 \widetilde{\delta x}_{\text{rel}} = \frac{\widetilde{\delta x}}{\widetilde{\Delta x}} = \frac{\frac{2}{\pi}\sqrt{A_0/A}}{\sqrt{A/A_0}} = \frac{2}{\pi} \frac{A_0}{A}.
 \end{equation}
  
-For each state, the thermodynamic erasure was computed using a custom C++ simulation engine bound to an R-based parallel data pipeline (\texttt{Rcpp} and \texttt{RcppParallel}). To simulate the physical encoding function $\operatorname{ENCODE}$, the binary phase-space partitioning uses a Stern-Brocot tree \cite{ConcreteMath}, leveraging modified sequences \cite{Aiylam2013} to extend the boundaries to $\pm\infty$ and cover the real line $\mathbb{R}$.
+ For each state, the thermodynamic erasure was computed using a custom C++ simulation engine bound to an R-based parallel data pipeline (\texttt{Rcpp} and \texttt{RcppParallel}). To simulate the physical encoding function $\operatorname{ENCODE}$, the binary phase-space partitioning uses a Signed Stern-Brocot tree \cite{ConcreteMath, Niqui2007}.
 
 Seeded by the mapped target coordinates ($\tilde{x}_b$) and the relative algorithmic tolerance ($\widetilde{\delta x}_{\text{rel}}$), the fundamental interval is dynamically partitioned into a sequence of binary address bits:
 
