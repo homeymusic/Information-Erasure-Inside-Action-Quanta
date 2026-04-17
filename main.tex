@@ -214,7 +214,7 @@ Planck demonstrated \cite{Planck1906} that a classical phase space of area $A$ h
 (N_q + N_p) E_L \tau \le \frac{A}{h} (\pi \delta q \Delta p + \pi \Delta q \delta p)
 \end{equation}
 
-Where the erasure paths from the least-action microstate $(q_\blacktriangledown, p_\blacktriangledown)$ to the blob centers $(q_b, p_b)$ are bounded by $|\epsilon_q| \le \delta q$ and $|\epsilon_p| \le \delta p$.
+Where the erasure paths from the least-action microstate $(q_\Upsilon, p_\Upsilon)$ to the blob centers $(q_b, p_b)$ are bounded by $|\epsilon_q| \le \delta q$ and $|\epsilon_p| \le \delta p$.
 
 \subsection{Anatomy of the Erasure Action}
 
@@ -259,27 +259,27 @@ When the classical momentum boundary ($\Delta p$) grows, the squeezed position b
 \section{Least-Action Density}
 
 
-Standard phase-space formulations of quantum mechanics traditionally employ the Wigner quasi-probability distribution $W(q,p)$ \cite{Wigner1932}. However, because a finite system possesses a finite kinematic bit budget (N), the physically accessible phase space cannot be a continuous manifold; it must be a discretely resolved grid. We instead introduce the least-action density $\blacktriangledown(q,p)$ as a sum of discrete Iverson brackets \cite{Knuth1992}—mathematical switches that snap to exactly 1 when a coordinate is occupied and 0 otherwise—over the quantum blobs:
+Standard phase-space formulations of quantum mechanics traditionally employ the Wigner quasi-probability distribution $W(q,p)$ \cite{Wigner1932}. However, because a finite system possesses a finite kinematic bit budget (N), the physically accessible phase space cannot be a continuous manifold; it must be a discretely resolved grid. We instead introduce the least-action density $\Upsilon(q,p)$ as a sum of discrete Iverson brackets \cite{Knuth1992}—mathematical switches that snap to exactly 1 when a coordinate is occupied and 0 otherwise—over the quantum blobs:
 
 \begin{equation}
 \label{eq:JointErasure}
-\blacktriangledown(q,p) = \sum_{b} \left[ q = \frac{A}{\pi \hbar} \epsilon_{q,b} \right] \left[ p = \frac{A}{\pi \hbar} \epsilon_{p,b} \right]
+\Upsilon(q,p) = \sum_{b} \left[ q = \frac{A}{\pi \hbar} \epsilon_{q,b} \right] \left[ p = \frac{A}{\pi \hbar} \epsilon_{p,b} \right]
 \end{equation}
 
 Because the kinematic partitioning evaluates to a discrete coordinate grid, the marginal distributions are obtained by summing over the conjugate variables:
 
 \begin{equation}
 \label{eq:Marginals}
-N(q) = \sum_{p} \blacktriangledown(q,p)
+N(q) = \sum_{p} \Upsilon(q,p)
 \quad \text{and} \quad
-N(p) = \sum_{q} \blacktriangledown(q,p)
+N(p) = \sum_{q} \Upsilon(q,p)
 \end{equation}
 
-For any phase-space coordinate, $x \in \{q, p\}$, a partitioning function selects the least action microstate $x_\blacktriangledown$ from among infinite possible microstates $\{x_\mu\}$ inside the squeezed boundary $\delta x$ centered on the blob coordinate $x_b$, yielding a binary sequence $s_x$:
+For any phase-space coordinate, $x \in \{q, p\}$, a partitioning function selects the least action microstate $x_\Upsilon$ from among infinite possible microstates $\{x_\mu\}$ inside the squeezed boundary $\delta x$ centered on the blob coordinate $x_b$, yielding a binary sequence $s_x$:
 
 \begin{equation}
 \label{eq:PartitionFunction}
-(x_\blacktriangledown, s_x) = \operatorname{PARTITION}(x_b, \delta x)
+(x_\Upsilon, s_x) = \operatorname{PARTITION}(x_b, \delta x)
 \end{equation}
 
 Following Bennett's protocol \cite{Bennett1973}, we invert and reverse the binary partition sequence $s_x$ to form the uncomputation path $(\bar{s}_x)^R$, where both paths have bit count $N_x = |s_x| = |(\bar{s}_x)^R|$.
@@ -288,10 +288,10 @@ Physical erasure of this sequence uncomputes the microstate back to the ground s
 
 \begin{equation}
 \label{eq:ErasureFunction}
-\epsilon_x = \operatorname{ERASE}(s_x, x_\blacktriangledown, x_b), \quad \text{expends} \quad \Delta A_L = N_x E_L \tau
+\epsilon_x = \operatorname{ERASE}(s_x, x_\Upsilon, x_b), \quad \text{expends} \quad \Delta A_L = N_x E_L \tau
 \end{equation}
 
-The vector $\mathbf{\epsilon} = (\epsilon_q,\epsilon_p)$ is the distance from the least-action state $(q_\blacktriangledown, p_\blacktriangledown)$ to the blob center $(q_b, p_b)$. The observed classical coordinates $(q,p)$ are these displacements scaled by the geometric capacity $\frac{A}{\pi \hbar}$:
+The vector $\mathbf{\epsilon} = (\epsilon_q,\epsilon_p)$ is the distance from the least-action state $(q_\Upsilon, p_\Upsilon)$ to the blob center $(q_b, p_b)$. The observed classical coordinates $(q,p)$ are these displacements scaled by the geometric capacity $\frac{A}{\pi \hbar}$:
 
 \begin{equation}
 \label{eq:ObservedCoordinates}
@@ -385,11 +385,11 @@ Seeded by the blob centers ($\tilde{x}_b$) and the relative algorithmic toleranc
 \Function{PARTITION}{$\widetilde{x_b}, \widetilde{\delta x}$}
     \State $\text{left} \gets (-1, 0)$
     \State $\text{num} \gets 0, \quad \text{den} \gets 1$
-    \State $\widetilde{x_\blacktriangledown} \gets \text{num} / \text{den}$
+    \State $\widetilde{x_\Upsilon} \gets \text{num} / \text{den}$
     \State $\text{right} \gets (1, 0)$
     \State $s_x \gets \text{``''}$
-    \While{$|\widetilde{x_\blacktriangledown} - \widetilde{x_b}| > \widetilde{\delta x}$}
-        \If{$\tilde{x}_\blacktriangledown < \tilde{x}_b$} 
+    \While{$|\widetilde{x_\Upsilon} - \widetilde{x_b}| > \widetilde{\delta x}$}
+        \If{$\tilde{x}_\Upsilon < \tilde{x}_b$} 
             \State $\text{left} \gets (\text{num}, \text{den})$
             \State $s_x \gets s_x + \text{``1''}$
         \Else 
@@ -398,9 +398,9 @@ Seeded by the blob centers ($\tilde{x}_b$) and the relative algorithmic toleranc
         \EndIf
         \State $\text{num} \gets \text{left}_{\text{num}} + \text{right}_{\text{num}}$
         \State $\text{den} \gets \text{left}_{\text{den}} + \text{right}_{\text{den}}$
-        \State $\tilde{x}_\blacktriangledown \gets \text{num} / \text{den}$
+        \State $\tilde{x}_\Upsilon \gets \text{num} / \text{den}$
     \EndWhile
-    \State \Return $\tilde{x}_\blacktriangledown, s_x$
+    \State \Return $\tilde{x}_\Upsilon, s_x$
 \EndFunction
 \end{algorithmic}
 
@@ -409,14 +409,14 @@ The engine enforces a mathematical condition for compact support; the iterative 
 Once partitioned, the universe must physically erase the state. For example, let $s_x = \mathtt{1101}$. Taking the bitwise complement gives $\bar{s}_x = \mathtt{0010}$, and reversing it yields the uncomputation path $(\bar{s}_x)^R = \mathtt{0100}$. By following $(\bar{s}_x)^R$, the partition sequence $s_x$ is irreversibly destroyed. This erasure dissipates the Landauer action and yields the observable displacement:
 
 \begin{algorithmic}[1]
-\Function{ERASE}{$(\bar{s}_x)^R, \widetilde{x_\blacktriangledown}, \widetilde{x_b}$}
+\Function{ERASE}{$(\bar{s}_x)^R, \widetilde{x_\Upsilon}, \widetilde{x_b}$}
     \State $N_x \gets |(\bar{s}_x)^R|$
     \While{$N_x > 0$}
         \State \Call{ShiftLeft}{$(\bar{s}_x)^R$} 
         \Statex \Comment{Expends action $k_B T \ln{2} \tau$}
         \State $N_x \gets |(\bar{s}_x)^R|$
     \EndWhile
-    \State $\widetilde{\epsilon_x} \gets \widetilde{x_\blacktriangledown} - \widetilde{x_b}$ \Comment{The normalized phase-space displacement}
+    \State $\widetilde{\epsilon_x} \gets \widetilde{x_\Upsilon} - \widetilde{x_b}$ \Comment{The normalized phase-space displacement}
     \State \Return $\widetilde{\epsilon_x}$
 \EndFunction
 \end{algorithmic}
